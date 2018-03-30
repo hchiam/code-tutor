@@ -1,10 +1,7 @@
 {
-	"//1": "describes your app and its dependencies",
-	"//2": "https://docs.npmjs.com/files/package.json",
-	"//3": "updating this file will download and update your packages",
-	"name": "mental-temp-converter",
+	"name": "program-by-voice",
 	"version": "0.0.1",
-	"description": "What am I about?",
+	"description": "Just a simple app to test out programming by voice.",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
@@ -22,7 +19,7 @@
 		"node": "6.9.1"
 	},
 	"repository": {
-		"url": "https://github.com/hchiam/mental-temperature-converter"
+		"url": "https://github.com/hchiam/program-by-voice"
 	},
 	"keywords": [
 		"node",
