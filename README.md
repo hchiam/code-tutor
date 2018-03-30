@@ -1,5 +1,7 @@
 # Program By Voice
 
+[![HitCount](http://hits.dwyl.io/hchiam/program-by-voice.svg)](http://hits.dwyl.io/hchiam/program-by-voice)
+
 Built using lessons learned from <a href="https://glitch.com/edit/#!/mental-temp-converter">https://glitch.com/edit/#!/mental-temp-converter</a>
 
 Previous work:
