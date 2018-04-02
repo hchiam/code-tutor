@@ -40,17 +40,19 @@ app.post('/', function(req, res, next) {
     
     let i = assistant.getArgument('input');
     let o = assistant.getArgument('output');
-    // this one works but I'd rather use a card
-    // assistant.ask('Expected input: ' + i + '. Expected output: ' + o + '.\ntest multiline --- it works on a real device');
     
+    // this one works but I'd rather use a card
+    assistant.ask('Expected input: ' + i + '. Expected output: ' + o + '.\ntest multiline --- it works on a real device');
+    
+    // // this card does not work right now
+    // assistant.ask(assistant.buildRichResponse()
+    //     .addSimpleResponse("Simple response")
+    //     .addBasicCard(assistant.buildBasicCard('L1 L2 L3')
+    // ));
+    
+    // // these also do not work right now
     // assistant.tell(assistant.buildRichResponse().addBasicCard(assistant.buildBasicCard("card text")));
     // assistant.ask(assistant.buildRichResponse().addBasicCard(assistant.buildBasicCard("card text")));
-    
-    // this card does not work right now
-    assistant.ask(assistant.buildRichResponse()
-        .addSimpleResponse("Simple response")
-        .addBasicCard(assistant.buildBasicCard('L1 L2 L3')
-    ));
   }
   
   // Add handler functions to the action router.

@@ -1,6 +1,6 @@
-# Program By Voice
+# Code Tutor app on the Google Assistant
 
-[![HitCount](http://hits.dwyl.io/hchiam/program-by-voice.svg)](http://hits.dwyl.io/hchiam/program-by-voice)
+[![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
 Built using lessons learned from <a href="https://glitch.com/edit/#!/mental-temp-converter">https://glitch.com/edit/#!/mental-temp-converter</a>
 
