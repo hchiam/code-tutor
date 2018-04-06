@@ -9,7 +9,7 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 ## Previous work:
 
 * https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow' inline editor instead)
-* [mental-temperature-converter](https://github.com/hchiam/mental-temperature-converter) (GitHub repo)
+* [Mental Temperature Converter app](https://github.com/hchiam/mental-temperature-converter) for the Google Assistant
 * [LUI](https://github.com/hchiam/language-user-interface)'s programming add-on
 * [Please](https://github.com/hchiam/please), an experimental programming language
 * My [programmingByVoice](https://github.com/hchiam/programmingByVoice) web interface
