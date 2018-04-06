@@ -1,0 +1,22 @@
+{
+  "name": "Code Tutor",
+  "description": "This is Code Tutor's fulfillment using Cloud Functions for Firebase",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "Howard Chiam",
+  "engines": {
+    "node": "~6.0"
+  },
+  "scripts": {
+    "start": "firebase serve --only functions:dialogflowFirebaseFulfillment",
+    "deploy": "firebase deploy --only functions:dialogflowFirebaseFulfillment"
+  },
+  "dependencies": {        
+      "actions-on-google": "^1.5.x",
+      "firebase": "^4.5.0",
+      "firebase-admin": "^4.2.1",
+      "firebase-functions": "^0.5.7",
+      "apiai": "^4.0.3"
+  }
+}
