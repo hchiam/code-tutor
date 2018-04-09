@@ -60,18 +60,20 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let value = parameters.value;
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
-                    speech: `Here's your code. Let x = "${value}". I've also added a function called "say" that will tell me to say out loud whatever you put in the variable x.`,
+                    speech: `Here's your code. Let x = "${value}". I've also added a function called "say" that will tell me to say out loud what you've put in the variable x.`,
                     displayText: "Here's your code:"
                 })
                 .addBasicCard(
                     app.buildBasicCard(`let x = "**${value}**"; \nsay(x);`)
                 )
                 .addSuggestions(['run code', 'do something else'])
+            
             app.ask(googleResponse);
         },
         
         'array-size': () => {
             let size = parameters.size;
+            
             if (typeof parseInt(size) !== 'number') {
                 size = 2;
             } else if (size < 2) {
@@ -79,35 +81,75 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             } else if (size > 10) {
                 size = 10;
             }
+            
+            let code = `let x = [${'..., '.repeat(size-1) + '...'}];`;
+            
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
-                    speech: "Item 1 goes to position 0 in code. \
-                        \nWhat should I put at position 0 of the array?",
-                    displayText: "Item 1 goes to position 0 in code. \
-                        \nWhat should I put at position 0 of the array?",
-                })
-                .addBasicCard(
-                    app.buildBasicCard(`let x = [${'..., '.repeat(size-1) + '...'}];`)
-                )
-            app.setContext('array-fill', 1, {
-                size: size
-            });
-            app.ask(googleResponse);
-        },
-        
-        'array-fill': () => {
-            let size = inputContexts.size;
-            let code = `let x = [${parameters.value + ', ...'.repeat(size-1)}];`;
-            let googleResponse = app.buildRichResponse()
-                .addSimpleResponse({
-                    speech: `Here's your code:`,
-                    displayText: "Here's your code:"
+                    speech: "Item number 1 goes to position 0 in code. \
+                        \nWhat should go to position 0?",
+                    displayText: "Item number 1 goes to position 0 in code. \
+                        \nWhat should go to position 0 of the array?",
                 })
                 .addBasicCard(
                     app.buildBasicCard(code)
                 )
-                .addSuggestions(['run code', 'do something else'])
+            
+            app.setContext('array-fill', 1, {
+                code: code,
+                size: size,
+                i: 0,
+                array: [null]
+            });
+            
             app.ask(googleResponse);
+        },
+        
+        'array-fill': () => {
+            let code = inputContexts.code;
+            let size = inputContexts.size;
+            let i = inputContexts.i;
+            let array = inputContexts.array;
+            let value = parameters.value;
+            let googleResponse;
+            let moreArrayIndicesToFill = i < size-1;
+            
+            array[i] = value;
+            code += `\nx[${i}] = ${value};`;
+            
+            if (moreArrayIndicesToFill) {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse(`Item number ${i+2} goes to position ${i+1} in code.\nWhat should go to position ${i+1} of the array?`)
+                    .addBasicCard(
+                        app.buildBasicCard(code)
+                    )
+                // repeat to fill remainder of array
+                app.setContext('array-fill', 1, {
+                    code: code,
+                    size: size,
+                    i: i+1,
+                    array: array
+                });
+            } else {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse({
+                        speech: `Here's your code: ${code}. I've also added a function called "say" that will tell me to say out loud what you've put in the array x.`,
+                        displayText: `Here's your code:`
+                    })
+                    .addBasicCard(
+                        app.buildBasicCard(code + `\nsay(x);`)
+                    )
+                    .addSuggestions(['run code', 'do something else']);
+                app.setContext('array-run', 1, {
+                    array: array
+                });
+            }
+            app.ask(googleResponse);
+        },
+        
+        'array-run': () => {
+            let array = inputContexts.array;
+            app.ask(`${JSON.stringify(array)} debug test`);
         },
     };
     
