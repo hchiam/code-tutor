@@ -12,7 +12,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     // https://dialogflow.com/docs/contexts
     let action = request.body.result.action;
     const parameters = request.body.result.parameters;
-    const inputContexts = request.body.result.contexts;
+    const inputContexts = request.body.result.contexts[0].parameters; // debug without [0].parameters and JSON.stringify to see more info in a JSON
     const requestSource = (request.body.originalRequest) ? request.body.originalRequest.source : undefined;
     
     // create app so you can do app.ask(...);
@@ -51,7 +51,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let value = parameters.value;
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
-                    speech: `Here's your code. I've also added a function called "say" that will tell me to say out loud whatever you put in the variable x.`,
+                    speech: `Here's your code. Let x = "${value}". I've also added a function called "say" that will tell me to say out loud whatever you put in the variable x.`,
                     displayText: "Here's your code:"
                 })
                 .addBasicCard(
@@ -61,13 +61,42 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             app.ask(googleResponse);
         },
         
-        'arrayValue': () => {
-            let code = `let x = "${parameters.value}";\nsay(x);`;
+        'array-size': () => {
+            let size = parameters.size;
+            if (typeof parseInt(size) !== 'number') {
+                size = 2;
+            } else if (size < 2) {
+                size = 2;
+            } else if (size > 10) {
+                size = 10;
+            }
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
-                    speech: `A variable holds a piece of information for you, like a "box" in a computer's memory. To start, say something, and I'll put it in a variable.`,
-                    displayText: code
+                    speech: "Item 1 goes in position 0 in code. \
+                        \nWhat would you like to put in position 0 of the array?",
+                    displayText: "Item 1 goes in position 0 in code. \
+                        \nWhat would you like to put in position 0 of the array?",
                 })
+                .addBasicCard(
+                    app.buildBasicCard(`let x = [${'..., '.repeat(size-1) + '...'}];`)
+                )
+            app.setContext('array-fill', 1, {
+                size: size
+            });
+            app.ask(googleResponse);
+        },
+        
+        'array-fill': () => {
+            let size = inputContexts.size;
+            let code = `let x = [${parameters.value + ', ...'.repeat(size-1)}];`;
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse({
+                    speech: `Here's your code:`,
+                    displayText: "Here's your code:"
+                })
+                .addBasicCard(
+                    app.buildBasicCard(code)
+                )
                 .addSuggestions(['run code', 'do something else'])
             app.ask(googleResponse);
         },
