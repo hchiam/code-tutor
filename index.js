@@ -34,17 +34,26 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'input.unknown': () => {
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse("I'm still learning. Would you like to suggest something for me to work on to teach you next time?")
+                .addSimpleResponse("I'm always learning. Would you like to suggest something for me to work on to teach you next time?")
                 .addSuggestionLink('feedback form', 'https://goo.gl/forms/mn2Xcy0tmNyFQ5y72')
             app.ask(googleResponse);
         },
         
         'suggestion-prefill': () => {
             let suggestion = parameters.suggestion;
-            let googleResponse = app.buildRichResponse()
-                .addSimpleResponse(`Thanks. I heard this: ${suggestion}`)
-                .addSuggestionLink('feedback form', `https://docs.google.com/forms/d/e/1FAIpQLSdi2h9SfAS2EU2AC6PjlqnKPwo5v5i3fQreFN1Vx-fs1MckEA/viewform?usp=pp_url&entry.326955045=${suggestion}`)
-            app.ask(googleResponse);
+            let hasScreen = app.hasSurfaceCapability(app.SurfaceCapabilities.SCREEN_OUTPUT);
+            let googleResponse;
+            if (hasScreen) {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse(`Thanks. Right now Google's Dialogflow isn't able to let me open a link for you hands-free. But here's a link to a feedback form that I've pre-filled for you with what I just heard: ${suggestion}`)
+                    .addSuggestionLink('feedback form', `https://docs.google.com/forms/d/e/1FAIpQLSdi2h9SfAS2EU2AC6PjlqnKPwo5v5i3fQreFN1Vx-fs1MckEA/viewform?usp=pp_url&entry.326955045=${suggestion}`)
+                app.ask(googleResponse);
+            } else {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse(`Sorry, right now Google's Dialogflow isn't able to let me open a link for you hands-free. If you go on a device with a screen, you'll see a link to a feedback form. Code Tutor signing out.`)
+                // exit by using tell instead of say
+                app.tell(googleResponse);
+            }
         },
         
         'variable-value': () => {
@@ -72,10 +81,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             }
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
-                    speech: "Item 1 goes in position 0 in code. \
-                        \nWhat would you like to put in position 0 of the array?",
-                    displayText: "Item 1 goes in position 0 in code. \
-                        \nWhat would you like to put in position 0 of the array?",
+                    speech: "Item 1 goes to position 0 in code. \
+                        \nWhat should I put at position 0 of the array?",
+                    displayText: "Item 1 goes to position 0 in code. \
+                        \nWhat should I put at position 0 of the array?",
                 })
                 .addBasicCard(
                     app.buildBasicCard(`let x = [${'..., '.repeat(size-1) + '...'}];`)
