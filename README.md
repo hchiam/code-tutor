@@ -1,4 +1,4 @@
-# Code Tutor app on the Google Assistant
+# Ok Google, Talk to Code Tutor
 
 [![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
