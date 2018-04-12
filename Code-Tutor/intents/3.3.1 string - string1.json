@@ -1,0 +1,60 @@
+{
+  "id": "f8cf065c-1a90-40ec-b8f5-4916bb908017",
+  "name": "3.3.1 string - string1",
+  "auto": true,
+  "contexts": [
+    "string1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "string1",
+      "affectedContexts": [
+        {
+          "name": "string1",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "string2",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "d44753ad-fc87-4222-a0e9-2c154ec88429",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "string1",
+          "value": "$string1",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": "basic_card",
+          "platform": "google",
+          "lang": "en",
+          "formattedText": "let x \u003d \"$string1\";",
+          "buttons": []
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Now say something else to put in the second string."
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523575181,
+  "fallbackIntent": false,
+  "events": []
+}

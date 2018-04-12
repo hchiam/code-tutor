@@ -1,0 +1,36 @@
+{
+  "id": "7382eddb-41f6-48c5-9991-079c86b8011f",
+  "name": "1.1 a variable",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "variable",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A variable is like a \"box\" that holds information. To start, say something, and I\u0027ll put it in a variable named x."
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523413455,
+  "fallbackIntent": false,
+  "events": []
+}

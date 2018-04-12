@@ -1,0 +1,75 @@
+{
+  "id": "29cccbc8-c71b-4427-9f72-cd3289824b42",
+  "name": "3.1.1 variable lesson - value",
+  "auto": true,
+  "contexts": [
+    "variable"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "variable-value",
+      "affectedContexts": [
+        {
+          "name": "variable",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "run-code",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "eedafa10-343a-4bca-8432-c9b9480f483f",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "value",
+          "value": "$value",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Can you say the value again?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "textToSpeech": "Here\u0027s your code: let x \u003d \"$value\". I added a function say(x). Say \"run code\" and I\u0027ll follow the instructions.",
+          "displayText": "Here\u0027s your code: \nlet x \u003d \"$value\"; \nsay(x);"
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "run code"
+            },
+            {
+              "title": "do something else"
+            }
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523575379,
+  "fallbackIntent": false,
+  "events": []
+}

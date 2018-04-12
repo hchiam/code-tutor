@@ -1,0 +1,58 @@
+{
+  "id": "643556ef-ede0-4613-8805-13fab5d58ad2",
+  "name": "3.2.3 array - run code",
+  "auto": true,
+  "contexts": [
+    "array-run"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "array-run",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "What would you like to try next?"
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "another array"
+            },
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "#array-run.array"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523503225,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,80 @@
+{
+  "id": "62b2f22a-f5c8-405b-b2c1-0e3b200930c0",
+  "name": "3.3.2 string - string2",
+  "auto": true,
+  "contexts": [
+    "string1",
+    "string2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "string2",
+      "affectedContexts": [
+        {
+          "name": "string1",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "string2",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "run-code",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9eeedd45-5ef5-47d9-9622-86fe39de26d8",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "string2",
+          "value": "$string2",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "textToSpeech": "let x \u003d \"#string1.string1\"; let y \u003d \"$string2\". I added let z \u003d x + y. I also added say(z). Say \"run code\" and I\u0027ll follow the instructions.",
+          "displayText": "let x \u003d \"#string1.string1\"; \nlet y \u003d \"$string2\"; \nlet z \u003d x + y; \nsay(z);"
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "run code"
+            },
+            {
+              "title": "do something else"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Here’s your code:"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523576084,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,67 @@
+{
+  "id": "4cdd6745-c72a-442f-8ffb-e075cc346a7b",
+  "name": "3.1.2 variable lesson - run code",
+  "auto": true,
+  "contexts": [
+    "variable",
+    "run-code"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "962fda05-e26c-4aa6-b2a9-fc7fb8d178a6",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "variable",
+          "value": "#variable.value",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "What would you like to try next?"
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "another variable"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "#variable.value"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522729245,
+  "fallbackIntent": false,
+  "events": []
+}

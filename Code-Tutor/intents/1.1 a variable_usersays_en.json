@@ -1,0 +1,74 @@
+[
+  {
+    "id": "a9bd21a7-e205-42a7-b29c-b6e06336e13a",
+    "data": [
+      {
+        "text": "Yes, a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523413455
+  },
+  {
+    "id": "7a0a9676-d936-439e-abce-8f6aeea5e5df",
+    "data": [
+      {
+        "text": "I want to code a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523413455
+  },
+  {
+    "id": "e1a4a472-c02f-4713-96a2-6ac16ed059a8",
+    "data": [
+      {
+        "text": "I want to create a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523413455
+  },
+  {
+    "id": "ccd8f691-9509-43d8-b54b-6887bc16d3bc",
+    "data": [
+      {
+        "text": "i want to build a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523413455
+  },
+  {
+    "id": "9817cc38-29c0-4f7f-b1af-358a3e8d5fd0",
+    "data": [
+      {
+        "text": "variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523413455
+  },
+  {
+    "id": "312865a9-0908-4553-ab20-5dfb0c23c529",
+    "data": [
+      {
+        "text": "a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1523413455
+  }
+]

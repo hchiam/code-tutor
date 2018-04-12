@@ -1,0 +1,46 @@
+{
+  "id": "9fa10d5d-7c8f-4762-ad2d-2a8d5a57abc2",
+  "name": "3.2.1 array - size",
+  "auto": true,
+  "contexts": [
+    "array-size"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "array-size",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "fdd970fb-336f-4bc7-a2e9-68752bc9a77f",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "name": "size",
+          "value": "$size",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please give me a number between 1 and 10."
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523241269,
+  "fallbackIntent": false,
+  "events": []
+}

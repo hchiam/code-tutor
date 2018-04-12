@@ -1,0 +1,49 @@
+{
+  "id": "a5575104-2926-4fdb-a987-3af669c4e002",
+  "name": "2.0 what\u0027s code",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "You can think of code like instructions for a computer to follow. Or like steps in a recipe. What would you like to create?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523575904,
+  "fallbackIntent": false,
+  "events": []
+}

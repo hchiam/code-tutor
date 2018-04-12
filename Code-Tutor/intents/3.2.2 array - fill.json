@@ -1,0 +1,46 @@
+{
+  "id": "6def5940-c30e-43ef-9395-bb35e54bd363",
+  "name": "3.2.2 array - fill",
+  "auto": true,
+  "contexts": [
+    "array-fill"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "array-fill",
+      "affectedContexts": [
+        {
+          "name": "array-run",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cd6ef736-4d14-40e0-be23-90bb6046b217",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "value",
+          "value": "$value",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523415757,
+  "fallbackIntent": false,
+  "events": []
+}

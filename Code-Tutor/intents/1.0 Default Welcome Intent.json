@@ -1,0 +1,60 @@
+{
+  "id": "342d63e6-ad23-4598-acbc-562388046019",
+  "name": "1.0 Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "what\u0027s a variable?"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I\u0027m Code Tutor. You can talk to me to create simple code. What would you like to create? For example, you can say \"a variable\".",
+            "This is Code Tutor. You can talk to me to create simple code. What would you like to create? For example, you can say \"a variable\".",
+            "I\u0027m your Code Tutor. Let\u0027s talk to create some simple code. What would you like to create? For example, you can say \"a variable\"."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523244491,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ]
+}

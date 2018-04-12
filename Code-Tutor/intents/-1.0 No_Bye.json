@@ -1,0 +1,29 @@
+{
+  "id": "8eda261a-92ea-4f78-9826-e504705e6659",
+  "name": "-1.0 No/Bye",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "no-bye",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Ok bye! Code Tutor signing out."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523246012,
+  "fallbackIntent": false,
+  "events": []
+}

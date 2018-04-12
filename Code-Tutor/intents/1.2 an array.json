@@ -1,0 +1,35 @@
+{
+  "id": "cf5f5d4a-4d21-4754-91ba-1625166d3329",
+  "name": "1.2 an array",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "array-size",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "An array is like a numbered list of variables. How long a list would you like? Please pick a number between 2 and 10."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523244593,
+  "fallbackIntent": false,
+  "events": []
+}

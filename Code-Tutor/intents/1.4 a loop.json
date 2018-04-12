@@ -1,0 +1,34 @@
+{
+  "id": "ecf29646-6a5f-4d20-ac90-b9c5c7d0fcee",
+  "name": "1.4 a loop",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "loop-what",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A loop lets you repeat code. You can make me say something a few times in a row. What would you like me to say?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523506942,
+  "fallbackIntent": false,
+  "events": []
+}

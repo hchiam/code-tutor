@@ -1,0 +1,86 @@
+[
+  {
+    "id": "93099320-fd25-493c-8b99-1ec297f0a4df",
+    "data": [
+      {
+        "text": "i want to code a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522722001
+  },
+  {
+    "id": "f359908c-edb0-486f-a9b5-4f509be6e62b",
+    "data": [
+      {
+        "text": "i want to build a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522722001
+  },
+  {
+    "id": "d3657043-cdd0-4a6a-bdc1-1a22cd5dab3a",
+    "data": [
+      {
+        "text": "I want a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522722001
+  },
+  {
+    "id": "217697d4-e660-4b04-9dbc-7d655ce8f7d1",
+    "data": [
+      {
+        "text": "i want to create a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522722001
+  },
+  {
+    "id": "537a5dbb-2b6d-45be-9c23-17ca658d935f",
+    "data": [
+      {
+        "text": "a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522719219
+  },
+  {
+    "id": "8db4aeb9-491c-424b-b3bf-c27e2d67c4b6",
+    "data": [
+      {
+        "text": "Yes, a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522719219
+  },
+  {
+    "id": "1d3852a4-a79c-4138-bb5a-9b0d17c68671",
+    "data": [
+      {
+        "text": "string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522719219
+  }
+]

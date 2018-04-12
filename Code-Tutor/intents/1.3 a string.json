@@ -1,0 +1,34 @@
+{
+  "id": "7b1c1357-a539-43e2-ad99-2f7c11b47aa0",
+  "name": "1.3 a string",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "string1",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A string\u0027s like a sentence or array of letters. Let’s try combining 2 strings. Say something for me to put in the first string."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523414041,
+  "fallbackIntent": false,
+  "events": []
+}

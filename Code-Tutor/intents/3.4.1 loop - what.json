@@ -1,0 +1,59 @@
+{
+  "id": "9bff9c46-2674-463e-9360-3b5ef4027092",
+  "name": "3.4.1 loop - what",
+  "auto": true,
+  "contexts": [
+    "loop-what"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "loop-what",
+      "affectedContexts": [
+        {
+          "name": "loop-times",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "loop-what",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2f0f2099-2404-48e1-9ced-408965002c2b",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "what",
+          "value": "$what",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "say(\"$what\");"
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "And how many times would you like me to repeat that? For security, I can only loop between 1 and 5 times."
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523508155,
+  "fallbackIntent": false,
+  "events": []
+}

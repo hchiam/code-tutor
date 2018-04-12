@@ -1,0 +1,49 @@
+{
+  "id": "0ed9df2d-50f0-4c48-9bec-aa7c1b1181c8",
+  "name": "2.1 what\u0027s a variable",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A variable holds a piece of information for you, like a \"box\" in a computer\u0027s memory. What would you like to create?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522727535,
+  "fallbackIntent": false,
+  "events": []
+}

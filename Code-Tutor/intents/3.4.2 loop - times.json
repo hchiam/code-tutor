@@ -1,0 +1,53 @@
+{
+  "id": "186288c2-f72b-46c3-a22d-76d55fde67e4",
+  "name": "3.4.2 loop - times",
+  "auto": true,
+  "contexts": [
+    "loop-times",
+    "loop-what"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "loop-times",
+      "affectedContexts": [
+        {
+          "name": "loop-run-code",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "loop-times",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "loop-what",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "384c210b-24b0-4514-a7e3-ff1d63582aac",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "times",
+          "value": "$times",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "google": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523575962,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0e9094c3-1e6f-4fd6-ae0c-ea0889e491e0",
+    "data": [
+      {
+        "text": "what\u0027s a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1522720061
+  },
+  {
+    "id": "3e14bc86-04dc-4f2d-8520-d77f57adc38b",
+    "data": [
+      {
+        "text": "what does a variable do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522720061
+  },
+  {
+    "id": "1f611a4c-bf89-43f1-a785-918f3818ae11",
+    "data": [
+      {
+        "text": "what does a variable mean",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522720061
+  },
+  {
+    "id": "3bf43418-cd10-4d4d-9a5d-de9652d0fac3",
+    "data": [
+      {
+        "text": "what is a variable",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522720061
+  }
+]

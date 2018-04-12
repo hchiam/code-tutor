@@ -1,0 +1,52 @@
+{
+  "id": "20e35c29-420b-4fa9-9162-346d5f7a423b",
+  "name": "0.0 Default Fallback Intent",
+  "auto": false,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [
+        {
+          "name": "suggest",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "basic_card",
+          "platform": "google",
+          "lang": "en",
+          "formattedText": "feedback form",
+          "buttons": [
+            {
+              "title": "https://goo.gl/forms/mn2Xcy0tmNyFQ5y72",
+              "openUrlAction": {
+                "url": "https://goo.gl/forms/mn2Xcy0tmNyFQ5y72",
+                "urlTypeHint": "URL_TYPE_HINT_UNSPECIFIED"
+              }
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I\u0027m still learning. Would you like to suggest something for me to work on to teach you next time?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522987227,
+  "fallbackIntent": true,
+  "events": []
+}

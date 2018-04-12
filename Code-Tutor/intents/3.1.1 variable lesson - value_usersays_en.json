@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0b3130d1-f57c-48cd-a0e5-c461bc0f7b4f",
+    "data": [
+      {
+        "text": "hi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523574828
+  },
+  {
+    "id": "79e4bb9c-4095-4d59-a0f8-3d53add22f3d",
+    "data": [
+      {
+        "text": "@sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1523574828
+  }
+]

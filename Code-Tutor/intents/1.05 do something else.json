@@ -1,0 +1,57 @@
+{
+  "id": "32f2d176-8dac-4160-b319-683d70a1d741",
+  "name": "1.05 do something else",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "what\u0027s a variable?"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "What would you like to create? For example, you can say \"a variable\".",
+            "What would you like to create? For example, you can say \"an array\".",
+            "What would you like to create? For example, you can say \"a string\".",
+            "What would you like to create? For example, you can say \"a loop\"."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523237615,
+  "fallbackIntent": false,
+  "events": []
+}

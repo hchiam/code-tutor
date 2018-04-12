@@ -1,0 +1,41 @@
+{
+  "id": "64fda1c3-5d0d-4222-8400-cd21f7cf1031",
+  "name": "0.1 Default Fallback Intent - yes - suggestion",
+  "auto": true,
+  "contexts": [
+    "suggest",
+    "yes"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "suggestion-prefill",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "54e0da08-22bf-4acc-a0b7-d9e713c16477",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "suggestion",
+          "value": "$suggestion",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Thanks. I heard this: $suggestion."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522989863,
+  "fallbackIntent": false,
+  "events": []
+}

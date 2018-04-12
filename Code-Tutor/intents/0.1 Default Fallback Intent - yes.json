@@ -1,0 +1,42 @@
+{
+  "id": "15eb5cd6-9dc9-44ca-898f-d72b7775884d",
+  "name": "0.1 Default Fallback Intent - yes",
+  "auto": true,
+  "contexts": [
+    "suggest"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DefaultFallbackIntent.DefaultFallbackIntent-yes",
+      "affectedContexts": [
+        {
+          "name": "suggest",
+          "parameters": {},
+          "lifespan": 1
+        },
+        {
+          "name": "yes",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "What\u0027s your suggestion?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522720870,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "a8526250-0250-41a1-8ba3-3c0e4aaf6a1f",
+  "name": "2.5 what\u0027s a loop",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a loop"
+            },
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A loop lets you repeat code, so you can do things like repeat the same thing 3 times in a row. What would you like to create?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522726751,
+  "fallbackIntent": false,
+  "events": []
+}

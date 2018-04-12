@@ -1,0 +1,49 @@
+{
+  "id": "cecb29f7-a492-4043-8eda-8e9b9a8296de",
+  "name": "2.3 what\u0027s a string",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a string"
+            },
+            {
+              "title": "what\u0027s an array?"
+            },
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A string is like a sentence, or like an array that holds letters for you. What would you like to create?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1522726903,
+  "fallbackIntent": false,
+  "events": []
+}

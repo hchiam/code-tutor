@@ -1,0 +1,49 @@
+{
+  "id": "52b710ed-568b-48f3-aca6-9e62a176a6ec",
+  "name": "2.2 what\u0027s an array",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "an array"
+            },
+            {
+              "title": "what\u0027s a variable?"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "An array is like a numbered list of variables. In code, we start counting at 0, so the first item in an array is at position 0, not 1. What would you like to create?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523504257,
+  "fallbackIntent": false,
+  "events": []
+}
