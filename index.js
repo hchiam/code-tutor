@@ -56,18 +56,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             }
         },
         
-        'variable-value': () => {
-            let value = parameters.value;
-            let googleResponse = app.buildRichResponse()
-                .addSimpleResponse({
-                    speech: `Here's your code. Let x = "${value}". I've also added a function called "say" that will tell me to say out loud what you've put in the variable x.`,
-                    displayText: `Here's your code: \nlet x = "${value}"; \nsay(x);`
-                })
-                .addSuggestions(['run code', 'do something else'])
-            
-            app.ask(googleResponse);
-        },
-        
         'array-size': () => {
             let size = parameters.size;
             
@@ -129,7 +117,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse(`We counted from 0, so we stop at ${size-1} and not at ${size}.`)
                     .addSimpleResponse({
-                        speech: `Here's your code: ${code}. I've also added a function called "say" that will tell me to say out loud what you've put in the array x.`,
+                        speech: `Here's your code: ${code}. I added a function say(x). Say "run code" and I'll follow the instructions.`,
                         displayText: `Here's your code: \n${code} \nsay(x);`
                     })
                     .addSuggestions(['run code', 'do something else']);
@@ -164,7 +152,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's your code:")
                 .addSimpleResponse({
-                  speech: `${code}. Code usually counts starting at 0. And so because we want to repeat it ${times} times, we need to stop 1 step before the counter reaches ${times}.`,
+                  speech: `${code}. In code we count from 0. And because we want to repeat ${times} times, we need to stop 1 step before ${times}. Say "run code" and I'll follow the instructions.`,
                   displayText: code
                 })
                 .addSuggestions(['run code', 'do something else'])
