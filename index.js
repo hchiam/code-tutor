@@ -34,7 +34,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'input.unknown': () => {
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse("I'm always learning. Would you like to suggest something for me to work on to teach you next time?")
+                .addSimpleResponse("I'm still learning. Would you like to suggest something for me to work on to teach you next time?")
                 .addSuggestionLink('feedback form', 'https://goo.gl/forms/mn2Xcy0tmNyFQ5y72')
             app.ask(googleResponse);
         },
@@ -50,7 +50,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 app.ask(googleResponse);
             } else {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Sorry, right now Google's Dialogflow isn't able to let me open a link for you hands-free. If you go on a device with a screen, you'll see a link to a feedback form. Code Tutor signing out.`)
+                    .addSimpleResponse(`Sorry, right now Google's Dialogflow isn't able to let me open a link for you hands-free. If you use a device with a screen, you'll see a button to go to a feedback form. Code Tutor signing out.`)
                 // exit by using tell instead of say
                 app.tell(googleResponse);
             }
