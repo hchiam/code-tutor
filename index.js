@@ -148,6 +148,35 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         //     app.ask(googleResponse);
         // },
         
+        'loop-times': () => {
+            let what = inputContexts.what;
+            let times = inputContexts.times;
+            if (typeof parseInt(times) !== 'number') {
+                times = 2;
+            } else if (times < 1) {
+                times = 2;
+            } else if (times > 5) {
+                times = 5;
+            }
+            
+            let code = `for (let i=0; i<${times}; i++) {\n    say("${what}"); \n}`;
+            
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse("Here's your code:")
+                .addSimpleResponse({
+                  speech: `${code}. Code usually counts starting at 0. And so because we want to repeat it ${times} times, we need to stop 1 step before the counter reaches ${times}.`,
+                  displayText: code
+                })
+                .addSuggestions(['run code', 'do something else'])
+            
+            app.setContext('loop-run', 1, {
+                times: times,
+                what: what,
+            });
+            
+            app.ask(googleResponse);
+        },
+        
         'loop-run': () => {
             // for this to work, need these contexts:
                 // loop-run-code, loop-times, loop-what
@@ -159,6 +188,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let say = (what + ' ').repeat(times);
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
+                .addSimpleResponse('What would you like to try next?')
+                .addSuggestions(['another loop', 'a variable', 'an array', 'a string'])
             
             app.ask(googleResponse);
         },
