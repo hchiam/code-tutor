@@ -127,7 +127,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 });
             } else {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Because we started counting at 0, we stop counting at ${size-1} instead of at ${size}.`)
+                    .addSimpleResponse(`We counted from 0, so we stop at ${size-1} and not at ${size}.`)
                     .addSimpleResponse({
                         speech: `Here's your code: ${code}. I've also added a function called "say" that will tell me to say out loud what you've put in the array x.`,
                         displayText: `Here's your code: \n${code} \nsay(x);`
