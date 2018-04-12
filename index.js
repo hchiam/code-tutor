@@ -151,38 +151,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         //         .addSimpleResponse(`Here's your array: ${array}`)
         //     app.ask(googleResponse);
         // },
-        
-        'string1': () => {
-            let string1 = parameters.string1;
-            let googleResponse = app.buildRichResponse()
-                .addSimpleResponse(`Now say something else to put in the second string.`)
-                .addBasicCard(
-                    app.buildBasicCard(`let x = "${string1}";`)
-                )
-            app.setContext('string2', 1, {
-                string1: string1
-            });
-            app.ask(googleResponse);
-        },
-        
-        'string2': () => {
-            let string1 = parameters.string1;
-            let string2 = inputContexts.string2;
-            let stringConcat = string1 + string2;
-            let googleResponse = app.buildRichResponse()
-                .addSimpleResponse({
-                    speech: `Here's your code. Let x = "${string1}". Let y = "${string2}". I’ve added a variable z that combines the strings, and a function “say” that will make me say whatever is in the new string.`,
-                    displayText: "Here's your code:"
-                })
-                .addBasicCard(
-                    app.buildBasicCard(`let x = "${string1}"; \nlet y = "**${string2}**"; \nlet z = x + y; \nsay(x);`)
-                )
-                .addSuggestions(['run code', 'do something else'])
-            app.setContext('string-run', 1, {
-                stringConcat: stringConcat
-            });
-            app.ask(googleResponse);
-        },
     };
     
     if (!actionHandlers[action]) {
