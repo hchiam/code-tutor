@@ -82,15 +82,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 size = 10;
             }
             
-            let code = `let x = [${'... , '.repeat(size-1) + '...'}];`;
+            let code = `let x = [${' ... , '.repeat(size-1)}... ];`;
             
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse({
-                    speech: "Item number 1 goes to position 0 in code. \
-                        \nWhat should go to position 0?",
-                    displayText: "Item number 1 goes to position 0 in code. \
-                        \nWhat should go to position 0 of the array?",
-                })
+                .addSimpleResponse(`Let's place the first item in the array x. \
+                    \nIn code, we start counting at 0. \nSo what should go in position 0?`)
                 .addBasicCard(
                     app.buildBasicCard(code)
                 )
@@ -119,7 +115,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             if (moreArrayIndicesToFill) {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Item number ${i+2} goes to position ${i+1} in code.\nWhat should go to position ${i+1} of the array?`)
+                    .addSimpleResponse(`And what should go in position ${i+1}?`)
                     .addBasicCard(
                         app.buildBasicCard(code)
                     )
@@ -132,6 +128,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 });
             } else {
                 googleResponse = app.buildRichResponse()
+                    .addSimpleResponse(`Because we started counting at 0, we stop counting at ${size-1} instead of ${size}.`)
                     .addSimpleResponse({
                         speech: `Here's your code: ${code}. I've also added a function called "say" that will tell me to say out loud what you've put in the array x.`,
                         displayText: `Here's your code:`
