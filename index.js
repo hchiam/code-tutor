@@ -82,7 +82,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 size = 10;
             }
             
-            let code = `let x = [${'..., '.repeat(size-1) + '...'}];`;
+            let code = `let x = [${'... , '.repeat(size-1) + '...'}];`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
@@ -99,7 +99,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 code: code,
                 size: size,
                 i: 0,
-                array: [null]
+                array: []
             });
             
             app.ask(googleResponse);
@@ -147,10 +147,13 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             app.ask(googleResponse);
         },
         
-        'array-run': () => {
-            let array = inputContexts.array;
-            app.ask(`${JSON.stringify(array)} debug test`);
-        },
+        // // (just show in intent instead: #array-run.array)
+        // 'array-run': () => {
+        //     let array = inputContexts.array;
+        //     let googleResponse = app.buildRichResponse()
+        //         .addSimpleResponse(`Here's your array: ${array}`)
+        //     app.ask(googleResponse);
+        // },
     };
     
     if (!actionHandlers[action]) {
