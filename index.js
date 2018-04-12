@@ -185,6 +185,16 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 // what @sys.number #loop-what.what
             let times = inputContexts.times;
             let what = inputContexts.what;
+            
+            // extra security check
+            if (typeof parseInt(times) !== 'number') {
+                times = 3;
+            } else if (times < 1) {
+                times = 3;
+            } else if (times > 5) {
+                times = 5;
+            }
+            
             let say = (what + ' ').repeat(times);
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
