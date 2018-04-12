@@ -152,9 +152,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let what = inputContexts.what;
             let times = inputContexts.times;
             if (typeof parseInt(times) !== 'number') {
-                times = 2;
+                times = 3;
             } else if (times < 1) {
-                times = 2;
+                times = 3;
             } else if (times > 5) {
                 times = 5;
             }
