@@ -61,11 +61,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
                     speech: `Here's your code. Let x = "${value}". I've also added a function called "say" that will tell me to say out loud what you've put in the variable x.`,
-                    displayText: "Here's your code:"
+                    displayText: `Here's your code: \nlet x = "${value}"; \nsay(x);`
                 })
-                .addBasicCard(
-                    app.buildBasicCard(`let x = "**${value}**"; \nsay(x);`)
-                )
                 .addSuggestions(['run code', 'do something else'])
             
             app.ask(googleResponse);
@@ -86,10 +83,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Let's place the first item in the array x. \
-                    \nIn code, we start counting at 0. \nSo what should go in position 0?`)
-                .addBasicCard(
-                    app.buildBasicCard(code)
-                )
+                    In code, we start counting at 0. So what should go in position 0?`)
+                .addSimpleResponse({
+                  speech: '',
+                  displayText: code
+                })
             
             app.setContext('array-fill', 1, {
                 code: code,
@@ -116,9 +114,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             if (moreArrayIndicesToFill) {
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse(`And what should go in position ${i+1}?`)
-                    .addBasicCard(
-                        app.buildBasicCard(code)
-                    )
+                    .addSimpleResponse({
+                      speech: '',
+                      displayText: code
+                    })
                 // repeat to fill remainder of array
                 app.setContext('array-fill', 1, {
                     code: code,
@@ -128,14 +127,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 });
             } else {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Because we started counting at 0, we stop counting at ${size-1} instead of ${size}.`)
+                    .addSimpleResponse(`Because we started counting at 0, we stop counting at ${size-1} instead of at ${size}.`)
                     .addSimpleResponse({
                         speech: `Here's your code: ${code}. I've also added a function called "say" that will tell me to say out loud what you've put in the array x.`,
-                        displayText: `Here's your code:`
+                        displayText: `Here's your code: \n${code} \nsay(x);`
                     })
-                    .addBasicCard(
-                        app.buildBasicCard(code + `\nsay(x);`)
-                    )
                     .addSuggestions(['run code', 'do something else']);
                 app.setContext('array-run', 1, {
                     array: array
