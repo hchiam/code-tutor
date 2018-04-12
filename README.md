@@ -6,6 +6,8 @@ Let's help people who can't use their hands to learn to code by talking to the G
 
 Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended.
 
+`index.js` is my inline editor code, which requires the imports listed in `package.json` (you’ll see a tab for it in the inline editor). The `.zip` file contains my app’s intents, entities, and other app info.
+
 ## Previous work:
 
 * https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow' inline editor instead)
