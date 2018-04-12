@@ -147,6 +147,21 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         //         .addSimpleResponse(`Here's your array: ${array}`)
         //     app.ask(googleResponse);
         // },
+        
+        'loop-run': () => {
+            // for this to work, need these contexts:
+                // loop-run-code, loop-times, loop-what
+            // and also these parameters:
+                // times @sys.number #loop-times.times
+                // what @sys.number #loop-what.what
+            let times = inputContexts.times;
+            let what = inputContexts.what;
+            let say = (what + ' ').repeat(times);
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(say)
+            
+            app.ask(googleResponse);
+        },
     };
     
     if (!actionHandlers[action]) {
