@@ -73,8 +73,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let code = `let x = [${' ,'.repeat(size-1)} ];`;
             
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse(`Let's place the first item in the array x. \
-                    In code, we start counting at 0. So what should go in position 0?`)
+                .addSimpleResponse(`Let's place the first item in the array x. In code, we start counting at 0. So what should go in position 0?`)
                 .addSimpleResponse({
                   speech: '',
                   displayText: code
