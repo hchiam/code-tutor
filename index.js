@@ -70,7 +70,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 size = 10;
             }
             
-            let code = `let x = [${' ... , '.repeat(size-1)}... ];`;
+            let code = `let x = [${' ,'.repeat(size-1)} ];`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Let's place the first item in the array x. \
