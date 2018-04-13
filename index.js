@@ -63,6 +63,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 size = 2;
             } else if (size < 2) {
                 size = 2;
+            } else if (size >= 9000) {
+                size = 2;
+                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor signing out.</speak>`);
             } else if (size > 10) {
                 size = 10;
             }
@@ -143,6 +146,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 times = 3;
             } else if (times < 1) {
                 times = 3;
+            } else if (times >= 9000) {
+                times = 2;
+                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor signing out.</speak>`);
             } else if (times > 5) {
                 times = 5;
             }
@@ -179,14 +185,20 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 times = 3;
             } else if (times < 1) {
                 times = 3;
+            } else if (times >= 9000) {
+                times = 2;
+                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor signing out.</speak>`);
             } else if (times > 5) {
                 times = 5;
             }
             
             let say = (what + ' ').repeat(times);
+            
+            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg"></audio>Congrats! You just created a loop. What would you like to try next?</speak>`;
+            
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
-                .addSimpleResponse('What would you like to try next?')
+                .addSimpleResponse(congrats)
                 .addSuggestions(['another loop', 'a variable', 'an array', 'a string'])
             
             app.ask(googleResponse);
