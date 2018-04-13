@@ -1,0 +1,63 @@
+{
+  "id": "d6b74d1b-3ebc-45be-a3c3-5774139db9b7",
+  "name": "0.2 easter egg",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eDid you say \"hidden feature\"? You\u0027ll have to keep searching. :)\u003c/speak\u003e",
+          "displayText": "Did you say \"hidden feature\"? You\u0027ll have to keep searching. :)"
+        },
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "Now, what would you like to create?"
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "a variable"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523582046,
+  "fallbackIntent": false,
+  "events": []
+}

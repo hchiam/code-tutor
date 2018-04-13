@@ -1,0 +1,39 @@
+{
+  "id": "398e98e3-50b9-46e0-90de-90ed7639a228",
+  "name": "3.5.1 sound",
+  "auto": true,
+  "contexts": [
+    "sound-effects"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sound-effects",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. More features coming soon.\u003c/speak\u003e",
+          "displayText": "Password accepted."
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523584400,
+  "fallbackIntent": false,
+  "events": []
+}

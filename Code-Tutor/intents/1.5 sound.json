@@ -1,0 +1,53 @@
+{
+  "id": "3f55ba5b-ad8b-444e-a19b-a282597099c0",
+  "name": "1.5 sound",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "pre-sound-effects",
+      "affectedContexts": [
+        {
+          "name": "sound-effects",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "textToSpeech": "You found a hidden feature! Applause:",
+          "displayText": "You found a hidden feature! Applause:"
+        },
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/foley/hand_claps_medium.ogg\"\u003e\u003c/audio\u003eWhat\u0027s the password?\u003c/speak\u003e",
+          "displayText": "What\u0027s the password?"
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523583450,
+  "fallbackIntent": false,
+  "events": []
+}
