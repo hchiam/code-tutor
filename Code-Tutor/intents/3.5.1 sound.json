@@ -18,7 +18,7 @@
           "lang": "en",
           "customizeAudio": true,
           "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. More features coming soon.\u003c/speak\u003e",
-          "displayText": "Password accepted."
+          "displayText": "Password accepted. More features coming soon."
         },
         {
           "type": 0,
@@ -33,7 +33,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523584400,
+  "lastUpdate": 1523585943,
   "fallbackIntent": false,
   "events": []
 }

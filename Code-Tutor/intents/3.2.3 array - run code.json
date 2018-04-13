@@ -27,10 +27,10 @@
               "title": "another array"
             },
             {
-              "title": "a variable"
+              "title": "a string"
             },
             {
-              "title": "a string"
+              "title": "a variable"
             },
             {
               "title": "a loop"
@@ -52,7 +52,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523503225,
+  "lastUpdate": 1523585786,
   "fallbackIntent": false,
   "events": []
 }
