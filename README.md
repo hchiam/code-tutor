@@ -20,7 +20,7 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 
 * https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow's inline editor instead)
 * [Mental Temperature Converter app](https://github.com/hchiam/mental-temperature-converter) for the Google Assistant
-* [LUI](https://github.com/hchiam/language-user-interface)'s programming add-on
+* [LUI](https://github.com/hchiam/language-user-interface)'s programming [add-on](https://github.com/hchiam/language-user-interface/blob/master/add-on.js)
 * [Please](https://github.com/hchiam/please), an experimental programming language
 * My [programmingByVoice](https://github.com/hchiam/programmingByVoice) web interface
 * [How](https://github.com/hchiam/how), an interactive programming test
