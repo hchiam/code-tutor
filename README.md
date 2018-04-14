@@ -2,9 +2,9 @@
 
 [![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
-Long-term goal: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
+**Long-term goal**: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
 
-For now: Conversationally teach simple coding concepts. Code hands-free.
+**For now**: Conversationally teach simple coding concepts. Code hands-free.
 
 Made possible thanks to support from family and friends.
 
