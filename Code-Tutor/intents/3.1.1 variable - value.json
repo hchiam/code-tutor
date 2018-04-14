@@ -1,6 +1,6 @@
 {
   "id": "29cccbc8-c71b-4427-9f72-cd3289824b42",
-  "name": "3.1.1 variable lesson - value",
+  "name": "3.1.1 variable - value",
   "auto": true,
   "contexts": [
     "variable"
@@ -69,7 +69,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523575379,
+  "lastUpdate": 1523669274,
   "fallbackIntent": false,
   "events": []
 }

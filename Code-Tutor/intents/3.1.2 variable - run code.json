@@ -1,6 +1,6 @@
 {
   "id": "4cdd6745-c72a-442f-8ffb-e075cc346a7b",
-  "name": "3.1.2 variable lesson - run code",
+  "name": "3.1.2 variable - run code",
   "auto": true,
   "contexts": [
     "variable",
@@ -61,7 +61,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1522729245,
+  "lastUpdate": 1523669280,
   "fallbackIntent": false,
   "events": []
 }

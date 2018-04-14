@@ -193,13 +193,94 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let say = (what + ' ').repeat(times);
             
-            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to do next?</speak>`;
+            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next?</speak>`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
                 .addSimpleResponse(congrats)
                 .addSuggestions(['another loop', 'a variable', 'play with sound effects'])
             
+            app.ask(googleResponse);
+        },
+        
+        'sound-effects-more-info': () => {
+            let code = `let x = "nothing";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse("More accurately, an if statement lets your code instructions make a decision based on a value, \
+                    such as what's inside a variable. \nFor example, I made this code for you: " + code)
+                .addSimpleResponse(`What would you like to put in the variable x?`)
+            
+            app.ask(googleResponse);
+        },
+        
+        'sound-effects-value-response': () => {
+            let value = inputContexts.value;
+            let googleResponse;
+            
+            if (value === "beep") {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse(`Here's your code: \nlet x = "beep";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`)
+                    .addSimpleResponse(`Now say "run code".`)
+                    .addSuggestions(['run code', 'do something else'])
+                app.setContext('sound-effects-beep');
+            } else if (value === "wood planks") {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse(`Here's your code: \nlet x = "wood planks";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`)
+                    .addSimpleResponse(`Now say "run code".`)
+                    .addSuggestions(['run code', 'do something else'])
+                app.setContext('sound-effects-wood-planks');
+            } else {
+                googleResponse = app.buildRichResponse()
+                    .addSimpleResponse({
+                        speech: `Here's your code`,
+                        displayText: `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
+                    })
+                    .addSimpleResponse({
+                        speech: `Nothing will play if you run this code.`,// Please say another value.`,
+                        displayText: `Nothing will play if you run this code.`// Please say another value.`
+                    })
+                    .addSuggestions(['do something else', 'sandbox', 'a variable', 'an array', 'a string', 'a loop'])
+                // // not working right now:
+                // app.setContext('sound-effects-value-response', 1, {
+                //   value: value
+                // });
+            }
+            app.ask(googleResponse);
+        },
+        
+        'sound-effects-beep': () => {
+            let say =  '<speak><audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
+                <audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
+                <audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
+                What would you like to try next?</speak>';
+            
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse({
+                    speech: say,
+                    displayText: '(beep)'
+                })
+                .addSuggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop'])
+            
+            app.ask(googleResponse);
+        },
+        
+        'sound-effects-wood-planks': () => {
+            let say =  `<speak><audio src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>What would you like to try next?</speak>`;
+            
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse({
+                    speech: say,
+                    displayText: '(wood planks)'
+                })
+                .addSuggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop'])
+            
+            app.ask(googleResponse);
+        },
+        
+        'sandbox': () => {
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse('Sandbox is still under development. What would you like to try next?')
+                .addSuggestions(['a variable', 'an array', 'a string', 'a loop'])
             app.ask(googleResponse);
         },
     };

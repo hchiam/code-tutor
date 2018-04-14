@@ -1,19 +1,21 @@
 {
-  "id": "8eda261a-92ea-4f78-9826-e504705e6659",
-  "name": "-1.0 No/Bye",
+  "id": "096694f6-ec65-4198-ba0f-7e904474c7f3",
+  "name": "3.5.3.1 sound effects - beep",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "sound-effects-beep"
+  ],
   "responses": [
     {
       "resetContexts": false,
-      "action": "no-bye",
+      "action": "sound-effects-beep",
       "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
           "type": 0,
           "lang": "en",
-          "speech": "Ok bye! Code Tutor version 1 signing out."
+          "speech": []
         }
       ],
       "defaultResponsePlatforms": {},
@@ -21,9 +23,9 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523668631,
+  "lastUpdate": 1523670766,
   "fallbackIntent": false,
   "events": []
 }

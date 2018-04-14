@@ -1,0 +1,61 @@
+{
+  "id": "398e98e3-50b9-46e0-90de-90ed7639a228",
+  "name": "3.5.1 sound effects - unlock",
+  "auto": true,
+  "contexts": [
+    "sound-effects"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sound-effects",
+      "affectedContexts": [
+        {
+          "name": "sound-effects-more-info",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to learn more?\u003c/speak\u003e",
+          "displayText": "Password accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to learn more?"
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "yes"
+            },
+            {
+              "title": "no"
+            },
+            {
+              "title": "what\u0027s an if statement?"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523671087,
+  "fallbackIntent": false,
+  "events": []
+}

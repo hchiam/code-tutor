@@ -1,0 +1,40 @@
+{
+  "id": "d24e0a6d-2043-41a1-a71a-3aabc42d8383",
+  "name": "3.5.3 sound effects - value response",
+  "auto": true,
+  "contexts": [
+    "sound-effects-value"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sound-effects-value-response",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "bba1f206-1749-4986-b769-548491e7970a",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "value",
+          "value": "$value",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523672004,
+  "fallbackIntent": false,
+  "events": []
+}

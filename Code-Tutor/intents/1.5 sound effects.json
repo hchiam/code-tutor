@@ -1,6 +1,6 @@
 {
   "id": "3f55ba5b-ad8b-444e-a19b-a282597099c0",
-  "name": "1.5 sound",
+  "name": "1.5 sound effects",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -47,7 +47,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523583450,
+  "lastUpdate": 1523672274,
   "fallbackIntent": false,
   "events": []
 }

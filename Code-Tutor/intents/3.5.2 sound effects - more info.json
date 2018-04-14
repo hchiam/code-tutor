@@ -1,0 +1,51 @@
+{
+  "id": "9a5cf562-b00d-4e7e-b189-494b3137ad01",
+  "name": "3.5.2 sound effects - more info",
+  "auto": true,
+  "contexts": [
+    "sound-effects-more-info"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sound-effects-more-info",
+      "affectedContexts": [
+        {
+          "name": "sound-effects-value",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "More accurately, an if statement lets your code instructions make a decision based on a value, such as what\u0027s inside a variable. For example, I made this code for you:"
+        },
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "let x \u003d \"nothing\";\nif (x \u003d\u003d \"beep\") {\n    playBeep();\n} else if (x \u003d\u003d \"wood planks\") {\n    playWoodPlanks();\n}"
+        },
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "What would you like to change the variable to?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523671417,
+  "fallbackIntent": false,
+  "events": []
+}
