@@ -249,29 +249,32 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sound-effects-beep': () => {
-            let say =  '<speak><audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
+            let say =  '<speak>\
                 <audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
                 <audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
-                What would you like to try next?</speak>';
+                <audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>\
+                </speak>';
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
                     speech: say,
                     displayText: '(beep)'
                 })
+                .addSimpleResponse('What would you like to try next?')
                 .addSuggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop'])
             
             app.ask(googleResponse);
         },
         
         'sound-effects-wood-planks': () => {
-            let say =  `<speak><audio src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>What would you like to try next?</speak>`;
+            let say =  `<speak><audio src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio></speak>`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse({
                     speech: say,
                     displayText: '(wood planks)'
                 })
+                .addSimpleResponse('What would you like to try next?')
                 .addSuggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop'])
             
             app.ask(googleResponse);
