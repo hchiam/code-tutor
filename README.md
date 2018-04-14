@@ -2,7 +2,11 @@
 
 [![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
-Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
+Long-term goal: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
+
+For now: Conversationally teach simple coding concepts. Code hands-free.
+
+Made possible thanks to support from family and friends.
 
 Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended.
 
