@@ -18,7 +18,7 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 
 ## Previous Work:
 
-* https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow' inline editor instead)
+* https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow's inline editor instead)
 * [Mental Temperature Converter app](https://github.com/hchiam/mental-temperature-converter) for the Google Assistant
 * [LUI](https://github.com/hchiam/language-user-interface)'s programming add-on
 * [Please](https://github.com/hchiam/please), an experimental programming language
