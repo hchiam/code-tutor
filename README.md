@@ -6,7 +6,7 @@ Let's help people who can't use their hands to learn to code by talking to the G
 
 Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended.
 
-# Files:
+## Files:
 
 * `index.js` is my inline editor code. You can use it to figure out how to use the inline editor faster in your own projects. For it to work, my code requires the imports listed in 
 * `package.json` (you’ll see a tab for this in the inline editor). 
