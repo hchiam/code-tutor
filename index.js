@@ -207,7 +207,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let code = `let x = "nothing";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("More accurately, an if statement lets your code instructions make a decision based on a value, \
-                    such as what's inside a variable. \nFor example, I made this code for you: " + code)
+                    such as what's inside a variable. \nFor example, I made this code for you: \n\n" + code)
                 .addSimpleResponse(`What would you like to put in the variable x?`)
             
             app.ask(googleResponse);
