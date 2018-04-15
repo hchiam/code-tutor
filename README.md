@@ -18,6 +18,10 @@ I'm open-sourcing my code to help others learn faster: https://github.com/hchiam
 * `package.json` (you’ll see a tab for this in the inline editor). 
 * The `CodeTutor` folder is an un-zipped export of my agent from Dialogflow (API.ai), which may contain the app’s intents, entities, and other info besides the other 2 files. 
 
+## Related:
+
+https://codepen.io/hchiam/full/mxZpda/ and https://github.com/hchiam/code-tutor-sandbox-test
+
 ## Previous Work:
 
 * https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow's inline editor instead)
