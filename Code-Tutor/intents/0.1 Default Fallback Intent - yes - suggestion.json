@@ -25,7 +25,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "Thanks. I heard this: $suggestion."
+          "speech": []
         }
       ],
       "defaultResponsePlatforms": {},
@@ -35,7 +35,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1522989863,
+  "lastUpdate": 1523739869,
   "fallbackIntent": false,
   "events": []
 }

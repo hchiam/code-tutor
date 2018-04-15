@@ -33,10 +33,11 @@
       ],
       "messages": [
         {
-          "type": "simple_response",
+          "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "textToSpeech": "say(\"$what\");"
+          "formattedText": "say(\"$what\");",
+          "buttons": []
         },
         {
           "type": 0,
@@ -53,7 +54,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523508155,
+  "lastUpdate": 1523740572,
   "fallbackIntent": false,
   "events": []
 }

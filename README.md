@@ -12,6 +12,8 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 
 ## Files:
 
+I'm open-sourcing my code to help others learn faster: https://github.com/hchiam/code-tutor
+
 * `index.js` is my inline editor code. You can use it to figure out how to use the inline editor faster in your own projects. For it to work, my code requires the imports listed in 
 * `package.json` (you’ll see a tab for this in the inline editor). 
 * The `CodeTutor` folder is an un-zipped export of my agent from Dialogflow (API.ai), which may contain the app’s intents, entities, and other info besides the other 2 files. 

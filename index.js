@@ -21,6 +21,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         response: response
     });
     
+    // so I can change the version number in just one spot (for the fulfillment inline editor anyways):
+    const v = 1; // also edit the intent -1.0 No/Bye
+    
     const actionHandlers = {
         'default': () => {
             // https://developers.google.com/actions/assistant/responses
@@ -50,7 +53,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 app.ask(googleResponse);
             } else {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Sorry, right now Google's Dialogflow isn't able to let me open a link for you hands-free. If you use a device with a screen, you'll see a button to go to a feedback form. Code Tutor signing out.`)
+                    .addSimpleResponse(`Sorry, right now Google's Dialogflow isn't able to let me open a link for you hands-free. If you use a device with a screen, you'll see a button to go to a feedback form. Code Tutor version ${v} signing out.`)
                 // exit by using tell instead of say
                 app.tell(googleResponse);
             }
@@ -65,7 +68,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 size = 2;
             } else if (size >= 9000) {
                 size = 2;
-                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor signing out.</speak>`);
+                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor version ${v} signing out.</speak>`);
             } else if (size > 10) {
                 size = 10;
             }
@@ -147,7 +150,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 times = 3;
             } else if (times >= 9000) {
                 times = 2;
-                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor signing out.</speak>`);
+                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor version ${v} signing out.</speak>`);
             } else if (times > 5) {
                 times = 5;
             }
@@ -186,7 +189,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 times = 3;
             } else if (times >= 9000) {
                 times = 2;
-                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor signing out.</speak>`);
+                app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor version ${v} signing out.</speak>`);
             } else if (times > 5) {
                 times = 5;
             }
@@ -204,10 +207,16 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sound-effects-more-info': () => {
-            let code = `let x = "nothing";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
+            let say = "More accurately, an if statement lets your code instructions make a decision based on a value, \
+                such as what's inside a variable. \nFor example, I made this code for you: \n\n"
+            let codeSay = `Let variable x equal "nothing". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`;
+            let codeShow = `let x = "nothing";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
+            
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse("More accurately, an if statement lets your code instructions make a decision based on a value, \
-                    such as what's inside a variable. \nFor example, I made this code for you: \n\n" + code)
+                .addSimpleResponse({
+                    speech: say + codeSay,
+                    displayText: say + codeShow
+                })
                 .addSimpleResponse(`What would you like to put in the variable x?`)
             
             app.ask(googleResponse);
@@ -219,20 +228,26 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             if (value === "beep") {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Here's your code: \nlet x = "beep";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`)
+                    .addSimpleResponse({
+                        speech: `Here's your code: Let variable x equal "beep". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`,
+                        displayText: `Here's your code: \nlet x = "beep";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
+                    })
                     .addSimpleResponse(`Now say "run code".`)
                     .addSuggestions(['run code', 'do something else'])
                 app.setContext('sound-effects-beep');
             } else if (value === "wood planks") {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`Here's your code: \nlet x = "wood planks";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`)
+                    .addSimpleResponse({
+                        speech: `Here's your code: Let variable x equal "wood planks". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`,
+                        displayText: `Here's your code: \nlet x = "wood planks";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
+                    })
                     .addSimpleResponse(`Now say "run code".`)
                     .addSuggestions(['run code', 'do something else'])
                 app.setContext('sound-effects-wood-planks');
-            } else {
+            } else { // if value = some other value
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse({
-                        speech: `Here's your code`,
+                        speech: `Here's your code: Let variable x equal "${value}". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`,
                         displayText: `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
                     })
                     .addSimpleResponse({
