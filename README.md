@@ -20,7 +20,7 @@ I'm open-sourcing my code to help others learn faster: https://github.com/hchiam
 
 ## Related:
 
-https://codepen.io/hchiam/full/mxZpda/ and https://github.com/hchiam/code-tutor-sandbox-test
+https://code-tutor-sandbox-test.glitch.me/ and https://github.com/hchiam/code-tutor-sandbox-test
 
 ## Previous Work:
 
