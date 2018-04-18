@@ -2,6 +2,8 @@
 
 [![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
+Listed in the [Google Assistant web directory](https://assistant.google.com/services/a/uid/000000668d1fb538?hl=en-CA).
+
 **Long-term goal**: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
 
 **For now**: Conversationally teach simple coding concepts. Code hands-free.
