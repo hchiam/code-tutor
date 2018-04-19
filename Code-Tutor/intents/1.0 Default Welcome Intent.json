@@ -56,6 +56,9 @@
             },
             {
               "title": "a loop"
+            },
+            {
+              "title": "give me an example"
             }
           ]
         },
@@ -79,7 +82,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523584128,
+  "lastUpdate": 1524098852,
   "fallbackIntent": false,
   "events": [
     {

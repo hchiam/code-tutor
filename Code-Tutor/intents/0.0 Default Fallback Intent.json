@@ -34,7 +34,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "I\u0027m still learning. Would you like to suggest something for me to work on to teach you next time?"
+          "speech": "I\u0027m still learning. If you\u0027re not sure what to do, just ask me. Would you like to suggest something for me to work on to teach you next time?"
         }
       ],
       "defaultResponsePlatforms": {
@@ -46,7 +46,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523579144,
+  "lastUpdate": 1524102441,
   "fallbackIntent": true,
   "events": []
 }

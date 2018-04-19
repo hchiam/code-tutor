@@ -1,0 +1,40 @@
+{
+  "id": "faa093cc-80c4-4a19-973d-3c393ddda325",
+  "name": "3.6.2 example - run code",
+  "auto": true,
+  "contexts": [
+    "example-run-code"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "example-run-code",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "03a16286-ba68-45e1-b558-9d9c847417d3",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "name",
+          "value": "#example-run-code.name",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1524102297,
+  "fallbackIntent": false,
+  "events": []
+}

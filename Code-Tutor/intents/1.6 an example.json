@@ -1,0 +1,46 @@
+{
+  "id": "f1694a2c-9f1a-431d-a971-8997072bb64a",
+  "name": "1.6 an example",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "example-name",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "textToSpeech": "Here\u0027s an example of code instructions: Let the variable \"greeting\" equal \"hi there\". Let name equal \"someone\". Let message equal greeting plus name. If name \u003d \"someone\", then say \"What\u0027s your name?\". And then, while counting from 0, and stopping before 3, say message.",
+          "displayText": "let greeting \u003d \"hi there \";\nlet name \u003d \"someone\";\nlet message \u003d greeting + name;\nif (name \u003d\u003d \"someone\")\n    say(\"What\u0027s your name?\");\nfor (let i\u003d0; i\u003c3; i++)\n    say(message);"
+        },
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "textToSpeech": "What would you like to put in the name variable? Please give me a made-up name."
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1524103172,
+  "fallbackIntent": false,
+  "events": []
+}

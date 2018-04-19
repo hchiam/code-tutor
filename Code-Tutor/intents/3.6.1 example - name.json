@@ -1,20 +1,31 @@
 {
-  "id": "891ca144-eb4c-4517-9085-7a4ad2408a63",
-  "name": "1.6 sandbox",
+  "id": "ea4d92cd-4509-4e2c-b4d9-834c8c163fb9",
+  "name": "3.6.1 example - name",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "example-name"
+  ],
   "responses": [
     {
       "resetContexts": false,
-      "action": "sandbox",
+      "action": "example-name",
       "affectedContexts": [
         {
-          "name": "sandbox",
+          "name": "example-run-code",
           "parameters": {},
           "lifespan": 1
         }
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "b422bf8c-e7f5-490f-bea4-13281842efd9",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "name",
+          "value": "$name",
+          "isList": false
+        }
+      ],
       "messages": [
         {
           "type": 0,
@@ -29,7 +40,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523672143,
+  "lastUpdate": 1524103203,
   "fallbackIntent": false,
   "events": []
 }

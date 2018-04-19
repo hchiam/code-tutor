@@ -295,6 +295,55 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             app.ask(googleResponse);
         },
         
+        'example-name': () => {
+            let name = inputContexts.name;
+            
+            let say = 'Here\'s your code: \
+                Let greeting equal "hi there". \
+                Let name equal "' + name + '". \
+                Let message equal greeting plus name. \
+                If name = "someone", then say "What\'s your name?". \
+                And then, while counting from 0, and stopping before 3, say message.';
+            let code = 'let greeting = "hi there ";\
+                \nlet name = "' + name + '";\
+                \nlet message = greeting + name;\
+                \nif (name == "someone")\
+                \n\tsay("What\'s your name?");\
+                \nfor (let i=0; i<3; i++)\
+                \n\tsay(message);';
+            
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse({
+                    speech: say,
+                    displayText: code
+                })
+                .addSimpleResponse(`Say "run code" and I'll follow the instructions.`)
+                .addSuggestions(['run code', `what's a variable?`, `what's a loop?`]);
+            
+            app.setContext('example-run-code', 1, {
+                name: name
+            });
+            
+            app.ask(googleResponse);
+        },
+        
+        'example-run-code': () => {
+            let say = '';
+            
+            let greeting = "hi there ";
+            let name = inputContexts.name;
+            let message = greeting + name;
+            if (name === "someone") say += `What's your name? `;
+            say += (message + ' ').repeat(3);
+            
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(say)
+                .addSimpleResponse(`What would you like to try next?`)
+                .addSuggestions(['a variable', 'an array', 'a string', 'a loop'])
+            
+            app.ask(googleResponse);
+        },
+        
         'sandbox': () => {
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse('Sandbox is still under development. What would you like to try next?')
