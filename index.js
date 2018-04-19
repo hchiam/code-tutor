@@ -22,7 +22,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     });
     
     // so I can change the version number in just one spot (for the fulfillment inline editor anyways):
-    const v = 1; // also edit the intent -1.0 No/Bye
+    const v = 2; // also edit the intent -1.0 No/Bye
     
     const actionHandlers = {
         'default': () => {
