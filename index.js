@@ -69,14 +69,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             } else if (size >= 9000) {
                 size = 2;
                 app.tell(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that was too O.P.; Code Tutor version ${v} signing out.</speak>`);
-            } else if (size > 10) {
-                size = 10;
+            } else if (size > 5) {
+                size = 5;
             }
             
             let code = `let x = [${' ,'.repeat(size-1)} ];`;
             
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse(`Let's place the first item in the array x. In code, we start counting at 0. So what should go in position 0?`)
+                .addSimpleResponse(`Let's place the first item in the array x. By the way, in code, we count starting at 0. So, what should be item number 0?`)
                 .addSimpleResponse({
                   speech: '',
                   displayText: code
@@ -106,7 +106,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             if (moreArrayIndicesToFill) {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`And what should go in position ${i+1}?`)
+                    .addSimpleResponse(`And what is item number ${i+1} of the list?`)
                     .addSimpleResponse({
                       speech: '',
                       displayText: code
@@ -120,7 +120,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 });
             } else {
                 googleResponse = app.buildRichResponse()
-                    .addSimpleResponse(`We counted from 0, so we stop at ${size-1} and not at ${size}.`)
+                    .addSimpleResponse(`We counted starting at 0, so we stop at ${size-1}, and not at ${size}.`)
                     .addSimpleResponse({
                         speech: `Here's your code: ${code}. I added a function say(x). Say "run code" and I'll follow the instructions.`,
                         displayText: `Here's your code: \n${code} \nsay(x);`

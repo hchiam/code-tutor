@@ -31,7 +31,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "An array is like a numbered list of variables. In code, we start counting at 0, so the first item in an array is at position 0, not 1. What would you like to create?"
+          "speech": "An array is like a numbered list of variables. Think of a shopping list. By the way, in code, we start counting at 0, so the first item in an array is at position 0, not 1. What would you like to create?"
         }
       ],
       "defaultResponsePlatforms": {
@@ -43,7 +43,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523504257,
+  "lastUpdate": 1524104129,
   "fallbackIntent": false,
   "events": []
 }

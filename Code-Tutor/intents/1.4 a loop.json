@@ -18,7 +18,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "A loop lets you repeat code. You can make me say something a few times in a row. What would you like me to say?"
+          "speech": "A loop lets you repeat code. A loop lets you repeat code. You can make me say something a few times in a row. What would you like me to say?"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -28,7 +28,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523506942,
+  "lastUpdate": 1524103790,
   "fallbackIntent": false,
   "events": []
 }
