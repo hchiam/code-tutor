@@ -10,6 +10,13 @@
       "parameters": [],
       "messages": [
         {
+          "type": "basic_card",
+          "platform": "google",
+          "lang": "en",
+          "formattedText": "░██░░░█░░░░░░░░\n█░░█░░████░░███\n████░░█░░█░░█░░\n█░░█░░████░░███",
+          "buttons": []
+        },
+        {
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
@@ -43,7 +50,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1522726903,
+  "lastUpdate": 1524185127,
   "fallbackIntent": false,
   "events": []
 }

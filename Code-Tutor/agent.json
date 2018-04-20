@@ -17,7 +17,8 @@
     },
     "voiceType": "MALE_1",
     "capabilities": [],
-    "protocolVersion": "V2"
+    "protocolVersion": "V2",
+    "autoPreviewEnabled": true
   },
   "defaultTimezone": "America/New_York",
   "webhook": {
