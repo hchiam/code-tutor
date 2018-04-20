@@ -16,8 +16,8 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 
 This app works great on a device with a screen.
 
-Android: https://assistant.google.com/intl/en_ca/platforms/phones/
-iPhone: https://itunes.apple.com/ca/app/google-assistant/id1220976145
+* Android: https://assistant.google.com/intl/en_ca/platforms/phones/
+* iPhone: https://itunes.apple.com/ca/app/google-assistant/id1220976145
 
 ## Files:
 
