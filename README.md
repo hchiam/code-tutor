@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
-Listed in the [Google Assistant web directory](https://assistant.google.com/services/a/uid/000000668d1fb538?hl=en-CA).
+Listed in the [Google Assistant web directory](https://assistant.google.com/services/a/uid/000000668d1fb538).
 
 **Long-term goal**: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
 
@@ -11,6 +11,13 @@ Listed in the [Google Assistant web directory](https://assistant.google.com/serv
 Made possible thanks to support from family and friends.
 
 Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended.
+
+## Use the Google Assistant on Your Phone:
+
+This app works great on a device with a screen.
+
+Android: https://assistant.google.com/intl/en_ca/platforms/phones/
+iPhone: https://itunes.apple.com/ca/app/google-assistant/id1220976145
 
 ## Files:
 
