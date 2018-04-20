@@ -17,19 +17,28 @@
       "parameters": [],
       "messages": [
         {
+          "type": "basic_card",
+          "platform": "google",
+          "lang": "en",
+          "formattedText": "░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░",
+          "buttons": []
+        },
+        {
           "type": 0,
           "lang": "en",
           "speech": "An array is like a numbered list of variables. Think of a shopping list. How long a list would you like? Please pick a number between 2 and 5."
         }
       ],
-      "defaultResponsePlatforms": {},
+      "defaultResponsePlatforms": {
+        "google": true
+      },
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524103753,
+  "lastUpdate": 1524194582,
   "fallbackIntent": false,
   "events": []
 }

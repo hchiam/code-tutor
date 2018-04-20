@@ -16,13 +16,20 @@
       "parameters": [],
       "messages": [
         {
+          "type": "basic_card",
+          "platform": "google",
+          "lang": "en",
+          "formattedText": "█░░░░░░░░░░░░░░░█\n░█░░░░░░░░░░░░░█░\n░░█████████████░░\n░░█░░░░░░░░░░░█░░\n░░█░░░░█░█░░░░█░░\n░░█░░░░░█░░░░░█░░\n░░█░░░░█░█░░░░█░░\n░░█░░░░░░░░░░░█░░\n░░█████████████░░",
+          "buttons": []
+        },
+        {
           "type": 0,
           "lang": "en",
           "speech": "A variable is like a \"box\" that holds information. To start, say something, and I\u0027ll put it in a variable named x."
         }
       ],
       "defaultResponsePlatforms": {
-        "google": false
+        "google": true
       },
       "speech": []
     }
@@ -30,7 +37,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523413455,
+  "lastUpdate": 1524195499,
   "fallbackIntent": false,
   "events": []
 }

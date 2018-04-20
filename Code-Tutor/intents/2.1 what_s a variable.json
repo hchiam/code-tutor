@@ -38,7 +38,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "A variable holds a piece of information for you, like a \"box\" in a computer\u0027s memory. What would you like to create?"
+          "speech": "A variable holds a piece of information for you, like a \"box\" in a computer\u0027s memory. Think of a labelled box that you can put things into, but you can also switch out what\u0027s in it. What would you like to create?"
         }
       ],
       "defaultResponsePlatforms": {
@@ -50,7 +50,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524185070,
+  "lastUpdate": 1524195629,
   "fallbackIntent": false,
   "events": []
 }

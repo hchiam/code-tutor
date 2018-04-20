@@ -251,8 +251,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                         displayText: `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
                     })
                     .addSimpleResponse({
-                        speech: `Nothing will play if you run this code.`,// Please say another value.`,
-                        displayText: `Nothing will play if you run this code.`// Please say another value.`
+                        speech: `Nothing will play if you run this code. What would you like to try next?`,// Please say another value.`,
+                        displayText: `Nothing will play if you run this code. What would you like to try next?`// Please say another value.`
                     })
                     .addSuggestions(['do something else', 'sandbox', 'a variable', 'an array', 'a string', 'a loop'])
                 // // not working right now:
@@ -339,7 +339,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
                 .addSimpleResponse(`What would you like to try next?`)
-                .addSuggestions(['a variable', 'an array', 'a string', 'a loop'])
+                .addSuggestions(['a variable', `what's a variable?`, 'an array', 'a string', 'a loop', 'try the example again'])
             
             app.ask(googleResponse);
         },

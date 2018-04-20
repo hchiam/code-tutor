@@ -1,6 +1,6 @@
 {
   "id": "32f2d176-8dac-4160-b319-683d70a1d741",
-  "name": "1.05 do something else",
+  "name": "1.0.2 do something else",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -51,7 +51,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523237615,
+  "lastUpdate": 1524193108,
   "fallbackIntent": false,
   "events": []
 }

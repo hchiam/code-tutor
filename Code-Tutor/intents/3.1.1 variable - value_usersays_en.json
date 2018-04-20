@@ -1,6 +1,66 @@
 [
   {
-    "id": "41ba414f-f5f3-4a08-a2c8-c365353bcdbb",
+    "id": "dcfe95d2-59ab-48e0-b09d-d1059b6b6149",
+    "data": [
+      {
+        "text": "set x equal to @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "a3798203-5b8c-4c98-942a-cfcd7d9d3a37",
+    "data": [
+      {
+        "text": "let x equal @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "005e375e-b36d-4515-92f9-0f68997f6a77",
+    "data": [
+      {
+        "text": "assign @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "17389637-8cb0-4e81-a2f5-ab76faf65283",
+    "data": [
+      {
+        "text": "x equals @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "38df02d3-6540-4b85-b33d-bcb7819951d5",
+    "data": [
+      {
+        "text": "x \u003d @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "b7aedb50-8630-4aba-b961-e59de6d6588b",
     "data": [
       {
         "text": "hi",
@@ -9,10 +69,10 @@
     ],
     "isTemplate": false,
     "count": 0,
-    "updated": 1523574828
+    "updated": 1524192894
   },
   {
-    "id": "c231e71e-2e75-41f6-b785-9402ceab7b99",
+    "id": "03ddb14d-f423-4750-988a-24c0a6c670cd",
     "data": [
       {
         "text": "@sys.any:value",
@@ -21,6 +81,6 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1523574828
+    "updated": 1524192894
   }
 ]

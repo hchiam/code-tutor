@@ -1,30 +1,19 @@
 {
-  "id": "398e98e3-50b9-46e0-90de-90ed7639a228",
-  "name": "3.5.1 sound effects - unlock",
+  "id": "4d67cd9f-977b-4414-9513-988b9f0cf568",
+  "name": "2.6 what\u0027s an if statement",
   "auto": true,
-  "contexts": [
-    "sound-effects"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "sound-effects",
-      "affectedContexts": [
-        {
-          "name": "sound-effects-more-info",
-          "parameters": {},
-          "lifespan": 1
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
-          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to learn more?\u003c/speak\u003e",
-          "displayText": "Password accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to learn more?"
+          "textToSpeech": "An \"if statement\" is like a lock. If you have the right key, then you can access other code. More accurately, an if statement lets your code instructions make a decision based on a value, such as what\u0027s inside a variable. What would you like to create?"
         },
         {
           "type": "basic_card",
@@ -39,10 +28,19 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "yes"
+              "title": "a variable"
             },
             {
-              "title": "no"
+              "title": "what\u0027s a variable?"
+            },
+            {
+              "title": "an array"
+            },
+            {
+              "title": "a string"
+            },
+            {
+              "title": "a loop"
             }
           ]
         }
@@ -54,7 +52,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524195860,
+  "lastUpdate": 1524195838,
   "fallbackIntent": false,
   "events": []
 }

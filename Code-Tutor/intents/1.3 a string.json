@@ -16,19 +16,28 @@
       "parameters": [],
       "messages": [
         {
+          "type": "basic_card",
+          "platform": "google",
+          "lang": "en",
+          "formattedText": "░██░░░█░░░░░░░░\n█░░█░░████░░███\n████░░█░░█░░█░░\n█░░█░░████░░███",
+          "buttons": []
+        },
+        {
           "type": 0,
           "lang": "en",
           "speech": "A string\u0027s like a sentence or array of letters. Let’s try combining 2 strings. Say something for me to put in the first string."
         }
       ],
-      "defaultResponsePlatforms": {},
+      "defaultResponsePlatforms": {
+        "google": true
+      },
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523414041,
+  "lastUpdate": 1524194613,
   "fallbackIntent": false,
   "events": []
 }
