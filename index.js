@@ -367,9 +367,15 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'sandbox-variable': () => {
             let variable = inputContexts.variable;
-            let value = inputContexts.value;
+            let value = wrapIfString(inputContexts.value);
             let code = inputContexts.code;
-            code += `let ${variable} = ${value};\n`
+            // recognize whether variable is being reassigned
+            if (codeVariables.includes(variable)) {
+                code += `${variable} = ${value};\n`;
+            } else {
+                code += `let ${variable} = ${value};\n`;
+                codeVariables.push(variable);
+            }
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -381,7 +387,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         'sandbox-repeat': () => {
             let times = inputContexts.times;
             let code = inputContexts.code;
-            code += `for (let i=0; i<${times}; i++)\n  `
+            code += `for (let i=0; i<${times}; i++)\n  `;
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -391,9 +397,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-say': () => {
-            let what = inputContexts.what;
+            let what = wrapIfString(inputContexts.what);
             let code = inputContexts.code;
-            code += `say(${what});\n`
+            code += `say(${what});\n`;
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -403,10 +409,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-if': () => {
-            let variable = inputContexts.variable;
-            let value = inputContexts.value;
+            let variable = wrapIfString(inputContexts.variable);
+            let value = wrapIfString(inputContexts.value);
             let code = inputContexts.code;
-            code += `if(${variable} == ${value})\n  `
+            code += `if(${variable} == ${value})\n  `;
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -417,7 +423,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'sandbox-run-code': () => {
             let code = inputContexts.code;
-            let output = getOutput(code)
+            let output = getOutput(code);
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`${output}`)
             app.setContext('sandbox', 1, {
@@ -434,6 +440,29 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     actionHandlers[action]();
     
 });
+
+// make this the only global variable for the complex parsing
+// var, not let, to have here near these functions, but have it used in code above too
+var codeVariables = [];
+
+const wrapIfString = (value) => { // recognize if value is a variable name
+    if (value.match(/.+ and .+/i)) {
+        let array = value.split(' and ').map(wrapNaNWithQuotes).join(', ');
+        return `[${array}]`;
+    } else if (isNaN(value) && !codeVariables.includes(value)) {
+        return `"${value}"`;
+    } else {
+        return value;
+    }
+}
+
+const wrapNaNWithQuotes = (value) => {
+  if (isNaN(value) && !codeVariables.includes(value)) {
+    return `"${value}"`;
+  } else {
+    return value;
+  }
+}
 
 const getOutput = (code) => {
     return `(Need to do complex parsing here.) ${code}`;
