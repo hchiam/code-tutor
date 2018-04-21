@@ -1,0 +1,58 @@
+{
+  "id": "8de9b5bc-aa90-4ae2-941e-0c0af609abd0",
+  "name": "3.7.1 sandbox - variable",
+  "auto": true,
+  "contexts": [
+    "sandbox"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sandbox-variable",
+      "affectedContexts": [
+        {
+          "name": "sandbox",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "11291aa1-2c09-438a-9e8b-581240ac8718",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "variable",
+          "value": "$variable",
+          "isList": false
+        },
+        {
+          "id": "cceaae3c-82df-482b-a27f-ed95cb68817b",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "value",
+          "value": "$value",
+          "isList": false
+        },
+        {
+          "id": "f36cd036-c138-427d-8283-ea2ef5c06785",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "code",
+          "value": "#sandbox.code",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "google": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1524278286,
+  "fallbackIntent": false,
+  "events": []
+}

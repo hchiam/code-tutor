@@ -1,0 +1,52 @@
+{
+  "id": "69745af4-1b52-4e9d-a783-a12833e7fe41",
+  "name": "3.7.3 sandbox - say",
+  "auto": true,
+  "contexts": [
+    "sandbox"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sandbox-say",
+      "affectedContexts": [
+        {
+          "name": "sandbox",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9febc961-2838-4402-9a50-c1d4c010bb4f",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "what",
+          "value": "$what",
+          "isList": false
+        },
+        {
+          "id": "ac797084-ca44-43af-af7b-afda9028493e",
+          "dataType": "@sys.any",
+          "name": "code",
+          "value": "#sandbox.code"
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1524279294,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -344,10 +344,85 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             app.ask(googleResponse);
         },
         
-        'sandbox': () => {
+        'sandbox-list': () => {
+            let code = inputContexts.code;
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse('Sandbox is still under development. What would you like to try next?')
-                .addSuggestions(['a variable', 'an array', 'a string', 'a loop'])
+                .addSimpleResponse("Here's what you can say:")
+                .addSimpleResponse({
+                    speech: 'Apple equals 1 (and 2, and 3, and banana, and so on). \
+                        Repeat 3 times. Say hi. If coconut equals fruit. Run code. \
+                        If you need this list again, just say "what\'s on the list?"',
+                    displayText: '* apple equals 1 (and 2 and 3 and banana and ...)\n\
+                        * repeat 3 times\n\
+                        * say hi\n\
+                        * if coconut equals 4\n\
+                        * run code\n\n\
+                        If you need this list again, just say "what\'s on the list?"'
+                })
+            app.setContext('sandbox', 1, {
+                code: code
+            });
+            app.ask(googleResponse);
+        },
+        
+        'sandbox-variable': () => {
+            let variable = inputContexts.variable;
+            let value = inputContexts.value;
+            let code = inputContexts.code;
+            code += `let ${variable} = ${value};\n`
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`Here's your code:\n\n${code}`)
+            app.setContext('sandbox', 1, {
+                code: code
+            });
+            app.ask(googleResponse);
+        },
+        
+        'sandbox-repeat': () => {
+            let times = inputContexts.times;
+            let code = inputContexts.code;
+            code += `for (let i=0; i<${times}; i++)\n  `
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`Here's your code:\n\n${code}`)
+            app.setContext('sandbox', 1, {
+                code: code
+            });
+            app.ask(googleResponse);
+        },
+        
+        'sandbox-say': () => {
+            let what = inputContexts.what;
+            let code = inputContexts.code;
+            code += `say(${what});\n`
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`Here's your code:\n\n${code}`)
+            app.setContext('sandbox', 1, {
+                code: code
+            });
+            app.ask(googleResponse);
+        },
+        
+        'sandbox-if': () => {
+            let variable = inputContexts.variable;
+            let value = inputContexts.value;
+            let code = inputContexts.code;
+            code += `if(${variable} == ${value})\n  `
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`Here's your code:\n\n${code}`)
+            app.setContext('sandbox', 1, {
+                code: code
+            });
+            app.ask(googleResponse);
+        },
+        
+        'sandbox-run-code': () => {
+            let code = inputContexts.code;
+            let output = getOutput(code)
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`${output}`)
+            app.setContext('sandbox', 1, {
+                code: code
+            });
             app.ask(googleResponse);
         },
     };
@@ -359,3 +434,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     actionHandlers[action]();
     
 });
+
+const getOutput = (code) => {
+    return `(Need to do complex parsing here.) ${code}`;
+}

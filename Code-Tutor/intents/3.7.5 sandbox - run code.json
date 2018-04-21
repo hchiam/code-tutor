@@ -1,0 +1,46 @@
+{
+  "id": "232597c4-4864-40ba-a81d-9a51a710f229",
+  "name": "3.7.5 sandbox - run code",
+  "auto": true,
+  "contexts": [
+    "sandbox"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sandbox-run-code",
+      "affectedContexts": [
+        {
+          "name": "sandbox",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aaf60644-6351-4ff2-ada5-dd190167a3a4",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "code",
+          "value": "#sandbox.code",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1524279778,
+  "fallbackIntent": false,
+  "events": []
+}
