@@ -427,7 +427,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let variable = wrapIfString(removeSomePunctuation(inputContexts.variable));
             let value = wrapIfString(removeSomePunctuation(inputContexts.value));
-            code += `if(${variable} == ${value})\n  `;
+            code += `if (${variable} == ${value})\n  `;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
@@ -505,14 +505,25 @@ const removeSomePunctuation = (value) => {
     return value.replace(/[.,\\\/#!$%\^&\*;:{}_`~()<>@?]/g,'');
 }
 
+const isSay = (line) => { // returns the whole match object
+    return line.match(/say[(](.+?)[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
+}
+
+const isIf = (line) => { // returns the whole match object
+    return line.match(/if [(](.+?) == (.+?)[)]/i);
+}
+
+// figure out the audio output based on the code
 const getOutput = (code) => {
+    
     // escape early if there's no audio output (i.e. if say() is not even used)
     if (!code.match(/.*say(.+);.*/i)) return '';
+    
+    let codeLines = code.split('\n');
     
     let variableValues = {}; // e.g. {a:1,b:2}
     
     // fill variableValues dictionary
-    let codeLines = code.split('\n');
     for (let i=0; i<codeLines.length; i++) {
         let match = codeLines[i].match(/(let )?(.+) = (.+);/i);
         if (match) {
@@ -522,24 +533,36 @@ const getOutput = (code) => {
         }
     }
     
-    // otherwise try to figure out the output
-    let sayings = code.split('\n').map((elem) => {
-        
-    let isSaying = elem.match(/say[(](.+?)[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
+    // say will be the final output
+    let say = 'output: ';
+    
+    // check first line of code
+    let isSaying = isSay(codeLines[0]);
     if (isSaying) {
-        let variableName = isSaying[1];
-        if (codeVariables.includes(variableName)) {
-            return variableValues[variableName];
-        }
-        return isSaying[1];
-    } else {
-        return '';
+        say += isSaying[1];
     }
     
-    }).reduce((total, elem) => {
-        if (elem !== '') return total + ' ' + elem;
-        return total;
-    });
-
-    return sayings;
+    // check the rest of the lines of code
+    for (let i=1; i<codeLines.length; i++) {
+        let prev = codeLines[i-1];
+        let curr = codeLines[i];
+        
+        let isAfterIf = isIf(prev);
+        
+        if (!isAfterIf || isAfterIf[1] === isAfterIf[2]) {
+            
+            isSaying = isSay(curr);
+            
+            if (isSaying) {
+                let variableName = isSaying[1];
+                if (codeVariables.includes(variableName)) {
+                    say += variableValues[variableName];
+                } else {
+                    say += isSaying[1];
+                }
+            }
+        }
+    }
+    
+    return say;
 }
