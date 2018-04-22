@@ -12,12 +12,14 @@ Made possible thanks to support from family and friends.
 
 Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended.
 
+Privacy policy: https://goo.gl/PMwsDW
+
 ## Use the Google Assistant on Your Phone:
 
-This app works great on a device with a screen.
+This app works great on a device with a screen. You can get the Google Assistant on your device:
 
 * Android: https://assistant.google.com/intl/en_ca/platforms/phones/
-* iPhone/iPad: https://itunes.apple.com/ca/app/google-assistant/id1220976145
+* iPhone/iPad (I haven't tried it): https://itunes.apple.com/ca/app/google-assistant/id1220976145
 
 ## Files:
 
@@ -29,7 +31,7 @@ I'm open-sourcing my code to help others learn faster: https://github.com/hchiam
 
 ## Related:
 
-https://code-tutor-sandbox-test.glitch.me/ and https://github.com/hchiam/code-tutor-sandbox-test
+https://github.com/hchiam/code-tutor-sandbox-test and https://code-tutor-sandbox-test.glitch.me/
 
 ## Previous Work:
 
