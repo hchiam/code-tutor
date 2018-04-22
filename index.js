@@ -506,80 +506,103 @@ const removeSomePunctuation = (value) => {
 
 // figure out the audio output based on the code
 const getOutput = (code) => {
-  
-  // escape early if there's no audio output (i.e. if say() is not even used)
-  if (!code.match(/.*say(.+);.*/i)) return '';
-  
-  let codeLines = code.split('\n');
-  
-  let variableValues = {}; // e.g. {a:1,b:2}
-  
-  // fill variableValues dictionary
-  for (let i=0; i<codeLines.length; i++) {
-    let match = codeLines[i].match(/(let )?(.+) = (.+);/i);
-    if (match) {
-      let variableName = match[2];
-      let variableValue = match[3];
-      variableValues[variableName] = variableValue;
-    }
-  }
-  
-  // say will be the final output
-  let say = '';
-  
-  // check first line of code
-  let isSaying = isSay(codeLines[0]);
-  if (isSaying) {
-    say += isSaying[1];
-  }
-  
-  // check the rest of the lines of code
-  for (let i=1; i<codeLines.length; i++) {
-    let prev = codeLines[i-1];
-    let curr = codeLines[i];
     
-    let isAfterIf = isIf(prev);
-    let isAfterFor = isFor(prev);
+    // escape early if there's no audio output (i.e. if say() is not even used)
+    if (!code.match(/.*say(.+);.*/i)) return '';
     
-    isSaying = isSay(curr);
+    let codeLines = code.split('\n');
     
-    if ((isAfterIf && isAfterIf[1] === isAfterIf[2]) || (!isAfterIf && !isAfterFor)) {
-      
-      if (isSaying) {
-        let variableName = isSaying[1];
-        if (codeVariables.includes(variableName)) {
-          say += variableValues[variableName];
-        } else {
-          say += isSaying[1];
+    let variableValues = {}; // e.g. {a:1,b:2}
+    
+    // fill variableValues dictionary
+    for (let i=0; i<codeLines.length; i++) {
+        let match = codeLines[i].match(/(let )?(.+) = (.+);/i);
+        if (match) {
+            let variableName = match[2];
+            let variableValue = match[3];
+            variableValues[variableName] = variableValue;
         }
-      }
-      
-    } else if (isAfterFor) {
-      
-      let times = parseInt(isAfterFor[2]) - parseInt(isAfterFor[1]);
-      if (isSaying) {
-        let variableName = isSaying[1];
-        if (codeVariables.includes(variableName)) {
-          say += (variableValues[variableName] + ' ').repeat(times);
-        } else {
-          say += (isSaying[1] + ' ').repeat(times);
-        }
-      }
-      
     }
-  }
-  
-  return say;
+    
+    // say will be the final output
+    let say = '';
+    
+    // check first line of code
+    let isSaying = isSay(codeLines[0]);
+    let isSetVar = isVarAssignment(codeLines[0]);
+    if (isSaying) {
+        say += isSaying[1] + ' ';
+    } else if (isSetVar) {
+        variableValues[isSetVar[2]] = isSetVar[3];
+    }
+    
+    // check the rest of the lines of code
+    for (let i=1; i<codeLines.length; i++) {
+        
+        let prev = codeLines[i-1];
+        let curr = codeLines[i];
+        
+        let isAfterIf = isIf(prev);
+        let isAfterFor = isFor(prev);
+        
+        isSaying = isSay(curr);
+        isSetVar = isVarAssignment(curr);
+        
+        if ((isAfterIf && isAfterIf[1] === isAfterIf[2]) || (!isAfterIf && !isAfterFor && !isSetVar)) {
+            
+            if (isSaying) {
+                let variableName = isSaying[1];
+                if (codeVariables.includes(variableName)) {
+                    say += variableValues[variableName] + ' ';
+                } else {
+                    say += isSaying[1] + ' ';
+                }
+            }
+            
+        } else if (isAfterFor) {
+            
+            let times = parseInt(isAfterFor[2]) - parseInt(isAfterFor[1]);
+            if (isSaying) {
+                let variableName = isSaying[1];
+                if (codeVariables.includes(variableName)) {
+                    say += (variableValues[variableName] + ' ').repeat(times);
+                } else {
+                    say += (isSaying[1] + ' ').repeat(times);
+                }
+            }
+            
+        } else if (isSetVar) {
+            
+            let variableName = isSetVar[2];
+            let variableValue = isSetVar[3];//if (codeVariables.includes(variableName)) {
+            let isLeftVar = codeVariables.includes(variableName);
+            let isRightVar = codeVariables.includes(variableValue);
+            
+            if (!isRightVar) {
+                variableValues[variableName] = variableValue;
+            } else {
+                variableValues[variableName] = variableValues[variableValue];
+            }
+            
+        }
+        
+    }
+    
+    return say;
 }
 
 const isSay = (line) => { // returns the whole match object
-  return line.match(/say[(]"?(.+?)"?[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
+    return line.match(/say[(]"?(.+?)"?[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
 }
 
 const isIf = (line) => { // returns the whole match object
-  return line.match(/if [(](.+?) == (.+?)[)]/i);
+    return line.match(/if [(](.+?) == (.+?)[)]/i);
 }
 
 const isFor = (line) => { // returns the whole match object
-  return line.match(/for [(]let i=(.+?); i<(.+?); i\+\+[)]/i);
+    return line.match(/for [(]let i=(.+?); i<(.+?); i\+\+[)]/i);
+}
+
+const isVarAssignment = (line) => { // returns the whole match object
+    return line.match(/(let )?(.+?) = (.+?);/i)
 }
