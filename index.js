@@ -352,8 +352,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's what you can say:")
                 .addSimpleResponse({
-                    speech: 'Apple equals 1. \
-                        Repeat 3 times. Say hi. If banana equals fruit. Run code. \
+                    speech: 'Apple equals 1... Repeat 3 times... Say hi... If banana equals fruit... Run code... \
                         If you need this list again, just say "what\'s on the list?"',
                     displayText: '* apple equals 1\n\
                         * repeat 3 times\n\

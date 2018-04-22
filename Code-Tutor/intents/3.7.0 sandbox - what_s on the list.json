@@ -40,8 +40,8 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "textToSpeech": "Apple equals 1 (and 2, and 3, and banana, and so on). Repeat 3 times. Say hi. If coconut equals 4. Run code. If you need this list again, just say \"what\u0027s on the list?\"",
-          "displayText": "* apple equals 1 (and 2 and 3 and banana and ...)\n* repeat 3 times\n* say hi\n* if coconut equals 4\n* run code\n\nIf you need this list again, just say \"what\u0027s on the list?\""
+          "textToSpeech": "Apple equals 1... Repeat 3 times... Say hi... If banana equals fruit... Run code... If you need this list again, just say \"what\u0027s on the list?\"",
+          "displayText": "* apple equals 1\n* repeat 3 times\n* say hi\n* if banana equals fruit\n* run code\n\nIf you need this list again, just say \"what\u0027s on the list?\""
         },
         {
           "type": 0,
@@ -58,7 +58,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524364915,
+  "lastUpdate": 1524427773,
   "fallbackIntent": false,
   "events": []
 }
