@@ -372,7 +372,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let code = inputContexts.code;
             codeVariables = getVariables(code); // need to make sure variables array is up-to-date
             
-            let variable = removeSomePunctuation(inputContexts.variable);
+            let variable = toLowerCase(removeSomePunctuation(inputContexts.variable));
             let value = wrapIfString(removeSomePunctuation(inputContexts.value)); // uses codeVariables
             
             // recognize whether variable is being reassigned
@@ -474,7 +474,7 @@ const getVariables = (codeString) => { // make sure the variables array is up-to
     for (let i=0; i<codeArray.length; i++) {
         let line = codeArray[i];
         if (String(line).startsWith('let ')) {
-            let variableName = line.match(/let (.+?) = .+;/i)[1];
+            let variableName = toLowerCase(line.match(/let (.+?) = .+;/i)[1]);
             codeVariables.push(variableName);
         }
     }
