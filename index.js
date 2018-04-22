@@ -3,6 +3,9 @@
 const functions = require('firebase-functions');
 const DialogflowApp = require('actions-on-google').DialogflowApp;
 
+// make this the only global variable for the complex parsing
+var codeVariables = [];
+
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
     console.log('Request headers: ' + JSON.stringify(request.headers));
     console.log('Request body: ' + JSON.stringify(request.body));
@@ -355,7 +358,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                     displayText: '* apple equals 1 (and 2 and 3 and banana and ...)\n\
                         * repeat 3 times\n\
                         * say hi\n\
-                        * if coconut equals 4\n\
+                        * if coconut equals fruit\n\
                         * run code\n\n\
                         If you need this list again, just say "what\'s on the list?"'
                 })
@@ -366,17 +369,21 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-variable': () => {
-            let variable = removeSomePunctuation(inputContexts.variable);
-            let value = wrapIfString(removeSomePunctuation(inputContexts.value));
             let code = inputContexts.code;
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            
+            let variable = removeSomePunctuation(inputContexts.variable);
+            let value = wrapIfString(removeSomePunctuation(inputContexts.value)); // uses codeVariables
+            
             // recognize whether variable is being reassigned
-            if (codeVariables.includes(variable)) {
-                code += `${variable} = ${value};\n`;
-            } else {
+            if (codeVariables.indexOf(variable) < 0) {
                 code += `let ${variable} = ${value};\n`;
                 codeVariables.push(variable);
+            } else {
+                code += `${variable} = ${value};\n`;
             }
             let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`variables: ${codeVariables}`)
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
                 code: code
@@ -385,9 +392,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-repeat': () => {
-            let times = removeSomePunctuation(inputContexts.times);
             let code = inputContexts.code;
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            
+            let times = removeSomePunctuation(inputContexts.times);
             code += `for (let i=0; i<${times}; i++)\n  `;
+            
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -397,9 +407,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-say': () => {
-            let what = wrapIfString(removeSomePunctuation(inputContexts.what));
             let code = inputContexts.code;
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            
+            let what = wrapIfString(removeSomePunctuation(inputContexts.what));
             code += `say(${what});\n`;
+            
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -409,10 +422,13 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-if': () => {
+            let code = inputContexts.code;
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            
             let variable = wrapIfString(removeSomePunctuation(inputContexts.variable));
             let value = wrapIfString(removeSomePunctuation(inputContexts.value));
-            let code = inputContexts.code;
             code += `if(${variable} == ${value})\n  `;
+            
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
             app.setContext('sandbox', 1, {
@@ -423,7 +439,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'sandbox-run-code': () => {
             let code = inputContexts.code;
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            
             let output = getOutput(code);
+            
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`${output}`)
             app.setContext('sandbox', 1, {
@@ -441,15 +460,33 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     
 });
 
-// make this the only global variable for the complex parsing
-// var, not let, to have here near these functions, but have it used in code above too
-var codeVariables = [];
+// extra helper functions needed for sandbox:
+
+const getVariables = (codeString) => { // make sure the variables array is up-to-date
+    
+    // get variables from "let ..." lines
+    let codeArray = codeString.split('\n');
+    
+    // clean slate
+    codeVariables = [];
+    
+    // only get variable names from let statements in existing code
+    for (let i=0; i<codeArray.length; i++) {
+        let line = codeArray[i];
+        if (String(line).startsWith('let ')) {
+            let variableName = line.match(/let (.+?) = .+;/i)[1];
+            codeVariables.push(variableName);
+        }
+    }
+    
+    return codeVariables;
+}
 
 const wrapIfString = (value) => { // recognize if value is a variable name
     if (value.match(/.+ and .+/i)) {
         let array = value.split(' and ').map(wrapNaNWithQuotes).join(', ');
         return `[${array}]`;
-    } else if (isNaN(value) && !codeVariables.includes(value)) {
+    } else if (isNaN(value) && codeVariables.indexOf(value) < 0) {
         return `"${value}"`;
     } else {
         return value;
@@ -457,7 +494,7 @@ const wrapIfString = (value) => { // recognize if value is a variable name
 }
 
 const wrapNaNWithQuotes = (value) => {
-  if (isNaN(value) && !codeVariables.includes(value)) {
+  if (isNaN(value) && codeVariables.indexOf(value) < 0) {
     return `"${value}"`;
   } else {
     return value;
