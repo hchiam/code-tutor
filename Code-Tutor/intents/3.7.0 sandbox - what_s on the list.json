@@ -24,6 +24,14 @@
           "name": "code",
           "value": "#sandbox.code",
           "isList": false
+        },
+        {
+          "id": "48f3c6e3-6fd2-4416-8bb6-75638aa82818",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "codeVariables",
+          "value": "#sandbox.codeVariables",
+          "isList": false
         }
       ],
       "messages": [
@@ -48,9 +56,9 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524278943,
+  "lastUpdate": 1524364915,
   "fallbackIntent": false,
   "events": []
 }

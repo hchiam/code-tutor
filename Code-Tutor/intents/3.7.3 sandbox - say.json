@@ -27,9 +27,17 @@
         },
         {
           "id": "ac797084-ca44-43af-af7b-afda9028493e",
+          "required": false,
           "dataType": "@sys.any",
           "name": "code",
-          "value": "#sandbox.code"
+          "value": "#sandbox.code",
+          "isList": false
+        },
+        {
+          "id": "34d589bb-0ca5-4116-81cf-146bd1d06a40",
+          "dataType": "@sys.any",
+          "name": "codeVariables",
+          "value": "#sandbox.codeVariables"
         }
       ],
       "messages": [
@@ -46,7 +54,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524279294,
+  "lastUpdate": 1524361710,
   "fallbackIntent": false,
   "events": []
 }

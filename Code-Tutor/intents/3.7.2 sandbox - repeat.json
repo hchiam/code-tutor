@@ -32,6 +32,12 @@
           "name": "code",
           "value": "#sandbox.code",
           "isList": false
+        },
+        {
+          "id": "e56a9593-f9fc-4cd1-8db1-b2ccb34fe8e7",
+          "dataType": "@sys.any",
+          "name": "codeVariables",
+          "value": "#sandbox.codeVariables"
         }
       ],
       "messages": [
@@ -48,7 +54,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524279047,
+  "lastUpdate": 1524361699,
   "fallbackIntent": false,
   "events": []
 }
