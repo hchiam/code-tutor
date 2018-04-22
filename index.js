@@ -352,10 +352,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's what you can say:")
                 .addSimpleResponse({
-                    speech: 'Apple equals 1 (and 2, and 3, and banana, and so on). \
+                    speech: 'Apple equals 1. \
                         Repeat 3 times. Say hi. If coconut equals fruit. Run code. \
                         If you need this list again, just say "what\'s on the list?"',
-                    displayText: '* apple equals 1 (and 2 and 3 and banana and ...)\n\
+                    displayText: '* apple equals 1\n\
                         * repeat 3 times\n\
                         * say hi\n\
                         * if coconut equals fruit\n\
@@ -506,5 +506,40 @@ const removeSomePunctuation = (value) => {
 }
 
 const getOutput = (code) => {
-    return `(Need to do complex parsing here.) ${code}`;
+    // escape early if there's no audio output (i.e. if say() is not even used)
+    if (!code.match(/.*say(.+);.*/i)) return '';
+    
+    let variableValues = {}; // e.g. {a:1,b:2}
+    
+    // fill variableValues dictionary
+    let codeLines = code.split('\n');
+    for (let i=0; i<codeLines.length; i++) {
+        let match = codeLines[i].match(/(let )?(.+) = (.+);/i);
+        if (match) {
+            let variableName = match[2];
+            let variableValue = match[3];
+            variableValues[variableName] = variableValue;
+        }
+    }
+    
+    // otherwise try to figure out the output
+    let sayings = code.split('\n').map((elem) => {
+        
+    let isSaying = elem.match(/say[(](.+?)[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
+    if (isSaying) {
+        let variableName = isSaying[1];
+        if (codeVariables.includes(variableName)) {
+            return variableValues[variableName];
+        }
+        return isSaying[1];
+    } else {
+        return '';
+    }
+    
+    }).reduce((total, elem) => {
+        if (elem !== '') return total + ' ' + elem;
+        return total;
+    });
+
+    return sayings;
 }
