@@ -360,14 +360,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                         If you need this list again, just say "what\'s on the list?"'
                 })
             app.setContext('sandbox', 1, {
-                code: code
+                code: removeSomePunctuation(code)
             });
             app.ask(googleResponse);
         },
         
         'sandbox-variable': () => {
-            let variable = inputContexts.variable;
-            let value = wrapIfString(inputContexts.value);
+            let variable = removeSomePunctuation(inputContexts.variable);
+            let value = wrapIfString(removeSomePunctuation(inputContexts.value));
             let code = inputContexts.code;
             // recognize whether variable is being reassigned
             if (codeVariables.includes(variable)) {
@@ -385,7 +385,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-repeat': () => {
-            let times = inputContexts.times;
+            let times = removeSomePunctuation(inputContexts.times);
             let code = inputContexts.code;
             code += `for (let i=0; i<${times}; i++)\n  `;
             let googleResponse = app.buildRichResponse()
@@ -397,7 +397,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-say': () => {
-            let what = wrapIfString(inputContexts.what);
+            let what = wrapIfString(removeSomePunctuation(inputContexts.what));
             let code = inputContexts.code;
             code += `say(${what});\n`;
             let googleResponse = app.buildRichResponse()
@@ -409,8 +409,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         },
         
         'sandbox-if': () => {
-            let variable = wrapIfString(inputContexts.variable);
-            let value = wrapIfString(inputContexts.value);
+            let variable = wrapIfString(removeSomePunctuation(inputContexts.variable));
+            let value = wrapIfString(removeSomePunctuation(inputContexts.value));
             let code = inputContexts.code;
             code += `if(${variable} == ${value})\n  `;
             let googleResponse = app.buildRichResponse()
@@ -462,6 +462,10 @@ const wrapNaNWithQuotes = (value) => {
   } else {
     return value;
   }
+}
+
+const removeSomePunctuation = (value) => {
+    return value.replace(/[.,\\\/#!$%\^&\*;:{}_`~()<>@?]/g,'');
 }
 
 const getOutput = (code) => {
