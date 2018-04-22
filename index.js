@@ -493,11 +493,11 @@ const wrapIfString = (value) => { // recognize if value is a variable name
 }
 
 const wrapNaNWithQuotes = (value) => {
-  if (isNaN(value) && codeVariables.indexOf(value) < 0) {
-    return `"${value}"`;
-  } else {
-    return value;
-  }
+    if (isNaN(value) && codeVariables.indexOf(value) < 0) {
+        return `"${value}"`;
+    } else {
+        return value;
+    }
 }
 
 const removeSomePunctuation = (value) => {
