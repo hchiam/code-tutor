@@ -353,12 +353,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 .addSimpleResponse("Here's what you can say:")
                 .addSimpleResponse({
                     speech: 'Apple equals 1. \
-                        Repeat 3 times. Say hi. If coconut equals fruit. Run code. \
+                        Repeat 3 times. Say hi. If banana equals fruit. Run code. \
                         If you need this list again, just say "what\'s on the list?"',
                     displayText: '* apple equals 1\n\
                         * repeat 3 times\n\
                         * say hi\n\
-                        * if coconut equals fruit\n\
+                        * if banana equals fruit\n\
                         * run code\n\n\
                         If you need this list again, just say "what\'s on the list?"'
                 })
@@ -505,64 +505,82 @@ const removeSomePunctuation = (value) => {
     return value.replace(/[.,\\\/#!$%\^&\*;:{}_`~()<>@?]/g,'');
 }
 
+// figure out the audio output based on the code
+const getOutput = (code) => {
+  
+  // escape early if there's no audio output (i.e. if say() is not even used)
+  if (!code.match(/.*say(.+);.*/i)) return '';
+  
+  let codeLines = code.split('\n');
+  
+  let variableValues = {}; // e.g. {a:1,b:2}
+  
+  // fill variableValues dictionary
+  for (let i=0; i<codeLines.length; i++) {
+    let match = codeLines[i].match(/(let )?(.+) = (.+);/i);
+    if (match) {
+      let variableName = match[2];
+      let variableValue = match[3];
+      variableValues[variableName] = variableValue;
+    }
+  }
+  
+  // say will be the final output
+  let say = '';
+  
+  // check first line of code
+  let isSaying = isSay(codeLines[0]);
+  if (isSaying) {
+    say += isSaying[1];
+  }
+  
+  // check the rest of the lines of code
+  for (let i=1; i<codeLines.length; i++) {
+    let prev = codeLines[i-1];
+    let curr = codeLines[i];
+    
+    let isAfterIf = isIf(prev);
+    let isAfterFor = isFor(prev);
+    
+    isSaying = isSay(curr);
+    
+    if ((isAfterIf && isAfterIf[1] === isAfterIf[2]) || (!isAfterIf && !isAfterFor)) {
+      
+      if (isSaying) {
+        let variableName = isSaying[1];
+        if (codeVariables.includes(variableName)) {
+          say += variableValues[variableName];
+        } else {
+          say += isSaying[1];
+        }
+      }
+      
+    } else if (isAfterFor) {
+      
+      let times = parseInt(isAfterFor[2]) - parseInt(isAfterFor[1]);
+      if (isSaying) {
+        let variableName = isSaying[1];
+        if (codeVariables.includes(variableName)) {
+          say += (variableValues[variableName] + ' ').repeat(times);
+        } else {
+          say += (isSaying[1] + ' ').repeat(times);
+        }
+      }
+      
+    }
+  }
+  
+  return say;
+}
+
 const isSay = (line) => { // returns the whole match object
-    return line.match(/say[(](.+?)[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
+  return line.match(/say[(]"?(.+?)"?[)]/i); // /say[(](.+?)[)]/i // /say[(]"?(.+?)"?[)]/i
 }
 
 const isIf = (line) => { // returns the whole match object
-    return line.match(/if [(](.+?) == (.+?)[)]/i);
+  return line.match(/if [(](.+?) == (.+?)[)]/i);
 }
 
-// figure out the audio output based on the code
-const getOutput = (code) => {
-    
-    // escape early if there's no audio output (i.e. if say() is not even used)
-    if (!code.match(/.*say(.+);.*/i)) return '';
-    
-    let codeLines = code.split('\n');
-    
-    let variableValues = {}; // e.g. {a:1,b:2}
-    
-    // fill variableValues dictionary
-    for (let i=0; i<codeLines.length; i++) {
-        let match = codeLines[i].match(/(let )?(.+) = (.+);/i);
-        if (match) {
-            let variableName = match[2];
-            let variableValue = match[3];
-            variableValues[variableName] = variableValue;
-        }
-    }
-    
-    // say will be the final output
-    let say = 'output: ';
-    
-    // check first line of code
-    let isSaying = isSay(codeLines[0]);
-    if (isSaying) {
-        say += isSaying[1];
-    }
-    
-    // check the rest of the lines of code
-    for (let i=1; i<codeLines.length; i++) {
-        let prev = codeLines[i-1];
-        let curr = codeLines[i];
-        
-        let isAfterIf = isIf(prev);
-        
-        if (!isAfterIf || isAfterIf[1] === isAfterIf[2]) {
-            
-            isSaying = isSay(curr);
-            
-            if (isSaying) {
-                let variableName = isSaying[1];
-                if (codeVariables.includes(variableName)) {
-                    say += variableValues[variableName];
-                } else {
-                    say += isSaying[1];
-                }
-            }
-        }
-    }
-    
-    return say;
+const isFor = (line) => { // returns the whole match object
+  return line.match(/for [(]let i=(.+?); i<(.+?); i\+\+[)]/i);
 }
