@@ -23,7 +23,7 @@ This app works great on a device with a screen. You can get the Google Assistant
 
 ## Files:
 
-I'm open-sourcing my code to help others learn faster: https://github.com/hchiam/code-tutor (just please change the author in package.json before you publish).
+I'm open-sourcing my code to help others learn faster (just please change the author in package.json before you publish). It also enables you to help me improve the app by contributing on GitHub.
 
 * [index.js](https://github.com/hchiam/code-tutor/blob/master/index.js) is my inline editor code. You can use it to figure out how to use the inline editor faster in your own projects. For it to work, my code requires the imports listed in 
 * [package.json](https://github.com/hchiam/code-tutor/blob/master/package.json) (you’ll see a tab for this in the inline editor). 
