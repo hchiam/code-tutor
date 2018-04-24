@@ -1,6 +1,6 @@
 [
   {
-    "id": "17016e26-d3fc-467f-b33a-8a4064b20660",
+    "id": "a813c96c-1144-467d-9fed-4a631afd88bf",
     "data": [
       {
         "text": "what is this",
@@ -12,7 +12,7 @@
     "updated": 1524527328
   },
   {
-    "id": "1287e6be-22b2-4561-bdee-8fa9fd9c808e",
+    "id": "a37eff9f-3d90-42e8-af3f-fc951d18c39c",
     "data": [
       {
         "text": "What do I do",
@@ -24,19 +24,7 @@
     "updated": 1524527328
   },
   {
-    "id": "b9d239d2-5b27-4fec-9dcf-dae6a3f9c5ad",
-    "data": [
-      {
-        "text": "hi",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 2,
-    "updated": 1524527328
-  },
-  {
-    "id": "348598db-c7c6-48c1-a163-444eb0fa3c45",
+    "id": "d55a71f2-da14-499a-861f-35c2892f6bb7",
     "data": [
       {
         "text": "teach me to program",
@@ -48,7 +36,7 @@
     "updated": 1524527328
   },
   {
-    "id": "eac3f7a7-3753-4b0c-bb63-672a88f1f0a3",
+    "id": "cdf98b49-624a-4afc-adaf-efed1b88ae24",
     "data": [
       {
         "text": "what can i do",
@@ -60,7 +48,7 @@
     "updated": 1524527328
   },
   {
-    "id": "e4e2e33b-e629-433e-bf9f-f1fa5667adda",
+    "id": "943c7185-5979-4fca-b845-a0449dcad66c",
     "data": [
       {
         "text": "what do you do",
@@ -72,7 +60,7 @@
     "updated": 1524527328
   },
   {
-    "id": "a2637368-0c32-4e5d-85c0-9eccbe8b520a",
+    "id": "9300e4fe-feaf-4cd1-933f-2e8279f01293",
     "data": [
       {
         "text": "How do I program by talking?",
@@ -84,7 +72,7 @@
     "updated": 1524527328
   },
   {
-    "id": "95a3d514-62dd-4de6-82ee-22f064f0b19f",
+    "id": "a9b8db73-c771-479b-aecc-1b8a3173d4b8",
     "data": [
       {
         "text": "How can I program by voice?",
@@ -96,7 +84,7 @@
     "updated": 1524527328
   },
   {
-    "id": "55c84e5b-e78a-40dc-b554-ec3495559517",
+    "id": "c7deb1cd-0176-4667-8e41-60e73380d3c5",
     "data": [
       {
         "text": "I want to learn to program",
@@ -108,7 +96,7 @@
     "updated": 1524527328
   },
   {
-    "id": "b670292c-5796-4826-bdcc-62fdf46710ac",
+    "id": "67272d9e-c65b-49b2-b547-98a4a121b7ec",
     "data": [
       {
         "text": "teach me how to code",
@@ -120,7 +108,7 @@
     "updated": 1524527328
   },
   {
-    "id": "d09ee55a-a7d2-4087-bf83-50bc11322f8c",
+    "id": "e3c684c7-1606-4af4-88f1-4654f1b338e9",
     "data": [
       {
         "text": "go back to the beginning",
@@ -132,7 +120,7 @@
     "updated": 1524527328
   },
   {
-    "id": "651a7a2b-eada-43ad-a270-1dd555eeb37f",
+    "id": "30afccf7-9816-462d-9206-1972a3611963",
     "data": [
       {
         "text": "let\u0027s start again",
@@ -144,7 +132,7 @@
     "updated": 1524527328
   },
   {
-    "id": "60f1c05b-2d30-425b-9119-28e255f615bb",
+    "id": "d344d238-418f-4283-b96a-f6b5c8985982",
     "data": [
       {
         "text": "how do you use this?",
@@ -156,7 +144,7 @@
     "updated": 1524527328
   },
   {
-    "id": "5bf1ef96-f112-450c-acf8-1cc5948b2fe2",
+    "id": "12203eab-957d-44d9-bae9-bffc6d464331",
     "data": [
       {
         "text": "what am i supposed to do",
@@ -168,7 +156,7 @@
     "updated": 1524527328
   },
   {
-    "id": "74113db4-6500-4b81-a5f6-a476ca0fd03c",
+    "id": "11ef8587-3764-4e9d-b28e-bb544c1cbfa0",
     "data": [
       {
         "text": "how does this work",
@@ -180,7 +168,7 @@
     "updated": 1524527328
   },
   {
-    "id": "626b4ab0-43db-4885-b557-561eb30e947e",
+    "id": "a29c423d-c435-4779-ad94-90ff89a36f39",
     "data": [
       {
         "text": "what\u0027s going on",
@@ -189,54 +177,6 @@
     ],
     "isTemplate": false,
     "count": 0,
-    "updated": 1524527328
-  },
-  {
-    "id": "078f500e-6030-4967-ade2-5ebdf39e6a6a",
-    "data": [
-      {
-        "text": "let\u0027s begin",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1524527328
-  },
-  {
-    "id": "072146b9-a4a4-47ad-b2a8-a2b7b7a671f2",
-    "data": [
-      {
-        "text": "let\u0027s start",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1524527328
-  },
-  {
-    "id": "3c037c9b-941d-4adc-a27a-f86ad5c49e18",
-    "data": [
-      {
-        "text": "hey",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1524527328
-  },
-  {
-    "id": "8e1a74a4-ae7e-4cb0-a578-efb944dbfef1",
-    "data": [
-      {
-        "text": "hello",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
     "updated": 1524527328
   }
 ]

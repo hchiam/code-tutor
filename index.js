@@ -163,7 +163,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's your code:")
                 .addSimpleResponse({
-                  speech: `${code}. That's it for the code. Now, in code, we count from 0. And because we want to repeat ${times} times, we need to stop 1 step before ${times}. Say "run code" and I'll follow the instructions.`,
+                  speech: `${code}. That's it for the code. By the way, in code, we count from 0. And because we want to repeat ${times} times, we need to stop 1 step before ${times}. Say "run code" and I'll follow the instructions.`,
                   displayText: code
                 })
                 .addSuggestions(['run code', 'do something else'])
@@ -583,6 +583,9 @@ const getOutput = (code) => {
         } else if (isAfterFor) {
             
             let times = parseInt(isAfterFor[2]) - parseInt(isAfterFor[1]);
+            if (times === undefined || times > 5 || times < 1) {
+                times = 5;
+            }
             if (isSaying) {
                 let variableName = isSaying[1];
                 if (codeVariables.includes(variableName)) {
