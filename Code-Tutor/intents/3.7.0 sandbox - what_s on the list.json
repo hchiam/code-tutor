@@ -34,21 +34,7 @@
           "isList": false
         }
       ],
-      "messages": [
-        {
-          "type": "simple_response",
-          "platform": "google",
-          "lang": "en",
-          "customizeAudio": true,
-          "textToSpeech": "Apple equals 1... Repeat 3 times... Say hi... If banana equals fruit... Run code... If you need this list again, just say \"what\u0027s on the list?\"",
-          "displayText": "* apple equals 1\n* repeat 3 times\n* say hi\n* if banana equals fruit\n* run code\n\nIf you need this list again, just say \"what\u0027s on the list?\""
-        },
-        {
-          "type": 0,
-          "lang": "en",
-          "speech": "Here\u0027s what you can say:"
-        }
-      ],
+      "messages": [],
       "defaultResponsePlatforms": {
         "google": true
       },
@@ -58,7 +44,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524427773,
+  "lastUpdate": 1524524862,
   "fallbackIntent": false,
   "events": []
 }

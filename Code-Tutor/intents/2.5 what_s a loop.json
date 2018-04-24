@@ -10,6 +10,26 @@
       "parameters": [],
       "messages": [
         {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "items": [
+            {
+              "textToSpeech": "What would you like to create? A loop? A variable?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? A loop? An array?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? A loop? A string?",
+              "displayText": "What would you like to create?"
+            }
+          ]
+        },
+        {
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
@@ -22,23 +42,26 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "a loop"
+              "title": "give me an example"
             },
             {
-              "title": "a variable"
+              "title": "loop"
             },
             {
-              "title": "an array"
+              "title": "variable"
             },
             {
-              "title": "a string"
+              "title": "array"
+            },
+            {
+              "title": "string"
             }
           ]
         },
         {
           "type": 0,
           "lang": "en",
-          "speech": "A loop lets you repeat code, so you can do things like repeat the same thing 3 times in a row. Again. And again. And again. What would you like to create?"
+          "speech": "A loop lets you repeat code, so you can do things like repeat the same thing 3 times in a row. Again. And again. And again."
         }
       ],
       "defaultResponsePlatforms": {
@@ -50,7 +73,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524185145,
+  "lastUpdate": 1524528152,
   "fallbackIntent": false,
   "events": []
 }

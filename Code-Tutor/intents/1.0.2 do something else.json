@@ -15,19 +15,22 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "a variable"
+              "title": "give me an example"
+            },
+            {
+              "title": "variable"
             },
             {
               "title": "what\u0027s a variable?"
             },
             {
-              "title": "an array"
+              "title": "array"
             },
             {
-              "title": "a string"
+              "title": "string"
             },
             {
-              "title": "a loop"
+              "title": "loop"
             }
           ]
         },
@@ -51,7 +54,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524193108,
+  "lastUpdate": 1524527793,
   "fallbackIntent": false,
   "events": []
 }

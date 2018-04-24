@@ -21,8 +21,8 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "textToSpeech": "You found a hidden feature! Applause:",
-          "displayText": "You found a hidden feature! Applause:"
+          "textToSpeech": "You found one of the hidden features! Applause:",
+          "displayText": "You found one of the hidden features! Applause:"
         },
         {
           "type": "simple_response",
@@ -47,7 +47,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523672274,
+  "lastUpdate": 1524527071,
   "fallbackIntent": false,
   "events": []
 }

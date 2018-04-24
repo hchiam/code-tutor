@@ -13,7 +13,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "Code Tutor version 2, signing out."
+          "speech": "Code Tutor version 2, signing out. Come again for updates."
         }
       ],
       "defaultResponsePlatforms": {},
@@ -23,7 +23,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524439142,
+  "lastUpdate": 1524526146,
   "fallbackIntent": false,
   "events": []
 }

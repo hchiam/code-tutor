@@ -10,6 +10,26 @@
       "parameters": [],
       "messages": [
         {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "items": [
+            {
+              "textToSpeech": "What would you like to create? A variable? An array?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? A variable? A string?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? A variable? A loop?",
+              "displayText": "What would you like to create?"
+            }
+          ]
+        },
+        {
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
@@ -22,26 +42,26 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "a variable"
-            },
-            {
-              "title": "an array"
-            },
-            {
-              "title": "a string"
-            },
-            {
-              "title": "a loop"
-            },
-            {
               "title": "give me an example"
+            },
+            {
+              "title": "variable"
+            },
+            {
+              "title": "array"
+            },
+            {
+              "title": "string"
+            },
+            {
+              "title": "loop"
             }
           ]
         },
         {
           "type": 0,
           "lang": "en",
-          "speech": "You can think of code like instructions for a computer to follow. Or like steps in a recipe. What would you like to create?"
+          "speech": "You can think of code like instructions for a computer to follow. Or like steps in a recipe."
         }
       ],
       "defaultResponsePlatforms": {
@@ -53,7 +73,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524195663,
+  "lastUpdate": 1524527951,
   "fallbackIntent": false,
   "events": []
 }

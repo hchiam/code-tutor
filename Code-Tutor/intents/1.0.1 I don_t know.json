@@ -15,29 +15,29 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "a variable"
+              "title": "give me an example"
             },
             {
               "title": "what\u0027s a variable?"
             },
             {
-              "title": "an array"
+              "title": "variable"
             },
             {
-              "title": "a string"
+              "title": "array"
             },
             {
-              "title": "a loop"
+              "title": "string"
             },
             {
-              "title": "give me an example"
+              "title": "loop"
             }
           ]
         },
         {
           "type": 0,
           "lang": "en",
-          "speech": "I can teach you things like variables and arrays. Which would you like to learn about first?"
+          "speech": "I can show you things like variables, arrays, strings, and loops. Which would you like to learn about first?"
         }
       ],
       "defaultResponsePlatforms": {
@@ -49,7 +49,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524194746,
+  "lastUpdate": 1524528497,
   "fallbackIntent": false,
   "events": []
 }

@@ -14,28 +14,8 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "items": [
-            {
-              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eYou can talk to me to create simple code. What would you like to create? For example, you can say \"a variable\".\u003c/speak\u003e",
-              "displayText": "You can talk to me to create simple code. What would you like to create? For example, you can say \"a variable\"."
-            },
-            {
-              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eLet\u0027s talk to create some simple code. What would you like to create? For example, you can say \"a variable\".\u003c/speak\u003e",
-              "displayText": "Let\u0027s talk to create some simple code. What would you like to create? For example, you can say \"a variable\"."
-            },
-            {
-              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eI can teach you about variables, arrays, strings, and loops. What would you like to create? For example, you can say \"a variable\".\u003c/speak\u003e",
-              "displayText": "I can teach you about variables, arrays, strings, and loops. What would you like to create? For example, you can say \"a variable\"."
-            },
-            {
-              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eYou can talk to me to create simple code. What would you like to create? For example, you can say \"a string\".\u003c/speak\u003e",
-              "displayText": "You can talk to me to create simple code. What would you like to create? For example, you can say \"a string\"."
-            },
-            {
-              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eLet\u0027s talk to create some simple code. What would you like to create? For example, you can say \"an array\".\u003c/speak\u003e",
-              "displayText": "Let\u0027s talk to create some simple code. What would you like to create? For example, you can say \"an array\"."
-            }
-          ]
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eYou can talk to me to create simple code. I can teach you about variables, arrays, strings, and loops. What would you like to create first? For example, you can say \"a variable\". Or I can give you an example.\u003c/speak\u003e",
+          "displayText": "You can talk to me to create simple code. I can teach you about variables, arrays, strings, and loops. What would you like to create first? For example, you can say \"a variable\". Or I can give you an example."
         },
         {
           "type": "suggestion_chips",
@@ -43,22 +23,22 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "a variable"
+              "title": "give me an example"
             },
             {
               "title": "what\u0027s a variable?"
             },
             {
-              "title": "an array"
+              "title": "variable"
             },
             {
-              "title": "a string"
+              "title": "array"
             },
             {
-              "title": "a loop"
+              "title": "string"
             },
             {
-              "title": "give me an example"
+              "title": "loop"
             }
           ]
         },
@@ -66,10 +46,9 @@
           "type": 0,
           "lang": "en",
           "speech": [
-            "I\u0027m Code Tutor.",
-            "This is Code Tutor.",
-            "I\u0027m your Code Tutor.",
-            "Code Tutor here."
+            "Hi! I\u0027m Code Tutor, version 2.",
+            "This is Code Tutor, version 2.",
+            "Hello! I\u0027m Code Tutor, version 2."
           ]
         }
       ],
@@ -82,7 +61,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524098852,
+  "lastUpdate": 1524527328,
   "fallbackIntent": false,
   "events": [
     {

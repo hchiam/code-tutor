@@ -199,11 +199,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let say = (what + ' ').repeat(times);
             
-            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next?</speak>`;
+            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? A variable? Play with sound effects?</speak>`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
-                .addSimpleResponse(congrats)
+                .addSimpleResponse({
+                    speech: congrats,
+                    displayText: `Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? `
+                })
                 .addSuggestions(['another loop', 'a variable', 'play with sound effects'])
             
             app.ask(googleResponse);
@@ -254,7 +257,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                         displayText: `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
                     })
                     .addSimpleResponse({
-                        speech: `Nothing will play if you run this code. What would you like to try next?`,// Please say another value.`,
+                        speech: `Nothing will play if you run this code. What would you like to try next? A variable? An array? A string? A loop?`,// Please say another value.`,
                         displayText: `Nothing will play if you run this code. What would you like to try next?`// Please say another value.`
                     })
                     .addSuggestions(['do something else', 'sandbox', 'a variable', 'an array', 'a string', 'a loop'])
@@ -278,7 +281,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                     speech: say,
                     displayText: '(beep)'
                 })
-                .addSimpleResponse('What would you like to try next?')
+                .addSimpleResponse({
+                    speech: 'What would you like to try next? A variable? An array? A string? A loop?',
+                    displayText: 'What would you like to try next?'
+                })
                 .addSuggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop'])
             
             app.ask(googleResponse);
@@ -292,7 +298,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                     speech: say,
                     displayText: '(wood planks)'
                 })
-                .addSimpleResponse('What would you like to try next?')
+                .addSimpleResponse({
+                    speech: 'What would you like to try next? A variable? An array? A string? A loop?',
+                    displayText: 'What would you like to try next?'
+                })
                 .addSuggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop'])
             
             app.ask(googleResponse);
@@ -306,7 +315,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 Let name equal "' + name + '". \
                 Let message equal greeting plus name. \
                 If name = "someone", then say "What\'s your name?". \
-                And then, while counting from 0, and stopping before 3, say message.';
+                And then, repeating 3 times, say message.';
             let code = 'let greeting = "hi there ";\
                 \nlet name = "' + name + '";\
                 \nlet message = greeting + name;\
@@ -341,7 +350,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
-                .addSimpleResponse(`What would you like to try next?`)
+                .addSimpleResponse({
+                    speech: `What would you like to try next? A variable? An array? A string? A loop?`,
+                    displayText: 'What would you like to try next?'
+                })
                 .addSuggestions(['a variable', `what's a variable?`, 'an array', 'a string', 'a loop', 'try the example again'])
             
             app.ask(googleResponse);
@@ -349,11 +361,16 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'sandbox-list': () => {
             let code = inputContexts.code;
+            let say = '<speak> Apple equals 1. <break time="3s" /> ' + 
+                'Repeat 3 times. <break time="3s" /> ' + 
+                'Say hi. <break time="3s" /> ' + 
+                'If banana equals fruit. <break time="3s" /> ' + 
+                'Run code. <break time="3s" /> ' +
+                'If you need this list again, just ask me "what\'s on the list?" </speak>';
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's what you can say:")
                 .addSimpleResponse({
-                    speech: 'Apple equals 1... Repeat 3 times... Say hi... If banana equals fruit... Run code... \
-                        If you need this list again, just say "what\'s on the list?"',
+                    speech: say,
                     displayText: '* apple equals 1\n\
                         * repeat 3 times\n\
                         * say hi\n\
@@ -382,8 +399,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 code += `${variable} = ${value};\n`;
             }
             let googleResponse = app.buildRichResponse()
-                .addSimpleResponse(`variables: ${codeVariables}`)
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
+                .addSimpleResponse(`What's next?`)
             app.setContext('sandbox', 1, {
                 code: code
             });
@@ -399,6 +416,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
+                .addSimpleResponse(`What's next?`)
             app.setContext('sandbox', 1, {
                 code: code
             });
@@ -414,6 +432,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
+                .addSimpleResponse(`What's next?`)
             app.setContext('sandbox', 1, {
                 code: code
             });
@@ -430,6 +449,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`Here's your code:\n\n${code}`)
+                .addSimpleResponse(`What's next?`)
             app.setContext('sandbox', 1, {
                 code: code
             });
@@ -444,6 +464,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(`${output}`)
+                .addSimpleResponse(`What's next?`)
             app.setContext('sandbox', 1, {
                 code: code
             });

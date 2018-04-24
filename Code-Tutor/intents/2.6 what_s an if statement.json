@@ -10,10 +10,17 @@
       "parameters": [],
       "messages": [
         {
+          "type": 0,
+          "lang": "en",
+          "speech": "An \"if statement\" is like a lock. If you have the right key, then you can access other code. More accurately, an if statement lets your code instructions make a decision based on a value, such as what\u0027s inside a variable."
+        },
+        {
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "textToSpeech": "An \"if statement\" is like a lock. If you have the right key, then you can access other code. More accurately, an if statement lets your code instructions make a decision based on a value, such as what\u0027s inside a variable. What would you like to create?"
+          "customizeAudio": true,
+          "textToSpeech": "What would you like to create? A variable? An array? A string? A loop?",
+          "displayText": "What would you like to create?"
         },
         {
           "type": "basic_card",
@@ -28,31 +35,36 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "a variable"
+              "title": "give me an example"
             },
             {
               "title": "what\u0027s a variable?"
             },
             {
-              "title": "an array"
+              "title": "variable"
             },
             {
-              "title": "a string"
+              "title": "array"
             },
             {
-              "title": "a loop"
+              "title": "string"
+            },
+            {
+              "title": "loop"
             }
           ]
         }
       ],
-      "defaultResponsePlatforms": {},
+      "defaultResponsePlatforms": {
+        "google": true
+      },
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524195838,
+  "lastUpdate": 1524526852,
   "fallbackIntent": false,
   "events": []
 }

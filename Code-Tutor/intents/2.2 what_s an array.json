@@ -10,6 +10,26 @@
       "parameters": [],
       "messages": [
         {
+          "type": "simple_response",
+          "platform": "google",
+          "lang": "en",
+          "customizeAudio": true,
+          "items": [
+            {
+              "textToSpeech": "What would you like to create? An array? A variable?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? An array? A string?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? An array? A loop?",
+              "displayText": "What would you like to create?"
+            }
+          ]
+        },
+        {
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
@@ -22,23 +42,29 @@
           "lang": "en",
           "suggestions": [
             {
-              "title": "an array"
+              "title": "give me an example"
             },
             {
               "title": "what\u0027s a variable?"
             },
             {
-              "title": "a string"
+              "title": "array"
             },
             {
-              "title": "a loop"
+              "title": "string"
+            },
+            {
+              "title": "loop"
+            },
+            {
+              "title": "variable"
             }
           ]
         },
         {
           "type": 0,
           "lang": "en",
-          "speech": "An array is like a numbered list of variables. Think of a shopping list. By the way, in code, we start counting at 0, so the first item in an array is at position 0, not 1. What would you like to create?"
+          "speech": "An array is like a numbered list of variables. Think of a shopping list. By the way, in code, we start counting at 0, so the first item in an array is at position 0, not 1."
         }
       ],
       "defaultResponsePlatforms": {
@@ -50,7 +76,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524185455,
+  "lastUpdate": 1524528046,
   "fallbackIntent": false,
   "events": []
 }
