@@ -43,7 +43,7 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "textToSpeech": "let x \u003d \"#string1.string1\"; let y \u003d \"$string2\". I added let z \u003d x + y. I also added say(z). Say \"run code\" and I\u0027ll follow the instructions.",
+          "textToSpeech": "let x \u003d \"#string1.string1\"; let y \u003d \"$string2\". I added let z \u003d x + y. I also added say(z). That\u0027s it for the code. Now, say \"run code\" and I\u0027ll follow the instructions.",
           "displayText": "let x \u003d \"#string1.string1\"; \nlet y \u003d \"$string2\"; \nlet z \u003d x + y; \nsay(z);"
         },
         {
@@ -74,7 +74,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523576084,
+  "lastUpdate": 1524529203,
   "fallbackIntent": false,
   "events": []
 }

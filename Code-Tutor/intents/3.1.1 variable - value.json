@@ -43,7 +43,7 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "textToSpeech": "Here\u0027s your code: let x \u003d \"$value\". I added a function say(x). Say \"run code\" and I\u0027ll follow the instructions.",
+          "textToSpeech": "Here\u0027s your code: let x \u003d \"$value\". I added a function say(x). That\u0027s it for the code. Now, say \"run code\" and I\u0027ll follow the instructions.",
           "displayText": "Here\u0027s your code: \nlet x \u003d \"$value\"; \nsay(x);"
         },
         {
@@ -69,7 +69,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524192894,
+  "lastUpdate": 1524529168,
   "fallbackIntent": false,
   "events": []
 }

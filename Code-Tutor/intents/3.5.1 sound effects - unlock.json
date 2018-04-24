@@ -23,8 +23,8 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to learn more?\u003c/speak\u003e",
-          "displayText": "Password accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to learn more?"
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to continue?\u003c/speak\u003e",
+          "displayText": "Password accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to continue?"
         },
         {
           "type": "basic_card",
@@ -54,7 +54,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524195860,
+  "lastUpdate": 1524528897,
   "fallbackIntent": false,
   "events": []
 }

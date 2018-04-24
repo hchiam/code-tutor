@@ -125,7 +125,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse(`We counted starting at 0, so we stop at ${size-1}, and not at ${size}.`)
                     .addSimpleResponse({
-                        speech: `Here's your code: ${code}. I added a function say(x). Say "run code" and I'll follow the instructions.`,
+                        speech: `Here's your code: ${code}. I added a function say(x). That's it for the code. Now, say "run code" and I'll follow the instructions.`,
                         displayText: `Here's your code: \n${code} \nsay(x);`
                     })
                     .addSuggestions(['run code', 'do something else']);
@@ -163,7 +163,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's your code:")
                 .addSimpleResponse({
-                  speech: `${code}. In code we count from 0. And because we want to repeat ${times} times, we need to stop 1 step before ${times}. Say "run code" and I'll follow the instructions.`,
+                  speech: `${code}. That's it for the code. Now, in code, we count from 0. And because we want to repeat ${times} times, we need to stop 1 step before ${times}. Say "run code" and I'll follow the instructions.`,
                   displayText: code
                 })
                 .addSuggestions(['run code', 'do something else'])
@@ -199,7 +199,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let say = (what + ' ').repeat(times);
             
-            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? A variable? Play with sound effects?</speak>`;
+            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? A variable? Or play with sound effects?</speak>`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
@@ -235,25 +235,25 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             if (value === "beep") {
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse({
-                        speech: `Here's your code: Let variable x equal "beep". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`,
+                        speech: `Here's your code: Let variable x equal "beep". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks. That's it for the code.`,
                         displayText: `Here's your code: \nlet x = "beep";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
                     })
-                    .addSimpleResponse(`Now say "run code".`)
+                    .addSimpleResponse(`Now, say "run code".`)
                     .addSuggestions(['run code', 'do something else'])
                 app.setContext('sound-effects-beep');
             } else if (value === "wood planks") {
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse({
-                        speech: `Here's your code: Let variable x equal "wood planks". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`,
+                        speech: `Here's your code: Let variable x equal "wood planks". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks. That's it for the code.`,
                         displayText: `Here's your code: \nlet x = "wood planks";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
                     })
-                    .addSimpleResponse(`Now say "run code".`)
+                    .addSimpleResponse(`Now, say "run code".`)
                     .addSuggestions(['run code', 'do something else'])
                 app.setContext('sound-effects-wood-planks');
             } else { // if value = some other value
                 googleResponse = app.buildRichResponse()
                     .addSimpleResponse({
-                        speech: `Here's your code: Let variable x equal "${value}". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`,
+                        speech: `Here's your code: Let variable x equal "${value}". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks. That's it for the code.`,
                         displayText: `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`
                     })
                     .addSimpleResponse({
