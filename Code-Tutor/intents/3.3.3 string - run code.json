@@ -18,7 +18,21 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "textToSpeech": "What would you like to try next?"
+          "customizeAudio": true,
+          "items": [
+            {
+              "textToSpeech": "What would you like to try next? Another string? Or a loop?",
+              "displayText": "What would you like to try next?"
+            },
+            {
+              "textToSpeech": "What would you like to try next? Another string? Or an array?",
+              "displayText": "What would you like to try next?"
+            },
+            {
+              "textToSpeech": "What would you like to try next? Another string? Or a variable?",
+              "displayText": "What would you like to try next?"
+            }
+          ]
         },
         {
           "type": "suggestion_chips",
@@ -54,7 +68,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523585899,
+  "lastUpdate": 1524530968,
   "fallbackIntent": false,
   "events": []
 }

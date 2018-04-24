@@ -19,8 +19,20 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "textToSpeech": "What would you like to create? A variable? An array? A string? A loop?",
-          "displayText": "What would you like to create?"
+          "items": [
+            {
+              "textToSpeech": "What would you like to create? A variable? Or an array?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? A variable? Or a string?",
+              "displayText": "What would you like to create?"
+            },
+            {
+              "textToSpeech": "What would you like to create? A variable? Or a loop?",
+              "displayText": "What would you like to create?"
+            }
+          ]
         },
         {
           "type": "basic_card",
@@ -64,7 +76,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524526852,
+  "lastUpdate": 1524530774,
   "fallbackIntent": false,
   "events": []
 }

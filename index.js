@@ -199,7 +199,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             
             let say = (what + ' ').repeat(times);
             
-            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? A variable? Or play with sound effects?</speak>`;
+            let congrats = `<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? Or a variable? Or play with sound effects?</speak>`;
             
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse(say)
@@ -354,7 +354,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                     speech: `What would you like to try next? A variable? An array? A string? A loop?`,
                     displayText: 'What would you like to try next?'
                 })
-                .addSuggestions(['a variable', `what's a variable?`, 'an array', 'a string', 'a loop', 'try the example again'])
+                .addSuggestions(['a variable', `what's a variable?`, 'an array', 'a string', 'a loop', 'try the example again', 'sandbox'])
             
             app.ask(googleResponse);
         },

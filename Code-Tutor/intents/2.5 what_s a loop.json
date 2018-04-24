@@ -16,15 +16,15 @@
           "customizeAudio": true,
           "items": [
             {
-              "textToSpeech": "What would you like to create? A loop? A variable?",
+              "textToSpeech": "What would you like to create? A loop? Or a variable?",
               "displayText": "What would you like to create?"
             },
             {
-              "textToSpeech": "What would you like to create? A loop? An array?",
+              "textToSpeech": "What would you like to create? A loop? Or an array?",
               "displayText": "What would you like to create?"
             },
             {
-              "textToSpeech": "What would you like to create? A loop? A string?",
+              "textToSpeech": "What would you like to create? A loop? Or a string?",
               "displayText": "What would you like to create?"
             }
           ]
@@ -73,7 +73,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524528152,
+  "lastUpdate": 1524530733,
   "fallbackIntent": false,
   "events": []
 }
