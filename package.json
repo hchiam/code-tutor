@@ -6,7 +6,7 @@
   "license": "Apache Version 2.0",
   "author": "Howard Chiam (unless someone forked this project)",
   "engines": {
-    "node": "~6.0"
+    "node": "^6.0"
   },
   "scripts": {
     "start": "firebase serve --only functions:dialogflowFirebaseFulfillment",
