@@ -361,11 +361,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         'sandbox-list': () => {
             let code = inputContexts.code;
-            let say = '<speak> Apple equals 1. <break time="3s" /> ' + 
-                'Repeat 3 times. <break time="3s" /> ' + 
-                'Say hi. <break time="3s" /> ' + 
-                'If banana equals fruit. <break time="3s" /> ' + 
-                'Run code. <break time="3s" /> ' +
+            let say = '<speak> Apple equals 1. <break time="1s" /> ' + 
+                'Repeat 3 times. <break time="1s" /> ' + 
+                'Say hi. <break time="1s" /> ' + 
+                'If banana equals fruit. <break time="1s" /> ' + 
+                'Run code. <break time="1s" /> ' +
                 'If you need this list again, just ask me "what\'s on the list?" </speak>';
             let googleResponse = app.buildRichResponse()
                 .addSimpleResponse("Here's what you can say:")
