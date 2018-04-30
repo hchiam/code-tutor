@@ -1,17 +1,5 @@
 [
   {
-    "id": "16eb48b8-13ec-4a14-afd7-ebca410f2cb4",
-    "data": [
-      {
-        "text": "initialize @sys.any:variable as @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524412082
-  },
-  {
     "id": "68937e8a-12f3-4adf-81d6-16bc79408560",
     "data": [
       {
@@ -34,6 +22,42 @@
     "isTemplate": true,
     "count": 0,
     "updated": 1524278286
+  },
+  {
+    "id": "16eb48b8-13ec-4a14-afd7-ebca410f2cb4",
+    "data": [
+      {
+        "text": "initialize @sys.any:variable as @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524412082
+  },
+  {
+    "id": "6ce5a4ab-dbd7-4244-ba14-48ead92b295c",
+    "data": [
+      {
+        "text": "@sys.any:variable equals @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524277186
+  },
+  {
+    "id": "5995edc8-3fc3-4d52-ab2e-ea8960001c5d",
+    "data": [
+      {
+        "text": "set @sys.any:variable equal to @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524277186
   },
   {
     "id": "8f769ab8-9e26-4866-8918-d53583955014",
@@ -60,34 +84,10 @@
     "updated": 1524277186
   },
   {
-    "id": "5995edc8-3fc3-4d52-ab2e-ea8960001c5d",
-    "data": [
-      {
-        "text": "set @sys.any:variable equal to @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524277186
-  },
-  {
     "id": "dafd8da0-71b3-47fc-8390-ee0fbd2841a9",
     "data": [
       {
         "text": "let @sys.any:variable equal @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524277186
-  },
-  {
-    "id": "6ce5a4ab-dbd7-4244-ba14-48ead92b295c",
-    "data": [
-      {
-        "text": "@sys.any:variable equals @sys.any:value",
         "userDefined": false
       }
     ],

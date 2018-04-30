@@ -24,6 +24,18 @@
     "updated": 1522722033
   },
   {
+    "id": "d22cc958-7086-406c-ab92-6d4581757989",
+    "data": [
+      {
+        "text": "Yes, a loop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522719249
+  },
+  {
     "id": "2a1b7a45-568b-4579-bad7-68ccff5c548f",
     "data": [
       {
@@ -64,18 +76,6 @@
     "data": [
       {
         "text": "loop",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1522719249
-  },
-  {
-    "id": "d22cc958-7086-406c-ab92-6d4581757989",
-    "data": [
-      {
-        "text": "Yes, a loop",
         "userDefined": false
       }
     ],

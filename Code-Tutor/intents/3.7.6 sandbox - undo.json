@@ -1,0 +1,50 @@
+{
+  "id": "a0345fb7-822b-4aae-9d54-679f0667dd3a",
+  "name": "3.7.6 sandbox - undo",
+  "auto": true,
+  "contexts": [
+    "sandbox"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "sandbox-undo",
+      "affectedContexts": [
+        {
+          "name": "sandbox",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "b8370554-0102-47eb-9163-d4564dc091aa",
+          "dataType": "@sys.any",
+          "name": "code",
+          "value": "#sandbox.code"
+        },
+        {
+          "id": "02ec0e35-aee6-4c66-bff8-4a4fa429391c",
+          "dataType": "@sys.any",
+          "name": "codeVariables",
+          "value": "#sandbox.codeVariables"
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1525053894,
+  "fallbackIntent": false,
+  "events": []
+}

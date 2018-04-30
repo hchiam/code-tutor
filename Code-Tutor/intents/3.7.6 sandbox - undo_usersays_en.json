@@ -1,0 +1,67 @@
+[
+  {
+    "id": "3bb9acd5-25a0-458b-a6ef-e0a222ab821b",
+    "data": [
+      {
+        "text": "undo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525053328
+  },
+  {
+    "id": "afc7226a-05fb-4af5-8ae4-ae139a9d8175",
+    "data": [
+      {
+        "text": "undo that last one",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525053328
+  },
+  {
+    "id": "cd45d603-4ef3-49f6-a329-31f9eb4d44a2",
+    "data": [
+      {
+        "text": "cancel that last ",
+        "userDefined": false
+      },
+      {
+        "text": "one",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525053328
+  },
+  {
+    "id": "6970bc19-7042-472e-99ce-85de4e4b8955",
+    "data": [
+      {
+        "text": "cancel that",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525053328
+  },
+  {
+    "id": "a5756550-9533-4348-8e8a-3b5759435c95",
+    "data": [
+      {
+        "text": "undo that",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1525053328
+  }
+]

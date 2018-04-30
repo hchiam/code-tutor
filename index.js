@@ -470,6 +470,26 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             });
             app.ask(googleResponse);
         },
+        
+        'sandbox-undo': () => {
+            let code = inputContexts.code;
+            
+            // remove last line
+            code = code.split('\n');
+            if (code[code.length-1] === '') code.pop();
+            code.pop();
+            code = code.join('\n');
+            
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            
+            let googleResponse = app.buildRichResponse()
+                .addSimpleResponse(`Here's your code:\n\n${code}`)
+                .addSimpleResponse(`What's next?`)
+            app.setContext('sandbox', 1, {
+                code: code
+            });
+            app.ask(googleResponse);
+        },
     };
     
     if (!actionHandlers[action]) {

@@ -1,29 +1,5 @@
 [
   {
-    "id": "30db4f28-02b7-409d-8d8e-f3ba1f4c9642",
-    "data": [
-      {
-        "text": "what is a string",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1522720415
-  },
-  {
-    "id": "65d3826a-5319-42ea-8cc6-55c78cf02216",
-    "data": [
-      {
-        "text": "what\u0027s a string",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1522720415
-  },
-  {
     "id": "bdbeb266-3a75-4dd2-8abc-098394ce887c",
     "data": [
       {
@@ -40,6 +16,30 @@
     "data": [
       {
         "text": "what does a string do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522720415
+  },
+  {
+    "id": "30db4f28-02b7-409d-8d8e-f3ba1f4c9642",
+    "data": [
+      {
+        "text": "what is a string",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1522720415
+  },
+  {
+    "id": "65d3826a-5319-42ea-8cc6-55c78cf02216",
+    "data": [
+      {
+        "text": "what\u0027s a string",
         "userDefined": false
       }
     ],

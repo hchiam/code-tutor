@@ -12,6 +12,18 @@
     "updated": 1524528250
   },
   {
+    "id": "2c9189fc-e9b4-4057-964a-64a8e99a43be",
+    "data": [
+      {
+        "text": "I\u0027m confused",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1524528250
+  },
+  {
     "id": "8bc9ec13-975f-40c7-8bc1-7a3fbf6b7cb9",
     "data": [
       {
@@ -33,18 +45,6 @@
     ],
     "isTemplate": false,
     "count": 0,
-    "updated": 1524528250
-  },
-  {
-    "id": "2c9189fc-e9b4-4057-964a-64a8e99a43be",
-    "data": [
-      {
-        "text": "I\u0027m confused",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
     "updated": 1524528250
   }
 ]

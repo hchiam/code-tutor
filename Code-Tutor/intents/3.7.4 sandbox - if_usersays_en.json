@@ -1,51 +1,15 @@
 [
   {
-    "id": "b1638575-bb65-4d87-87e4-d5ebe5e1e589",
+    "id": "d8a6f6b3-53bd-4b65-b968-9835c57e9bfb",
     "data": [
       {
-        "text": "check if @sys.any:variable equals @sys.any:value then",
+        "text": "if @sys.any:variable equals @sys.any:value  then",
         "userDefined": false
       }
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524531940
-  },
-  {
-    "id": "7140a077-6ef8-4231-b4e6-d04af07f4393",
-    "data": [
-      {
-        "text": "check if @sys.any:variable equals @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524531940
-  },
-  {
-    "id": "587063cf-8e29-43e8-8641-d6131c971203",
-    "data": [
-      {
-        "text": "if @sys.any:variable \u003d\u003d @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524412508
-  },
-  {
-    "id": "70457962-e6d7-4166-abe5-2bd5eb62c952",
-    "data": [
-      {
-        "text": "if @sys.any:variable \u003d @sys.any:value then",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524412508
+    "updated": 1524279451
   },
   {
     "id": "d2d8805d-e706-4602-b513-29494a8bae64",
@@ -60,22 +24,10 @@
     "updated": 1524412508
   },
   {
-    "id": "77959250-100d-4d07-b740-67ddb051140e",
+    "id": "fdaa1e2b-949d-46a9-8bc7-8441d039afa3",
     "data": [
       {
-        "text": "if @sys.any:variable is @sys.any:value then",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
-    "id": "7b0d3be8-c292-4944-a0eb-5ed034b41267",
-    "data": [
-      {
-        "text": "if @sys.any:variable is @sys.any:value",
+        "text": "if @sys.any:variable is equal to @sys.any:value",
         "userDefined": false
       }
     ],
@@ -96,34 +48,82 @@
     "updated": 1524279451
   },
   {
-    "id": "fdaa1e2b-949d-46a9-8bc7-8441d039afa3",
+    "id": "7140a077-6ef8-4231-b4e6-d04af07f4393",
     "data": [
       {
-        "text": "if @sys.any:variable is equal to @sys.any:value",
+        "text": "check if @sys.any:variable equals @sys.any:value",
         "userDefined": false
       }
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524279451
+    "updated": 1524531940
   },
   {
-    "id": "d8a6f6b3-53bd-4b65-b968-9835c57e9bfb",
+    "id": "b1638575-bb65-4d87-87e4-d5ebe5e1e589",
     "data": [
       {
-        "text": "if @sys.any:variable equals @sys.any:value  then",
+        "text": "check if @sys.any:variable equals @sys.any:value then",
         "userDefined": false
       }
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524279451
+    "updated": 1524531940
+  },
+  {
+    "id": "587063cf-8e29-43e8-8641-d6131c971203",
+    "data": [
+      {
+        "text": "if @sys.any:variable \u003d\u003d @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524412508
   },
   {
     "id": "2a9adfc6-8614-45d0-b8d5-eb05e870613e",
     "data": [
       {
         "text": "if @sys.any:variable equals @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "77959250-100d-4d07-b740-67ddb051140e",
+    "data": [
+      {
+        "text": "if @sys.any:variable is @sys.any:value then",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "70457962-e6d7-4166-abe5-2bd5eb62c952",
+    "data": [
+      {
+        "text": "if @sys.any:variable \u003d @sys.any:value then",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524412508
+  },
+  {
+    "id": "7b0d3be8-c292-4944-a0eb-5ed034b41267",
+    "data": [
+      {
+        "text": "if @sys.any:variable is @sys.any:value",
         "userDefined": false
       }
     ],

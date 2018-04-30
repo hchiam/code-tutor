@@ -1,5 +1,41 @@
 [
   {
+    "id": "1d0dd902-abd6-43cd-872b-9fd03ecdd4f5",
+    "data": [
+      {
+        "text": "repeat @sys.number-integer:times time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279047
+  },
+  {
+    "id": "af8a0a86-3bbd-4e57-aec5-441ae1329ee1",
+    "data": [
+      {
+        "text": "repeat @sys.number-integer:times times",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279047
+  },
+  {
+    "id": "8a80f045-d227-4e42-8cbb-c244864d9f23",
+    "data": [
+      {
+        "text": "repeat the following @sys.number-integer:times times",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279047
+  },
+  {
     "id": "9229d144-b0aa-470c-af37-9c12d66e2bff",
     "data": [
       {
@@ -21,42 +57,6 @@
     ],
     "isTemplate": true,
     "count": 1,
-    "updated": 1524279047
-  },
-  {
-    "id": "1d0dd902-abd6-43cd-872b-9fd03ecdd4f5",
-    "data": [
-      {
-        "text": "repeat @sys.number-integer:times time",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279047
-  },
-  {
-    "id": "8a80f045-d227-4e42-8cbb-c244864d9f23",
-    "data": [
-      {
-        "text": "repeat the following @sys.number-integer:times times",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279047
-  },
-  {
-    "id": "af8a0a86-3bbd-4e57-aec5-441ae1329ee1",
-    "data": [
-      {
-        "text": "repeat @sys.number-integer:times times",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
     "updated": 1524279047
   }
 ]
