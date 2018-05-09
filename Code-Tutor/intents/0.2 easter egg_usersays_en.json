@@ -12,18 +12,6 @@
     "updated": 1524098439
   },
   {
-    "id": "59e76774-7286-4abe-b258-fa843c08d68b",
-    "data": [
-      {
-        "text": "any easter eggs",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1523582046
-  },
-  {
     "id": "ad60f278-b37d-4f45-b324-50936672ce93",
     "data": [
       {
@@ -36,10 +24,22 @@
     "updated": 1523582046
   },
   {
-    "id": "ee6184d1-b18b-477a-bf4f-05edec9de7dc",
+    "id": "59e76774-7286-4abe-b258-fa843c08d68b",
     "data": [
       {
-        "text": "easter egg",
+        "text": "any easter eggs",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523582046
+  },
+  {
+    "id": "0650de2f-811b-4479-9cae-bd46ce9d1b22",
+    "data": [
+      {
+        "text": "got an easter egg feature?",
         "userDefined": false
       }
     ],
@@ -60,10 +60,10 @@
     "updated": 1524098439
   },
   {
-    "id": "0650de2f-811b-4479-9cae-bd46ce9d1b22",
+    "id": "ee6184d1-b18b-477a-bf4f-05edec9de7dc",
     "data": [
       {
-        "text": "got an easter egg feature?",
+        "text": "easter egg",
         "userDefined": false
       }
     ],

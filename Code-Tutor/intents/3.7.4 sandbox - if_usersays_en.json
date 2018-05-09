@@ -1,17 +1,5 @@
 [
   {
-    "id": "d8a6f6b3-53bd-4b65-b968-9835c57e9bfb",
-    "data": [
-      {
-        "text": "if @sys.any:variable equals @sys.any:value  then",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
     "id": "d2d8805d-e706-4602-b513-29494a8bae64",
     "data": [
       {
@@ -24,10 +12,10 @@
     "updated": 1524412508
   },
   {
-    "id": "fdaa1e2b-949d-46a9-8bc7-8441d039afa3",
+    "id": "8ca350cf-f391-4a6a-9496-8dbf8a89d427",
     "data": [
       {
-        "text": "if @sys.any:variable is equal to @sys.any:value",
+        "text": "if @sys.any:variable is equal to @sys.any:value then",
         "userDefined": false
       }
     ],
@@ -36,10 +24,10 @@
     "updated": 1524279451
   },
   {
-    "id": "8ca350cf-f391-4a6a-9496-8dbf8a89d427",
+    "id": "d8a6f6b3-53bd-4b65-b968-9835c57e9bfb",
     "data": [
       {
-        "text": "if @sys.any:variable is equal to @sys.any:value then",
+        "text": "if @sys.any:variable equals @sys.any:value  then",
         "userDefined": false
       }
     ],
@@ -60,6 +48,18 @@
     "updated": 1524531940
   },
   {
+    "id": "fdaa1e2b-949d-46a9-8bc7-8441d039afa3",
+    "data": [
+      {
+        "text": "if @sys.any:variable is equal to @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
     "id": "b1638575-bb65-4d87-87e4-d5ebe5e1e589",
     "data": [
       {
@@ -72,18 +72,6 @@
     "updated": 1524531940
   },
   {
-    "id": "587063cf-8e29-43e8-8641-d6131c971203",
-    "data": [
-      {
-        "text": "if @sys.any:variable \u003d\u003d @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524412508
-  },
-  {
     "id": "2a9adfc6-8614-45d0-b8d5-eb05e870613e",
     "data": [
       {
@@ -94,6 +82,18 @@
     "isTemplate": true,
     "count": 0,
     "updated": 1524279451
+  },
+  {
+    "id": "587063cf-8e29-43e8-8641-d6131c971203",
+    "data": [
+      {
+        "text": "if @sys.any:variable \u003d\u003d @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524412508
   },
   {
     "id": "77959250-100d-4d07-b740-67ddb051140e",

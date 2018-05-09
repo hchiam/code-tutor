@@ -11,19 +11,24 @@
       "parameters": [],
       "messages": [
         {
-          "type": 0,
+          "type": "simple_response",
+          "platform": "google",
           "lang": "en",
-          "speech": "Code Tutor version 2, signing out. Come again for updates."
+          "customizeAudio": true,
+          "ssml": "\u003cspeak\u003eCode Tutor version 2, signing out. Come again for updates.\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/woodpecker.ogg\"\u003e\u003c/audio\u003e\u003c/speak\u003e",
+          "displayText": "Code Tutor version 2, signing out. Come again for updates."
         }
       ],
-      "defaultResponsePlatforms": {},
+      "defaultResponsePlatforms": {
+        "google": true
+      },
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524526146,
+  "lastUpdate": 1525827589,
   "fallbackIntent": false,
   "events": []
 }

@@ -2,6 +2,7 @@
   "description": "",
   "language": "en",
   "disableInteractionLogs": false,
+  "disableStackdriverLogs": true,
   "googleAssistant": {
     "googleAssistantCompatible": true,
     "project": "code-tutor-59988",
