@@ -14,8 +14,16 @@
           "platform": "google",
           "lang": "en",
           "customizeAudio": true,
-          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eYou can talk to me to create simple code. I can teach you about variables, arrays, strings, and loops. What would you like to create first? For example, you can say \"a variable\". Or I can give you an example.\u003c/speak\u003e",
-          "displayText": "You can talk to me to create simple code. I can teach you about variables, arrays, strings, and loops. What would you like to create first? For example, you can say \"a variable\". Or I can give you an example."
+          "items": [
+            {
+              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eWould you like to learn about a variable, or just go through an example?\u003c/speak\u003e",
+              "displayText": "Would you like to learn about a variable, or just go through an example?"
+            },
+            {
+              "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eWould you like to learn about an array, or just go through an example?\u003c/speak\u003e",
+              "displayText": "Would you like to learn about an array, or just go through an example?"
+            }
+          ]
         },
         {
           "type": "suggestion_chips",
@@ -46,9 +54,9 @@
           "type": 0,
           "lang": "en",
           "speech": [
-            "Hi! I\u0027m Code Tutor, version 2.",
-            "This is Code Tutor, version 2.",
-            "Hello! I\u0027m Code Tutor, version 2."
+            "Hi! I\u0027m Code Tutor, version 2. \n░█████░\n█░░░░██\n█░░░░██\n░░░██░░\n░██░░░░\n███████",
+            "This is Code Tutor, version 2. \n░█████░\n█░░░░██\n█░░░░██\n░░░██░░\n░██░░░░\n███████",
+            "Hello! I\u0027m Code Tutor, version 2. \n░█████░\n█░░░░██\n█░░░░██\n░░░██░░\n░██░░░░\n███████"
           ]
         }
       ],
@@ -61,7 +69,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524531900,
+  "lastUpdate": 1526932995,
   "fallbackIntent": false,
   "events": [
     {
