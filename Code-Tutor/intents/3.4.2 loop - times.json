@@ -31,7 +31,7 @@
         {
           "id": "384c210b-24b0-4514-a7e3-ff1d63582aac",
           "required": false,
-          "dataType": "@sys.number",
+          "dataType": "@sys.any",
           "name": "times",
           "value": "$times",
           "isList": false
@@ -47,7 +47,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524192986,
+  "lastUpdate": 1527477739,
   "fallbackIntent": false,
   "events": []
 }

@@ -1,21 +1,21 @@
 [
   {
-    "id": "1aca92ce-3f07-48e4-8d2d-f26604d55324",
+    "id": "05194379-1631-4f36-8c62-e64a0a7a24ee",
     "data": [
       {
-        "text": "cancel",
+        "text": "bye bye",
         "userDefined": false
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "updated": 1526932016
+    "count": 1,
+    "updated": 1525827589
   },
   {
-    "id": "1ffc22ce-b461-4d9e-b8af-5aaac30f839f",
+    "id": "e94c96fb-8b9e-4de5-88d2-d1f49c1c4f97",
     "data": [
       {
-        "text": "goodbye",
+        "text": "i\u0027m finished",
         "userDefined": false
       }
     ],
@@ -36,46 +36,10 @@
     "updated": 1525827589
   },
   {
-    "id": "4e9acb09-6b1d-49f4-9c38-d78b423abaec",
+    "id": "3abfd519-739c-413b-807d-21eb330ffe2c",
     "data": [
       {
-        "text": "I\u0027m tired",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525827589
-  },
-  {
-    "id": "05194379-1631-4f36-8c62-e64a0a7a24ee",
-    "data": [
-      {
-        "text": "bye bye",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
-    "updated": 1525827589
-  },
-  {
-    "id": "2b1b9902-987c-4602-8f60-888fcf0d3bc9",
-    "data": [
-      {
-        "text": "bye",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525827589
-  },
-  {
-    "id": "616ba8f9-6930-491a-bafb-c2e8a05ac081",
-    "data": [
-      {
-        "text": "exit",
+        "text": "nevermind",
         "userDefined": false
       }
     ],
@@ -96,58 +60,10 @@
     "updated": 1525827589
   },
   {
-    "id": "9e6c27e9-029b-4947-b8cd-e68f5a150f6a",
-    "data": [
-      {
-        "text": "I\u0027m done",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525827589
-  },
-  {
-    "id": "3abfd519-739c-413b-807d-21eb330ffe2c",
-    "data": [
-      {
-        "text": "nevermind",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525827589
-  },
-  {
     "id": "3f5430d4-ddc8-46c7-9c1b-26ce0b2cf93e",
     "data": [
       {
         "text": "no",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525827589
-  },
-  {
-    "id": "81afa083-28de-4d92-a859-fa82b9ffb4ae",
-    "data": [
-      {
-        "text": "ok bye",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525827589
-  },
-  {
-    "id": "19e56673-d2a2-41ea-83ea-1904b68c95ee",
-    "data": [
-      {
-        "text": "stop",
         "userDefined": false
       }
     ],
@@ -168,10 +84,10 @@
     "updated": 1525827589
   },
   {
-    "id": "e94c96fb-8b9e-4de5-88d2-d1f49c1c4f97",
+    "id": "9e6c27e9-029b-4947-b8cd-e68f5a150f6a",
     "data": [
       {
-        "text": "i\u0027m finished",
+        "text": "I\u0027m done",
         "userDefined": false
       }
     ],
@@ -180,10 +96,46 @@
     "updated": 1525827589
   },
   {
-    "id": "17cd844b-5c09-42a0-88d0-b6d5d3d39831",
+    "id": "1ffc22ce-b461-4d9e-b8af-5aaac30f839f",
     "data": [
       {
-        "text": "I don\u0027t want to do this anymore",
+        "text": "goodbye",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525827589
+  },
+  {
+    "id": "81afa083-28de-4d92-a859-fa82b9ffb4ae",
+    "data": [
+      {
+        "text": "ok bye",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525827589
+  },
+  {
+    "id": "616ba8f9-6930-491a-bafb-c2e8a05ac081",
+    "data": [
+      {
+        "text": "exit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525827589
+  },
+  {
+    "id": "c071d16e-ffac-4393-bc67-bd85b96377aa",
+    "data": [
+      {
+        "text": "that\u0027s it for now",
         "userDefined": false
       }
     ],
@@ -216,10 +168,58 @@
     "updated": 1525827589
   },
   {
-    "id": "c071d16e-ffac-4393-bc67-bd85b96377aa",
+    "id": "4e9acb09-6b1d-49f4-9c38-d78b423abaec",
     "data": [
       {
-        "text": "that\u0027s it for now",
+        "text": "I\u0027m tired",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525827589
+  },
+  {
+    "id": "1aca92ce-3f07-48e4-8d2d-f26604d55324",
+    "data": [
+      {
+        "text": "cancel",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932016
+  },
+  {
+    "id": "19e56673-d2a2-41ea-83ea-1904b68c95ee",
+    "data": [
+      {
+        "text": "stop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525827589
+  },
+  {
+    "id": "17cd844b-5c09-42a0-88d0-b6d5d3d39831",
+    "data": [
+      {
+        "text": "I don\u0027t want to do this anymore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525827589
+  },
+  {
+    "id": "2b1b9902-987c-4602-8f60-888fcf0d3bc9",
+    "data": [
+      {
+        "text": "bye",
         "userDefined": false
       }
     ],

@@ -1,5 +1,29 @@
 [
   {
+    "id": "3bb9acd5-25a0-458b-a6ef-e0a222ab821b",
+    "data": [
+      {
+        "text": "undo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525053328
+  },
+  {
+    "id": "afc7226a-05fb-4af5-8ae4-ae139a9d8175",
+    "data": [
+      {
+        "text": "undo that last one",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1525053328
+  },
+  {
     "id": "cd45d603-4ef3-49f6-a329-31f9eb4d44a2",
     "data": [
       {
@@ -21,30 +45,6 @@
     "data": [
       {
         "text": "cancel that",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525053328
-  },
-  {
-    "id": "afc7226a-05fb-4af5-8ae4-ae139a9d8175",
-    "data": [
-      {
-        "text": "undo that last one",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1525053328
-  },
-  {
-    "id": "3bb9acd5-25a0-458b-a6ef-e0a222ab821b",
-    "data": [
-      {
-        "text": "undo",
         "userDefined": false
       }
     ],

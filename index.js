@@ -147,7 +147,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         'loop-times': () => {
             let what = inputContexts.what;
             let times = inputContexts.times;
-            if (typeof parseInt(times) !== 'number') {
+            if (times.toLowerCase() === 'once') times = 1;
+            if (times.toLowerCase() === 'twice') times = 2;
+            // extra security check
+            if (isNaN(times)) {
                 times = 3;
             } else if (times < 1) {
                 times = 3;
@@ -184,9 +187,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 // what @sys.number #loop-what.what
             let times = inputContexts.times;
             let what = inputContexts.what;
-            
+            if (times.toLowerCase() === 'once') times = 1;
+            if (times.toLowerCase() === 'twice') times = 2;
             // extra security check
-            if (typeof parseInt(times) !== 'number') {
+            if (isNaN(times)) {
                 times = 3;
             } else if (times < 1) {
                 times = 3;

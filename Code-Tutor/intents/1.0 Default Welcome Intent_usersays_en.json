@@ -1,9 +1,9 @@
 [
   {
-    "id": "426c7b01-301b-4016-be51-23436d84ec40",
+    "id": "9387f0ea-8fb4-486f-9c4a-935766417d42",
     "data": [
       {
-        "text": "what do you do",
+        "text": "what am i supposed to do",
         "userDefined": false
       }
     ],
@@ -12,46 +12,10 @@
     "updated": 1526932995
   },
   {
-    "id": "1e9708c7-fe86-462c-a136-aa8ba661a061",
+    "id": "a48d07a7-9e6a-475b-aab8-ad8e303eb221",
     "data": [
       {
-        "text": "How do I program by talking?",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1526932995
-  },
-  {
-    "id": "bf3ad9e6-2998-4dbe-9c00-19afb9ac0ec0",
-    "data": [
-      {
-        "text": "let\u0027s start again",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1526932995
-  },
-  {
-    "id": "f43a5cde-b1d8-4c9b-979e-a5a6562c3a4e",
-    "data": [
-      {
-        "text": "How can I program by voice?",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1526932995
-  },
-  {
-    "id": "89181ae9-475c-4838-ba49-95d5ce067140",
-    "data": [
-      {
-        "text": "how does this work",
+        "text": "teach me how to code",
         "userDefined": false
       }
     ],
@@ -72,10 +36,46 @@
     "updated": 1526932995
   },
   {
-    "id": "c9f82299-e81a-425d-b489-bd23bc405c50",
+    "id": "bf3ad9e6-2998-4dbe-9c00-19afb9ac0ec0",
     "data": [
       {
-        "text": "I want to learn to program",
+        "text": "let\u0027s start again",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932995
+  },
+  {
+    "id": "426c7b01-301b-4016-be51-23436d84ec40",
+    "data": [
+      {
+        "text": "what do you do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932995
+  },
+  {
+    "id": "89181ae9-475c-4838-ba49-95d5ce067140",
+    "data": [
+      {
+        "text": "how does this work",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932995
+  },
+  {
+    "id": "f43a5cde-b1d8-4c9b-979e-a5a6562c3a4e",
+    "data": [
+      {
+        "text": "How can I program by voice?",
         "userDefined": false
       }
     ],
@@ -88,6 +88,42 @@
     "data": [
       {
         "text": "teach me to program",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932995
+  },
+  {
+    "id": "c9f82299-e81a-425d-b489-bd23bc405c50",
+    "data": [
+      {
+        "text": "I want to learn to program",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932995
+  },
+  {
+    "id": "1e9708c7-fe86-462c-a136-aa8ba661a061",
+    "data": [
+      {
+        "text": "How do I program by talking?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1526932995
+  },
+  {
+    "id": "70db2ca7-f759-400e-ac6b-366a7e77f519",
+    "data": [
+      {
+        "text": "what\u0027s going on",
         "userDefined": false
       }
     ],
@@ -132,46 +168,10 @@
     "updated": 1526932995
   },
   {
-    "id": "a48d07a7-9e6a-475b-aab8-ad8e303eb221",
-    "data": [
-      {
-        "text": "teach me how to code",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1526932995
-  },
-  {
-    "id": "70db2ca7-f759-400e-ac6b-366a7e77f519",
-    "data": [
-      {
-        "text": "what\u0027s going on",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1526932995
-  },
-  {
     "id": "772a50d5-6e26-461e-9e78-6b0de19e265e",
     "data": [
       {
         "text": "how do you use this?",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1526932995
-  },
-  {
-    "id": "9387f0ea-8fb4-486f-9c4a-935766417d42",
-    "data": [
-      {
-        "text": "what am i supposed to do",
         "userDefined": false
       }
     ],
