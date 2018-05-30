@@ -28,6 +28,7 @@ I'm open-sourcing my code to help others learn faster (just please change the au
 * [index.js](https://github.com/hchiam/code-tutor/blob/master/index.js) is my inline editor code. You can use it to figure out how to use the inline editor faster in your own projects. For it to work, my code requires the imports listed in 
 * [package.json](https://github.com/hchiam/code-tutor/blob/master/package.json) (you’ll see a tab for this in the inline editor). 
 * The [CodeTutor](https://github.com/hchiam/code-tutor/tree/master/Code-Tutor) folder is an un-zipped export of my agent from Dialogflow (API.ai), which may contain the app’s intents, entities, and other info besides the other 2 files. 
+* I also added [pictures for your reference](https://github.com/hchiam/code-tutor/blob/master/pictures_for_reference). I think I followed best practice by hinting at conversation flow by treating [intent names](https://dialogflow.com/docs/intents) as numbered bullet points.
 
 ## Related:
 
