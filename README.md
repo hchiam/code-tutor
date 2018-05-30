@@ -28,7 +28,7 @@ I'm open-sourcing my code to help others learn faster (just please change the au
 * **START HERE**: [index.js](https://github.com/hchiam/code-tutor/blob/master/index.js) is my inline editor code in Dialogflow. You can use it to figure out how to use the inline editor faster in your own projects. For it to work, my code requires the imports listed in [package.json](https://github.com/hchiam/code-tutor/blob/master/package.json)
 * **START HERE**: I also added [pictures for your reference](https://github.com/hchiam/code-tutor/blob/master/pictures_for_reference). I think I followed best practice by hinting at conversation flow by treating [intent names](https://dialogflow.com/docs/intents) as numbered bullet points. Dialogflow automatically sorts your intents in alphabetical order, so it helps when you have a lot of intents.
 * [package.json](https://github.com/hchiam/code-tutor/blob/master/package.json) (you’ll see a tab for this in the inline editor in Dialogflow). 
-* The [CodeTutor](https://github.com/hchiam/code-tutor/tree/master/Code-Tutor) folder is an un-zipped export of my agent from Dialogflow, which may contain the app’s intents, entities, and other info besides the other 2 files. 
+* The [CodeTutor](https://github.com/hchiam/code-tutor/tree/master/Code-Tutor) folder is an un-zipped export of my agent from Dialogflow, which may contain the app’s [intents](https://dialogflow.com/docs/intents), [entities](https://dialogflow.com/docs/entities), and other info besides the other 2 files. 
 
 ## Related:
 
