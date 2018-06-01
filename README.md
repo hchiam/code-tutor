@@ -2,6 +2,11 @@
 
 [![HitCount](http://hits.dwyl.io/hchiam/code-tutor.svg)](http://hits.dwyl.io/hchiam/code-tutor)
 
+<a href="https://assistant.google.com/services/invoke/uid/000000668d1fb538">
+    🅖 Ask Code Tutor to teach me
+</a>
+<br>
+
 **Code Tutor** is listed in the [Google Assistant web directory](https://assistant.google.com/services/a/uid/000000668d1fb538).
 
 **Long-term goal**: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
