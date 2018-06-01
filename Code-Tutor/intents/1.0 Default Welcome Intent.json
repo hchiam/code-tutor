@@ -54,9 +54,9 @@
           "type": 0,
           "lang": "en",
           "speech": [
-            "Hi! I\u0027m Code Tutor, version 2. \n░█████░\n█░░░░██\n█░░░░██\n░░░██░░\n░██░░░░\n███████",
-            "This is Code Tutor, version 2. \n░█████░\n█░░░░██\n█░░░░██\n░░░██░░\n░██░░░░\n███████",
-            "Hello! I\u0027m Code Tutor, version 2. \n░█████░\n█░░░░██\n█░░░░██\n░░░██░░\n░██░░░░\n███████"
+            "Hi! I\u0027m Code Tutor, version 3. \n██████\n░░░░░█\n░░███░\n█░░░░█\n░████░",
+            "This is Code Tutor, version 3. \n██████\n░░░░░█\n░░███░\n█░░░░█\n░████░",
+            "Hello! I\u0027m Code Tutor, version 3. \n██████\n░░░░░█\n░░███░\n█░░░░█\n░████░"
           ]
         }
       ],
@@ -69,7 +69,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1526932995,
+  "lastUpdate": 1527829098,
   "fallbackIntent": false,
   "events": [
     {
