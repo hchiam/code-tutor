@@ -88,7 +88,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         let code = `let x = [${' ,'.repeat(size-1)} ];`;
         
-        app.add(`Here's your code: \n${code}\nLet's place the first item in the array x. By the way, in code, we count starting at 0. So, what should be item number 0?`);
+        app.add(`Here's your code: \n${code}\n That's it for the code. Let's place the first item in the array x. By the way, in code, we count starting at 0. So, what should be item number 0?`);
         app.setContext({
             name: 'array-fill', 
             lifespan: 1, 
@@ -385,14 +385,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             * if banana equals fruit\n\
             * run code\n\n\
             If you need this list again, just say "what\'s on the list?"';
-        app.add(`Here's what you can say: ${say}`);
-        app.add(new Card({
-            title: `Command Options:`,
-            imageUrl: ``,
-            text: optionsText,
-            buttonText: ``,
-            buttonUrl: ``
-        }));
+        app.add(`Here's what you can say: ${optionsText}`);
+        app.add(new Suggestion('apple equals 1'));
+        app.add(new Suggestion('repeat 3 times'));
+        app.add(new Suggestion('say hi'));
+        app.add(new Suggestion('if banana equals fruit'));
+        app.add(new Suggestion('run code'));
         app.setContext({
             name: 'sandbox',
             lifespan: 1,
@@ -418,6 +416,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         }
         app.add(`Here's your code:\n${code}`);
         app.add(`What's next?`);
+        app.add(new Suggestion('run code'));
         app.setContext({
             name: 'sandbox',
             lifespan: 1,
@@ -436,6 +435,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     
         app.add(`Here's your code:\n${code}`);
         app.add(`What's next?`);
+        app.add(new Suggestion('run code'));
         app.setContext({
             name: 'sandbox',
             lifespan: 1,
@@ -455,6 +455,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         let googleResponse = app.buildRichResponse()
         app.add(`Here's your code:\n${code}`);
         app.add(`What's next?`);
+        app.add(new Suggestion('run code'));
         app.setContext({
             name: 'sandbox',
             lifespan: 1,
@@ -474,6 +475,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     
         app.add(`Here's your code:\n${code}`);
         app.add(`What's next?`);
+        app.add(new Suggestion('run code'));
         app.setContext({
             name: 'sandbox',
             lifespan: 1,
