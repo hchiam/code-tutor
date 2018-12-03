@@ -20,10 +20,10 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "feedback form",
+          "formattedText": "Send feedback",
           "buttons": [
             {
-              "title": "https://goo.gl/forms/mn2Xcy0tmNyFQ5y72",
+              "title": "feedback form",
               "openUrlAction": {
                 "url": "https://goo.gl/forms/mn2Xcy0tmNyFQ5y72",
                 "urlTypeHint": "URL_TYPE_HINT_UNSPECIFIED"
@@ -44,9 +44,9 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": true,
+  "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524194672,
+  "lastUpdate": 1543798872,
   "fallbackIntent": true,
   "events": []
 }

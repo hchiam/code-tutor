@@ -337,7 +337,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             \nfor (let i=0; i<3; i++)\
             \n\tsay(message);';
     
-        app.add(code);
+        app.add(`Here\'s your code: ${code}`);
         app.add(`Say "run code" and I'll follow the instructions.`);
         app.add(new Suggestion('run code'));
         app.add(new Suggestion(`what's a variable?`));
@@ -371,6 +371,157 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         app.add(new Suggestion('sandbox'));
     }
 
+    function sandboxList(app) {
+        let code = inputContexts.code;
+        let say = '<speak> Apple equals 1. <break time="1s" /> ' + 
+            'Repeat 3 times. <break time="1s" /> ' + 
+            'Say hi. <break time="1s" /> ' + 
+            'If banana equals fruit. <break time="1s" /> ' + 
+            'Run code. <break time="1s" /> ' +
+            'If you need this list again, just ask me "what\'s on the list?" </speak>';
+        let optionsText = '* apple equals 1\n\
+            * repeat 3 times\n\
+            * say hi\n\
+            * if banana equals fruit\n\
+            * run code\n\n\
+            If you need this list again, just say "what\'s on the list?"';
+        app.add(`Here's what you can say: ${say}`);
+        app.add(new Card({
+            title: `Command Options:`,
+            imageUrl: ``,
+            text: optionsText,
+            buttonText: ``,
+            buttonUrl: ``
+        }));
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: removeSomePunctuation(code)
+            }
+        });
+    }
+
+    function sandboxVariable(app) {
+        let code = inputContexts.code;
+        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+    
+        let variable = removeSomePunctuation(inputContexts.variable).toLowerCase();
+        let value = wrapIfString(removeSomePunctuation(inputContexts.value)); // uses codeVariables
+    
+        // recognize whether variable is being reassigned
+        if (codeVariables.indexOf(variable) < 0) {
+            code += `let ${variable} = ${value};\n`;
+            codeVariables.push(variable);
+        } else {
+            code += `${variable} = ${value};\n`;
+        }
+        app.add(`Here's your code:\n${code}`);
+        app.add(`What's next?`);
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: code
+            }
+        });
+    }
+
+    function sandboxRepeat(app) {
+        let code = inputContexts.code;
+        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+    
+        let times = removeSomePunctuation(inputContexts.times);
+        code += `for (let i=0; i<${times}; i++)\n  `;
+    
+        app.add(`Here's your code:\n${code}`);
+        app.add(`What's next?`);
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: code
+            }
+        });
+    }
+
+    function sandboxSay(app) {
+        let code = inputContexts.code;
+        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+    
+        let what = wrapIfString(removeSomePunctuation(inputContexts.what));
+        code += `say(${what});\n`;
+    
+        let googleResponse = app.buildRichResponse()
+        app.add(`Here's your code:\n${code}`);
+        app.add(`What's next?`);
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: code
+            }
+        });
+    }
+
+    function sandboxIf(app) {
+        let code = inputContexts.code;
+        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+    
+        let variable = wrapIfString(removeSomePunctuation(inputContexts.variable));
+        let value = wrapIfString(removeSomePunctuation(inputContexts.value));
+        code += `if (${variable} == ${value})\n  `;
+    
+        app.add(`Here's your code:\n${code}`);
+        app.add(`What's next?`);
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: code
+            }
+        });
+    }
+
+    function sandboxRunCode(app) {
+        let code = inputContexts.code;
+        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+    
+        let output = getOutput(code);
+    
+        app.add(`${output}`);
+        app.add(`What's next?`);
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: code
+            }
+        });
+    }
+
+    function sandboxUndo(app) {
+        let code = inputContexts.code;
+    
+        // remove last line
+        code = code.split('\n');
+        if (code[code.length-1] === '') code.pop();
+        code.pop();
+        code = code.join('\n');
+    
+        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+        
+        app.add(`Here's your code:\n${code}`);
+        app.add(`What's next?`);
+        app.setContext({
+            name: 'sandbox',
+            lifespan: 1,
+            parameters: {
+                code: code
+            }
+        });
+    }
+
     // Run the proper function handler based on the matched Dialogflow intent name
     let intentMap = new Map();
     intentMap.set('0.1 Default Fallback Intent - yes - suggestion', suggestionPrefill);
@@ -384,140 +535,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     intentMap.set('3.5.3.2 sound effects - wood planks', soundEffectsWoodPlanks);
     intentMap.set('3.6.1 example - name', exampleName);
     intentMap.set('3.6.2 example - run code', exampleRunCode);
+    intentMap.set(`3.7.0 sandbox - what's on the list`, sandboxList);
+    intentMap.set(`3.7.1 sandbox - variable`, sandboxVariable);
+    intentMap.set(`3.7.2 sandbox - repeat`, sandboxRepeat);
+    intentMap.set(`3.7.3 sandbox - say`, sandboxSay);
+    intentMap.set(`3.7.4 sandbox - if`, sandboxIf);
+    intentMap.set(`3.7.5 sandbox - run code`, sandboxRunCode);
+    intentMap.set(`3.7.6 sandbox - undo`, sandboxUndo);
     app.handleRequest(intentMap);
-
-    //     'sandbox-list': () => {
-    //         let code = inputContexts.code;
-    //         let say = '<speak> Apple equals 1. <break time="1s" /> ' + 
-    //             'Repeat 3 times. <break time="1s" /> ' + 
-    //             'Say hi. <break time="1s" /> ' + 
-    //             'If banana equals fruit. <break time="1s" /> ' + 
-    //             'Run code. <break time="1s" /> ' +
-    //             'If you need this list again, just ask me "what\'s on the list?" </speak>';
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse("Here's what you can say:")
-    //             .addSimpleResponse({
-    //                 speech: say,
-    //                 displayText: '* apple equals 1\n\
-    //                     * repeat 3 times\n\
-    //                     * say hi\n\
-    //                     * if banana equals fruit\n\
-    //                     * run code\n\n\
-    //                     If you need this list again, just say "what\'s on the list?"'
-    //             })
-    //         app.setContext('sandbox', 1, {
-    //             code: removeSomePunctuation(code)
-    //         });
-    //         app.add(googleResponse);
-    //     },
-
-    //     'sandbox-variable': () => {
-    //         let code = inputContexts.code;
-    //         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-        
-    //         let variable = removeSomePunctuation(inputContexts.variable).toLowerCase();
-    //         let value = wrapIfString(removeSomePunctuation(inputContexts.value)); // uses codeVariables
-        
-    //         // recognize whether variable is being reassigned
-    //         if (codeVariables.indexOf(variable) < 0) {
-    //             code += `let ${variable} = ${value};\n`;
-    //             codeVariables.push(variable);
-    //         } else {
-    //             code += `${variable} = ${value};\n`;
-    //         }
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse(`Here's your code:\n${code}`)
-    //             .addSimpleResponse(`What's next?`)
-    //         app.setContext('sandbox', 1, {
-    //             code: code
-    //         });
-    //         app.add(googleResponse);
-    //     },
-
-    //     'sandbox-repeat': () => {
-    //         let code = inputContexts.code;
-    //         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-        
-    //         let times = removeSomePunctuation(inputContexts.times);
-    //         code += `for (let i=0; i<${times}; i++)\n  `;
-        
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse(`Here's your code:\n${code}`)
-    //             .addSimpleResponse(`What's next?`)
-    //         app.setContext('sandbox', 1, {
-    //             code: code
-    //         });
-    //         app.add(googleResponse);
-    //     },
-
-    //     'sandbox-say': () => {
-    //         let code = inputContexts.code;
-    //         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-        
-    //         let what = wrapIfString(removeSomePunctuation(inputContexts.what));
-    //         code += `say(${what});\n`;
-        
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse(`Here's your code:\n${code}`)
-    //             .addSimpleResponse(`What's next?`)
-    //         app.setContext('sandbox', 1, {
-    //             code: code
-    //         });
-    //         app.add(googleResponse);
-    //     },
-
-    //     'sandbox-if': () => {
-    //         let code = inputContexts.code;
-    //         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-        
-    //         let variable = wrapIfString(removeSomePunctuation(inputContexts.variable));
-    //         let value = wrapIfString(removeSomePunctuation(inputContexts.value));
-    //         code += `if (${variable} == ${value})\n  `;
-        
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse(`Here's your code:\n${code}`)
-    //             .addSimpleResponse(`What's next?`)
-    //         app.setContext('sandbox', 1, {
-    //             code: code
-    //         });
-    //         app.add(googleResponse);
-    //     },
-
-    //     'sandbox-run-code': () => {
-    //         let code = inputContexts.code;
-    //         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-        
-    //         let output = getOutput(code);
-        
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse(`${output}`)
-    //             .addSimpleResponse(`What's next?`)
-    //         app.setContext('sandbox', 1, {
-    //             code: code
-    //         });
-    //         app.add(googleResponse);
-    //     },
-
-    //     'sandbox-undo': () => {
-    //         let code = inputContexts.code;
-        
-    //         // remove last line
-    //         code = code.split('\n');
-    //         if (code[code.length-1] === '') code.pop();
-    //         code.pop();
-    //         code = code.join('\n');
-        
-    //         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-        
-    //         let googleResponse = app.buildRichResponse()
-    //             .addSimpleResponse(`Here's your code:\n${code}`)
-    //             .addSimpleResponse(`What's next?`)
-    //         app.setContext('sandbox', 1, {
-    //             code: code
-    //         });
-    //         app.add(googleResponse);
-    //     },
-    // };
 });
 
 // extra helper functions needed for sandbox:
