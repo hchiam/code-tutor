@@ -467,11 +467,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     function sandboxIf(app) {
         let code = inputContexts.code;
         codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-    
+        
         let variable = wrapIfString(removeSomePunctuation(inputContexts.variable));
         let value = wrapIfString(removeSomePunctuation(inputContexts.value));
         code += `if (${variable} == ${value})\n  `;
-    
+        
         app.add(`Here's your code:\n${code}`);
         app.add(`What's next?`);
         app.add(new Suggestion('run code'));
@@ -486,19 +486,31 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     function sandboxRunCode(app) {
         let code = inputContexts.code;
-        codeVariables = getVariables(code); // need to make sure variables array is up-to-date
-    
-        let output = getOutput(code);
-    
+        let output = '(none)';
+        let haveCodeToRun = (code !== '') && (code !== undefined) && (code !== null);
+        if (haveCodeToRun) {
+            codeVariables = getVariables(code); // need to make sure variables array is up-to-date
+            output = getOutput(code);
+        }
         app.add(`${output}`);
         app.add(`What's next?`);
-        app.setContext({
-            name: 'sandbox',
-            lifespan: 1,
-            parameters: {
-                code: code
-            }
-        });
+        if (haveCodeToRun) {
+            app.setContext({
+                name: 'sandbox',
+                lifespan: 1,
+                parameters: {
+                    code: code
+                }
+            });
+        } else {
+            app.setContext({
+                name: 'sandbox',
+                lifespan: 1,
+                parameters: {
+                    code: '' // just in case
+                }
+            });
+        }
     }
 
     function sandboxUndo(app) {
