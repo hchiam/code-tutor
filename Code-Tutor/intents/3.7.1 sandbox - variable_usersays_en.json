@@ -1,30 +1,6 @@
 [
   {
-    "id": "aa792983-c129-44ee-bff8-f89c779a9f88",
-    "data": [
-      {
-        "text": "@sys.any:variable \u003d @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524278286
-  },
-  {
-    "id": "90b708f5-1384-4c0d-be69-822454ebb392",
-    "data": [
-      {
-        "text": "let @sys.any:variable equal to @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524278286
-  },
-  {
-    "id": "69ac5ed2-6a21-41ef-b098-1ccbeafe5200",
+    "id": "16eb48b8-13ec-4a14-afd7-ebca410f2cb4",
     "data": [
       {
         "text": "initialize @sys.any:variable as @sys.any:value",
@@ -36,31 +12,31 @@
     "updated": 1524412082
   },
   {
-    "id": "124feaf3-dd6d-4153-8841-393f05cfdead",
+    "id": "68937e8a-12f3-4adf-81d6-16bc79408560",
     "data": [
       {
-        "text": "@sys.any:variable equals @sys.any:value",
+        "text": "@sys.any:variable \u003d @sys.any:value",
         "userDefined": false
       }
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 1524278286
   },
   {
-    "id": "5742f92d-073e-43a5-9edd-9f39c181fe88",
+    "id": "3fe87b78-eff1-4f22-a011-00070eaf252c",
     "data": [
       {
-        "text": "set @sys.any:variable equal to @sys.any:value",
+        "text": "let @sys.any:variable equal to @sys.any:value",
         "userDefined": false
       }
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 1524278286
   },
   {
-    "id": "9fe149e4-2a73-48b1-b088-81427cdd0345",
+    "id": "8f769ab8-9e26-4866-8918-d53583955014",
     "data": [
       {
         "text": "create a variable @sys.any:variable equals to @sys.any:value",
@@ -72,7 +48,7 @@
     "updated": 1524277186
   },
   {
-    "id": "741dd825-adae-47a8-8622-0fba688272bb",
+    "id": "fc661456-c049-482c-aac0-f02842f9771f",
     "data": [
       {
         "text": "assign @sys.any:variable the value @sys.any:value",
@@ -84,10 +60,34 @@
     "updated": 1524277186
   },
   {
-    "id": "4a569983-bc35-4770-bb0b-fe5c48665adf",
+    "id": "5995edc8-3fc3-4d52-ab2e-ea8960001c5d",
+    "data": [
+      {
+        "text": "set @sys.any:variable equal to @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524277186
+  },
+  {
+    "id": "dafd8da0-71b3-47fc-8390-ee0fbd2841a9",
     "data": [
       {
         "text": "let @sys.any:variable equal @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524277186
+  },
+  {
+    "id": "6ce5a4ab-dbd7-4244-ba14-48ead92b295c",
+    "data": [
+      {
+        "text": "@sys.any:variable equals @sys.any:value",
         "userDefined": false
       }
     ],

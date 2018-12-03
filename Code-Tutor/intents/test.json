@@ -1,0 +1,28 @@
+{
+  "id": "c404d72d-7024-45d1-aafa-f25c89c6b2ef",
+  "name": "test",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1543791149,
+  "fallbackIntent": false,
+  "events": []
+}

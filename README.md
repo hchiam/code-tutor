@@ -12,7 +12,7 @@
 
 Made possible thanks to support from family and friends.
 
-Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended.
+Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended. (EDIT: Now updated to use API V2.)
 
 Privacy policy: https://goo.gl/PMwsDW
 

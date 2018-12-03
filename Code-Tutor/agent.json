@@ -1,15 +1,17 @@
 {
-  "description": "",
+  "description": "Build simple code, hands-free.",
   "language": "en",
   "disableInteractionLogs": false,
   "disableStackdriverLogs": true,
   "googleAssistant": {
     "googleAssistantCompatible": true,
-    "project": "code-tutor-4",
+    "project": "code-tutor-59988",
     "welcomeIntentSignInRequired": false,
     "startIntents": [],
     "systemIntents": [],
-    "endIntentIds": [],
+    "endIntentIds": [
+      "8eda261a-92ea-4f78-9826-e504705e6659"
+    ],
     "oAuthLinking": {
       "required": false,
       "grantType": "AUTH_CODE_GRANT"
@@ -17,11 +19,12 @@
     "voiceType": "MALE_1",
     "capabilities": [],
     "protocolVersion": "V2",
+    "autoPreviewEnabled": true,
     "isDeviceAgent": false
   },
   "defaultTimezone": "America/New_York",
   "webhook": {
-    "url": "https://us-central1-code-tutor-4.cloudfunctions.net/dialogflowFirebaseFulfillment",
+    "url": "https://us-central1-code-tutor-59988.cloudfunctions.net/dialogflowFirebaseFulfillment",
     "available": true,
     "useForDomains": false,
     "cloudFunctionsEnabled": true,

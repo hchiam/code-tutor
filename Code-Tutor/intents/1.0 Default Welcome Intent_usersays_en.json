@@ -1,114 +1,6 @@
 [
   {
-    "id": "fd34639c-26d3-4b8d-b32a-609a747879d3",
-    "data": [
-      {
-        "text": "what am i supposed to do",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "bb74798b-308d-47ee-8190-44d9fb7352db",
-    "data": [
-      {
-        "text": "teach me how to code",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "c730c3a4-2f14-4d60-afb1-c9e16b6ae6a8",
-    "data": [
-      {
-        "text": "what can i do",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "011ce46a-7384-426b-bb49-79295a628684",
-    "data": [
-      {
-        "text": "let\u0027s start again",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "cdf9c356-d773-4176-a466-ebb160dab025",
-    "data": [
-      {
-        "text": "what do you do",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "3e2945b3-7cde-4756-bf41-ac0daef28805",
-    "data": [
-      {
-        "text": "how does this work",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "5516206a-21f3-4266-b465-3aee9c589741",
-    "data": [
-      {
-        "text": "How can I program by voice?",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "96769a8a-10c4-4ed2-902c-dcf85d7c7126",
-    "data": [
-      {
-        "text": "teach me to program",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "bed10e8b-9552-4d29-a078-6085fcc8cf12",
-    "data": [
-      {
-        "text": "I want to learn to program",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "3cc3a8ea-dfc7-44d6-ab05-1ad0ec01762c",
+    "id": "2a5ff044-c113-445d-b958-f4709e53fc12",
     "data": [
       {
         "text": "How do I program by talking?",
@@ -120,31 +12,7 @@
     "updated": 1527829055
   },
   {
-    "id": "0d5a3cd6-68c8-4b8b-b3c3-bfafa007904d",
-    "data": [
-      {
-        "text": "what\u0027s going on",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "d3431cf7-d430-4dcc-aa92-a032cb25fffb",
-    "data": [
-      {
-        "text": "What do I do",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 1527829055
-  },
-  {
-    "id": "deee40d1-c524-4103-99c4-7a0355067a5f",
+    "id": "2e4a4aa3-126f-48fc-b0c3-d4b6a638feae",
     "data": [
       {
         "text": "go back to the beginning",
@@ -156,7 +24,43 @@
     "updated": 1527829055
   },
   {
-    "id": "1d57c851-f2d0-4c7a-99b8-8f1f9c96c641",
+    "id": "dd9e8fb7-c30d-43ec-bda9-04184246bfde",
+    "data": [
+      {
+        "text": "how does this work",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "c58c5deb-6d7f-4125-8278-a2a99a8ad21a",
+    "data": [
+      {
+        "text": "What do I do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "35bd8ded-68f5-4e58-b7c1-fc4de0ef4763",
+    "data": [
+      {
+        "text": "what am i supposed to do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "db03777b-d6e0-4207-ad5c-5cd07b017907",
     "data": [
       {
         "text": "what is this",
@@ -168,10 +72,106 @@
     "updated": 1527829055
   },
   {
-    "id": "44d2ab63-c620-4dfe-b413-e16333a91d84",
+    "id": "6ac25346-0e38-4ee8-8666-d6b5766b096b",
+    "data": [
+      {
+        "text": "teach me how to code",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "dceafd37-541e-474e-bf7b-bca12776308a",
+    "data": [
+      {
+        "text": "let\u0027s start again",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "44f075c4-476d-41a0-93db-745954f14f51",
+    "data": [
+      {
+        "text": "I want to learn to program",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "972a5ee9-335a-4826-8b75-068382211063",
     "data": [
       {
         "text": "how do you use this?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "231137d7-db9c-4567-9067-d63133f1b68a",
+    "data": [
+      {
+        "text": "teach me to program",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "0031afbf-dd59-4bfb-a73b-f4bde63fc908",
+    "data": [
+      {
+        "text": "what can i do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "891a8f58-ae7f-48db-82bc-6773a484be10",
+    "data": [
+      {
+        "text": "what\u0027s going on",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "a813c48f-0eb2-4b32-988d-230be2f40a23",
+    "data": [
+      {
+        "text": "what do you do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527829055
+  },
+  {
+    "id": "ac204c49-4c64-49d8-b106-2fbc53c75650",
+    "data": [
+      {
+        "text": "How can I program by voice?",
         "userDefined": false
       }
     ],

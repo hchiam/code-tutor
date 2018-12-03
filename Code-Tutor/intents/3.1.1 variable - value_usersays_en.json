@@ -1,30 +1,6 @@
 [
   {
-    "id": "85ffe511-a878-4cd7-b5d0-550faba6efed",
-    "data": [
-      {
-        "text": "let x equal @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524192894
-  },
-  {
-    "id": "ad192893-da75-449a-8150-181508ae04fd",
-    "data": [
-      {
-        "text": "x equals @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524192894
-  },
-  {
-    "id": "4b3da3d6-c54c-48d1-a55e-7bcc6dc9231a",
+    "id": "8aca4bcf-edb5-4522-82d6-1cb88c3936ef",
     "data": [
       {
         "text": "set x equal to @sys.any:value",
@@ -36,7 +12,19 @@
     "updated": 1524192894
   },
   {
-    "id": "196150ec-14a2-4e51-80c4-c6226d98ccc7",
+    "id": "ed8a491a-2fa0-48fe-a4f6-aa016e84129f",
+    "data": [
+      {
+        "text": "let x equal @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "4e82ce8c-3bb2-47be-ace7-d37892e3abb5",
     "data": [
       {
         "text": "assign @sys.any:value",
@@ -48,19 +36,19 @@
     "updated": 1524192894
   },
   {
-    "id": "9f03be5a-e45f-4e99-9df0-1d5db43d763f",
+    "id": "d122a277-be99-4bcb-a509-f5b03dbc2f75",
     "data": [
       {
-        "text": "hi",
+        "text": "x equals @sys.any:value",
         "userDefined": false
       }
     ],
-    "isTemplate": false,
+    "isTemplate": true,
     "count": 0,
     "updated": 1524192894
   },
   {
-    "id": "c4d79395-64f9-4c56-8840-029d6aba9832",
+    "id": "f6a153ac-deda-4355-b8f0-befa18823ca9",
     "data": [
       {
         "text": "x \u003d @sys.any:value",
@@ -72,7 +60,19 @@
     "updated": 1524192894
   },
   {
-    "id": "84f4e161-d644-4541-b7b5-075605fcb177",
+    "id": "b87ad8fe-b7b8-4d96-8684-e8538b1e4eee",
+    "data": [
+      {
+        "text": "hi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1524192894
+  },
+  {
+    "id": "2a0eacdc-9ed3-422c-b28e-8a7534026bee",
     "data": [
       {
         "text": "@sys.any:value",

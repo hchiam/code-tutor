@@ -1,66 +1,6 @@
 [
   {
-    "id": "4ad7dece-0c5e-4b1f-85d9-97d66594bbf0",
-    "data": [
-      {
-        "text": "if @sys.any:variable equals @sys.any:value  then",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
-    "id": "fa6e5da7-4018-47eb-af0c-f69c4fdbbdd3",
-    "data": [
-      {
-        "text": "if @sys.any:variable \u003d @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524412508
-  },
-  {
-    "id": "50123049-7294-4935-b67c-6408c7f719a5",
-    "data": [
-      {
-        "text": "if @sys.any:variable is equal to @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
-    "id": "e58652b6-ac2e-4f7f-97f2-e9622d865ce8",
-    "data": [
-      {
-        "text": "if @sys.any:variable is equal to @sys.any:value then",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
-    "id": "8b26daea-db66-4a6a-b63e-1a5b1a7d6dc6",
-    "data": [
-      {
-        "text": "check if @sys.any:variable equals @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524531940
-  },
-  {
-    "id": "a1483acc-4a32-421c-88e2-1f176b168178",
+    "id": "b1638575-bb65-4d87-87e4-d5ebe5e1e589",
     "data": [
       {
         "text": "check if @sys.any:variable equals @sys.any:value then",
@@ -72,7 +12,19 @@
     "updated": 1524531940
   },
   {
-    "id": "51d6f156-522a-4397-a837-3eac8dd5106c",
+    "id": "7140a077-6ef8-4231-b4e6-d04af07f4393",
+    "data": [
+      {
+        "text": "check if @sys.any:variable equals @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524531940
+  },
+  {
+    "id": "587063cf-8e29-43e8-8641-d6131c971203",
     "data": [
       {
         "text": "if @sys.any:variable \u003d\u003d @sys.any:value",
@@ -84,31 +36,7 @@
     "updated": 1524412508
   },
   {
-    "id": "72116fe1-b248-46f7-a121-05d64d42e1bf",
-    "data": [
-      {
-        "text": "if @sys.any:variable equals @sys.any:value",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
-    "id": "c131ce99-055e-4931-81e9-42f8f6c3955d",
-    "data": [
-      {
-        "text": "if @sys.any:variable is @sys.any:value then",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": true,
-    "count": 0,
-    "updated": 1524279451
-  },
-  {
-    "id": "c751c1e0-dc2f-483f-ae44-a8eb5815d041",
+    "id": "70457962-e6d7-4166-abe5-2bd5eb62c952",
     "data": [
       {
         "text": "if @sys.any:variable \u003d @sys.any:value then",
@@ -120,10 +48,82 @@
     "updated": 1524412508
   },
   {
-    "id": "7fcbe0a4-639b-48dc-8399-687bebd51d4f",
+    "id": "d2d8805d-e706-4602-b513-29494a8bae64",
+    "data": [
+      {
+        "text": "if @sys.any:variable \u003d @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524412508
+  },
+  {
+    "id": "77959250-100d-4d07-b740-67ddb051140e",
+    "data": [
+      {
+        "text": "if @sys.any:variable is @sys.any:value then",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "7b0d3be8-c292-4944-a0eb-5ed034b41267",
     "data": [
       {
         "text": "if @sys.any:variable is @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "8ca350cf-f391-4a6a-9496-8dbf8a89d427",
+    "data": [
+      {
+        "text": "if @sys.any:variable is equal to @sys.any:value then",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "fdaa1e2b-949d-46a9-8bc7-8441d039afa3",
+    "data": [
+      {
+        "text": "if @sys.any:variable is equal to @sys.any:value",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "d8a6f6b3-53bd-4b65-b968-9835c57e9bfb",
+    "data": [
+      {
+        "text": "if @sys.any:variable equals @sys.any:value  then",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1524279451
+  },
+  {
+    "id": "2a9adfc6-8614-45d0-b8d5-eb05e870613e",
+    "data": [
+      {
+        "text": "if @sys.any:variable equals @sys.any:value",
         "userDefined": false
       }
     ],
