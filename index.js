@@ -385,7 +385,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             * if banana equals fruit\n\
             * run code\n\n\
             If you need this list again, just say "what\'s on the list?"';
-        app.add(`Here's what you can say: ${optionsText}`);
+        app.add(`Here's what you can say: \n${optionsText}`);
         app.add(new Suggestion('apple equals 1'));
         app.add(new Suggestion('repeat 3 times'));
         app.add(new Suggestion('say hi'));
@@ -452,7 +452,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         let what = wrapIfString(removeSomePunctuation(inputContexts.what));
         code += `say(${what});\n`;
     
-        let googleResponse = app.buildRichResponse()
         app.add(`Here's your code:\n${code}`);
         app.add(`What's next?`);
         app.add(new Suggestion('run code'));
