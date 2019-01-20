@@ -32,6 +32,10 @@ I'm open-sourcing my code to help others learn faster (just please change the au
 * [package.json](https://github.com/hchiam/code-tutor/blob/master/package.json) (you’ll see a tab for this in the inline editor in Dialogflow). 
 * The [CodeTutor](https://github.com/hchiam/code-tutor/tree/master/Code-Tutor) folder is an un-zipped export of my agent from Dialogflow, which may contain the app’s [intents](https://dialogflow.com/docs/intents), [entities](https://dialogflow.com/docs/entities), and other info besides the other 2 files. 
 
+## Hidden Features:
+
+Hint: try a number over 9000. :)
+
 ## Related:
 
 https://github.com/hchiam/code-tutor-sandbox-test and https://code-tutor-sandbox-test.glitch.me/
