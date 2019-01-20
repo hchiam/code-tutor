@@ -34,7 +34,7 @@ I'm open-sourcing my code to help others learn faster (just please change the au
 
 ## Hidden Features:
 
-Hint: try a number over 9000. :)
+Hint: try a number over 9000 :)
 
 ## Related:
 
