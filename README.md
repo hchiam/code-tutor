@@ -36,6 +36,10 @@ I'm open-sourcing my code to help others learn faster (just please change the au
 
 Hint: try a number over 9000 :)
 
+## Want to Create Your Own Google Assistant App?
+
+Check out these AoG codelabs: https://developers.google.com/actions/codelabs/
+
 ## Related:
 
 https://github.com/hchiam/code-tutor-sandbox-test and https://code-tutor-sandbox-test.glitch.me/
