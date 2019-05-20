@@ -88,7 +88,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         
         let code = `let x = [${' ,'.repeat(size-1)} ];`;
         
-        app.add(`Here's your code: \n${code}\n That's it for the code. Let's place the first item in the array x. By the way, in code, we count starting at 0. So, what should be item number 0?`);
+        app.add(`Here's your code: \n${code}\n (an array). That's it for the code. Let's place the first item in the array x. By the way, in code, we count starting at 0. So, what should be item number 0?`);
         app.setContext({
             name: 'array-fill', 
             lifespan: 1, 
