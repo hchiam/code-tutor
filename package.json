@@ -1,5 +1,5 @@
 {
-  "name": "Code Tutor",
+  "name": "code-tutor",
   "description": "This is Code Tutor's fulfillment using Cloud Functions for Firebase",
   "version": "3",
   "private": true,
