@@ -1,9 +1,9 @@
 {
   "name": "Code Tutor",
   "description": "This is Code Tutor's fulfillment using Cloud Functions for Firebase",
-  "version": "5",
+  "version": "3",
   "private": true,
-  "license": "MIT",
+  "license": "Apache Version 2.0",
   "author": "Howard Chiam (unless someone forked this project)",
   "engines": {
     "node": "8"
