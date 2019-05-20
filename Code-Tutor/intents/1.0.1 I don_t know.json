@@ -37,7 +37,7 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": "I can show you things like variables, arrays, strings, and loops. Which would you like to learn about first?"
+          "speech": "As a code tutor, I can show you things like variables, arrays, strings, and loops. Which would you like to learn about first?"
         }
       ],
       "defaultResponsePlatforms": {

@@ -27,9 +27,11 @@
         },
         {
           "id": "2b408a88-8f0e-4e1e-bf60-f6002b81001f",
+          "required": false,
           "dataType": "@sys.any",
           "name": "codeVariables",
-          "value": "#sandbox.codeVariables"
+          "value": "#sandbox.codeVariables",
+          "isList": false
         }
       ],
       "messages": [
