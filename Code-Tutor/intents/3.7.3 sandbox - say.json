@@ -23,6 +23,10 @@
           "dataType": "@sys.any",
           "name": "what",
           "value": "$what",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         },
         {
@@ -31,19 +35,30 @@
           "dataType": "@sys.any",
           "name": "code",
           "value": "#sandbox.code",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         },
         {
           "id": "34d589bb-0ca5-4116-81cf-146bd1d06a40",
+          "required": false,
           "dataType": "@sys.any",
           "name": "codeVariables",
-          "value": "#sandbox.codeVariables"
+          "value": "#sandbox.codeVariables",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": []
         }
       ],
@@ -54,7 +69,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524361710,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

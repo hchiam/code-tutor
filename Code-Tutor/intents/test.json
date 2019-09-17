@@ -12,6 +12,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": []
         }
       ],
@@ -22,7 +23,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1543791149,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

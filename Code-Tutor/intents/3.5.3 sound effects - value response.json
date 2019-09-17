@@ -17,6 +17,10 @@
           "dataType": "@sys.any",
           "name": "value",
           "value": "$value",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -24,6 +28,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": []
         }
       ],
@@ -34,7 +39,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523672004,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

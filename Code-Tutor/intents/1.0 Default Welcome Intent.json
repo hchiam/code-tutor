@@ -13,13 +13,15 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
+              "textToSpeech": "",
               "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eWould you like to learn about a variable, or just go through an example?\u003c/speak\u003e",
               "displayText": "Would you like to learn about a variable, or just go through an example?"
             },
             {
+              "textToSpeech": "",
               "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eWould you like to learn about an array, or just go through an example?\u003c/speak\u003e",
               "displayText": "Would you like to learn about an array, or just go through an example?"
             }
@@ -29,6 +31,7 @@
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "give me an example"
@@ -53,6 +56,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": [
             "Hi! I\u0027m Code Tutor, version 4. \n░░░█░█\n░░█░░█\n░█░░░█\n██████\n░░░░░█\n░░░░░█",
             "This is Code Tutor, version 4. \n░░░█░█\n░░█░░█\n░█░░░█\n██████\n░░░░░█\n░░░░░█",
@@ -69,11 +73,11 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1543782114,
   "fallbackIntent": false,
   "events": [
     {
       "name": "WELCOME"
     }
-  ]
+  ],
+  "conditionalResponses": []
 }

@@ -20,7 +20,12 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "formattedText": "feedback form",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          },
           "buttons": [
             {
               "title": "https://goo.gl/forms/mn2Xcy0tmNyFQ5y72",
@@ -34,6 +39,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "I\u0027m still learning. If you\u0027re not sure what to do, just ask me. Would you like to suggest something for me to work on to teach you next time?"
         }
       ],
@@ -46,7 +52,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1543785028,
   "fallbackIntent": true,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

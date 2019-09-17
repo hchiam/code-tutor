@@ -26,6 +26,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "What\u0027s your suggestion?"
         }
       ],
@@ -36,7 +37,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1543784216,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

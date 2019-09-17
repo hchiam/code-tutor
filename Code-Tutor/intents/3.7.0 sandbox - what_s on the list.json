@@ -23,6 +23,10 @@
           "dataType": "@sys.any",
           "name": "code",
           "value": "#sandbox.code",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         },
         {
@@ -31,6 +35,10 @@
           "dataType": "@sys.any",
           "name": "codeVariables",
           "value": "#sandbox.codeVariables",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -44,7 +52,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524524862,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

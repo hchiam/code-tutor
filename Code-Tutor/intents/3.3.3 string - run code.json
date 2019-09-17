@@ -18,18 +18,21 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
               "textToSpeech": "What would you like to try next? Another string? Or a loop?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             },
             {
               "textToSpeech": "What would you like to try next? Another string? Or an array?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             },
             {
               "textToSpeech": "What would you like to try next? Another string? Or a variable?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             }
           ]
@@ -38,6 +41,7 @@
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "another string"
@@ -56,6 +60,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "#string1.string1#string2.string2"
         }
       ],
@@ -68,7 +73,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524530968,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -13,6 +13,7 @@
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "give me an example"
@@ -37,6 +38,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "As a code tutor, I can show you things like variables, arrays, strings, and loops. Which would you like to learn about first?"
         }
       ],
@@ -49,7 +51,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524528497,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

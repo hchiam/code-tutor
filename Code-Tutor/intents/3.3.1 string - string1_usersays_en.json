@@ -1,6 +1,6 @@
 [
   {
-    "id": "36017668-4eea-4026-8ba4-911373ce20f7",
+    "id": "a716624a-22eb-49ce-b902-f48d2c1e5ef2",
     "data": [
       {
         "text": "@sys.any:string1",
@@ -9,6 +9,6 @@
     ],
     "isTemplate": true,
     "count": 1,
-    "updated": 1523574710
+    "updated": 0
   }
 ]

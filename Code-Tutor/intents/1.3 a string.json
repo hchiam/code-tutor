@@ -19,12 +19,17 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "░██░░░█░░░░░░░░\n█░░█░░████░░███\n████░░█░░█░░█░░\n█░░█░░████░░███",
-          "buttons": []
+          "condition": "",
+          "formattedText": "🔤",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
         },
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": [
             "A string\u0027s like a sentence or array of letters. Let’s try combining 2 strings. Say something for me to put in the first string, like a word.",
             "A string\u0027s like an array of letters, or a sentence. Let’s try combining 2 strings. Say something for me to put in the first string."
@@ -40,7 +45,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1540345668,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -23,6 +23,10 @@
               "value": "Please give me a number between 1 and 10."
             }
           ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -30,7 +34,8 @@
         {
           "type": 0,
           "lang": "en",
-          "speech": []
+          "condition": "",
+          "speech": "test"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -40,7 +45,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524192934,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -12,24 +12,28 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "An \"if statement\" is like a lock. If you have the right key, then you can access other code. More accurately, an if statement lets your code instructions make a decision based on a value, such as what\u0027s inside a variable."
         },
         {
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
               "textToSpeech": "What would you like to create? A variable? Or an array?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             },
             {
               "textToSpeech": "What would you like to create? A variable? Or a string?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             },
             {
               "textToSpeech": "What would you like to create? A variable? Or a loop?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             }
           ]
@@ -38,13 +42,18 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "░████░░░░░░░░░░\n█░░░░█░░░░░░░░░\n█░░░░██████████\n█░░░░█░░░░████░\n░████░░░░░█░█░░",
-          "buttons": []
+          "condition": "",
+          "formattedText": "🔑",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
         },
         {
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "give me an example"
@@ -76,7 +85,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524530774,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -16,18 +16,21 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
               "textToSpeech": "What would you like to try next? Another array? Or a string?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             },
             {
               "textToSpeech": "What would you like to try next? Another array? Or a variable?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             },
             {
               "textToSpeech": "What would you like to try next? Another array? Or a loop?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             }
           ]
@@ -36,6 +39,7 @@
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "another array"
@@ -54,6 +58,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "#array-run.array"
         }
       ],
@@ -66,7 +71,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524530930,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

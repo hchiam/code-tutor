@@ -19,12 +19,17 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "█░░░░░░░░░░░░░░░█\n░█░░░░░░░░░░░░░█░\n░░█████████████░░\n░░█░░░░░░░░░░░█░░\n░░█░░░░█░█░░░░█░░\n░░█░░░░░█░░░░░█░░\n░░█░░░░█░█░░░░█░░\n░░█░░░░░░░░░░░█░░\n░░█████████████░░",
-          "buttons": []
+          "condition": "",
+          "formattedText": "📦",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
         },
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": [
             "A variable is like a \"box\" that holds information. To start, say something, and I\u0027ll put it in a variable named x.",
             "A variable is like a \"box\" that holds information. To start, say something for me to put into a variable. I\u0027ll call the variable x."
@@ -40,7 +45,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1540345688,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -6,7 +6,6 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
       "affectedContexts": [
         {
           "name": "array-size",
@@ -20,12 +19,40 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░",
-          "buttons": []
+          "condition": "",
+          "formattedText": "📋",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "condition": "",
+          "suggestions": [
+            {
+              "title": "2"
+            },
+            {
+              "title": "3"
+            },
+            {
+              "title": "4"
+            },
+            {
+              "title": "5"
+            },
+            {
+              "title": "9001"
+            }
+          ]
         },
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": [
             "An array is like a numbered list of variables. Think of a shopping list. How long a list would you like? Please pick a number between 2 and 5.",
             "An array is like a numbered list of variables. Think of a shopping list. Let\u0027s say we have a list of between 2 to 5 items. How long a list would you like?"
@@ -41,7 +68,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1540345727,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

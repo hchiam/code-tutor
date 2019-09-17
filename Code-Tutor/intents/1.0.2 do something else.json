@@ -13,6 +13,7 @@
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "give me an example"
@@ -37,6 +38,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": [
             "What would you like to create? For example, you can say \"a variable\".",
             "What would you like to create? For example, you can say \"an array\".",
@@ -54,7 +56,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524527793,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

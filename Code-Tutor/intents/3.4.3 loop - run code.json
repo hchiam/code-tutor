@@ -19,6 +19,10 @@
           "dataType": "@sys.number",
           "name": "times",
           "value": "#loop-times.times",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         },
         {
@@ -27,20 +31,22 @@
           "dataType": "@sys.any",
           "name": "what",
           "value": "#loop-what.what",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
       "messages": [],
-      "defaultResponsePlatforms": {
-        "google": false
-      },
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523575951,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

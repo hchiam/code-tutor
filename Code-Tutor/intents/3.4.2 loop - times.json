@@ -34,20 +34,22 @@
           "dataType": "@sys.any",
           "name": "times",
           "value": "$times",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
       "messages": [],
-      "defaultResponsePlatforms": {
-        "google": false
-      },
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1527477739,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

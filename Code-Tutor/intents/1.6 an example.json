@@ -6,7 +6,6 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
       "affectedContexts": [
         {
           "name": "example-name",
@@ -20,27 +19,29 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "textToSpeech": "Here\u0027s an example of code instructions: Let the variable \"greeting\" equal \"hi there\". Let name equal \"someone\". Let message equal greeting plus name. If name \u003d \"someone\", then say \"What\u0027s your name?\". And then, repeating 3 times, say message. That\u0027s it for the code.",
+          "ssml": "",
           "displayText": "let greeting \u003d \"hi there \";\nlet name \u003d \"someone\";\nlet message \u003d greeting + name;\nif (name \u003d\u003d \"someone\")\n    say(\"What\u0027s your name?\");\nfor (let i\u003d0; i\u003c3; i++)\n    say(message);"
         },
         {
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "textToSpeech": "Now, what would you like to put in the name variable? Please give me a made-up name."
+          "condition": "",
+          "textToSpeech": "Now, what would you like to put in the name variable? Please give me a made-up name.",
+          "ssml": "",
+          "displayText": ""
         }
       ],
-      "defaultResponsePlatforms": {
-        "google": false
-      },
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1526932003,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

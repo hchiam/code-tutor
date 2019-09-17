@@ -6,7 +6,6 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
       "affectedContexts": [
         {
           "name": "sandbox",
@@ -20,13 +19,15 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
+          "textToSpeech": "",
           "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eIn this \"sandbox\", you have a little freedom to create almost any code you want. Here\u0027s examples of instructions you can say: \u003cbreak time\u003d\"1s\"/\u003e Apple equals 1. \u003cbreak time\u003d\"1s\"/\u003e Repeat 3 times. \u003cbreak time\u003d\"1s\"/\u003e Say hi. \u003cbreak time\u003d\"1s\"/\u003e If banana equals fruit. \u003cbreak time\u003d\"1s\"/\u003e When you\u0027re done, say \"run code\", and I\u0027ll follow the instructions. \u003cbreak time\u003d\"1s\"/\u003e If you need this list again, just say \"what\u0027s on the list\"\u003c/speak\u003e",
           "displayText": "In this \"sandbox\", you have a little freedom to create almost any code you want. Here\u0027s examples of instructions you can say:\n\n* apple equals 1.\n* repeat 3 times.\n* say hi.\n* if banana equals fruit.\n\nWhen you\u0027re done, say \"run code\", and I\u0027ll follow the instructions.\n\nIf you need this list again, just say \"what\u0027s on the list?\""
         },
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "You found one of the hidden features!"
         }
       ],
@@ -39,7 +40,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524531841,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

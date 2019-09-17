@@ -14,7 +14,8 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
+          "textToSpeech": "",
           "ssml": "\u003cspeak\u003eCode Tutor version 4, signing out. Come again for updates.\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/woodpecker.ogg\"\u003e\u003c/audio\u003e\u003c/speak\u003e",
           "displayText": "Code Tutor version 4, signing out. Come again for updates."
         }
@@ -28,7 +29,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1543781340,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

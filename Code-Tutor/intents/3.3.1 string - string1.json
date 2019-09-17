@@ -28,6 +28,10 @@
           "dataType": "@sys.any",
           "name": "string1",
           "value": "$string1",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -36,12 +40,17 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "formattedText": "let x \u003d \"$string1\";",
-          "buttons": []
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
         },
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "Now say something else to put in the second string."
         }
       ],
@@ -54,7 +63,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523575181,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

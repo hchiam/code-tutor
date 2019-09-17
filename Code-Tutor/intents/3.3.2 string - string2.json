@@ -34,6 +34,10 @@
           "dataType": "@sys.any",
           "name": "string2",
           "value": "$string2",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -42,14 +46,16 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "textToSpeech": "let x \u003d \"#string1.string1\"; let y \u003d \"$string2\". I added let z \u003d x + y. I also added say(z). That\u0027s it for the code. Now, say \"run code\" and I\u0027ll follow the instructions.",
+          "ssml": "",
           "displayText": "let x \u003d \"#string1.string1\"; \nlet y \u003d \"$string2\"; \nlet z \u003d x + y; \nsay(z);"
         },
         {
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "run code"
@@ -62,6 +68,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "Here’s your code:"
         }
       ],
@@ -74,7 +81,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524529203,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -17,6 +17,10 @@
           "dataType": "@sys.any",
           "name": "variable",
           "value": "#variable.value",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -25,18 +29,21 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
               "textToSpeech": "What would you like to try next? Another variable? Or an array?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             },
             {
               "textToSpeech": "What would you like to try next? An array? Or a string?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             },
             {
               "textToSpeech": "What would you like to try next? An array? Or a loop?",
+              "ssml": "",
               "displayText": "What would you like to try next?"
             }
           ]
@@ -45,6 +52,7 @@
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "another variable"
@@ -63,6 +71,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "#variable.value"
         }
       ],
@@ -75,7 +84,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524530859,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

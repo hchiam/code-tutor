@@ -13,18 +13,21 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
               "textToSpeech": "What would you like to create? A variable? Or an array?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             },
             {
               "textToSpeech": "What would you like to create? A variable? Or a string?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             },
             {
               "textToSpeech": "What would you like to create? A variable? Or a loop?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             }
           ]
@@ -33,13 +36,18 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "░░░░░░░░░░░█░░░░░\n░░█░░░░░░░█░░░█░░\n░█░░░░░░░█░░░░░█░\n█░░░░░░░█░░░░░░░█\n░█░░░░░█░░░░░░░█░\n░░█░░░█░░░░░░░█░░\n░░░░░█░░░░░░░░░░░",
-          "buttons": []
+          "condition": "",
+          "formattedText": "💻",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
         },
         {
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "give me an example"
@@ -61,6 +69,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "You can think of code like instructions for a computer to follow. Or like steps in a recipe."
         }
       ],
@@ -73,7 +82,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524530618,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -34,6 +34,10 @@
               "value": "Can you say the value again?"
             }
           ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
           "isList": false
         }
       ],
@@ -42,14 +46,16 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "textToSpeech": "Here\u0027s your code: let x \u003d \"$value\". I added a function say(x). That\u0027s it for the code. Now, say \"run code\" and I\u0027ll follow the instructions.",
+          "ssml": "",
           "displayText": "Here\u0027s your code: \nlet x \u003d \"$value\"; \nsay(x);"
         },
         {
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "run code"
@@ -69,7 +75,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524529168,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "16eb48b8-13ec-4a14-afd7-ebca410f2cb4",
+    "id": "0ff6d085-3ca9-4a07-b6a2-3d32d4712bb3",
     "data": [
       {
         "text": "initialize @sys.any:variable as @sys.any:value",
@@ -9,10 +9,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524412082
+    "updated": 0
   },
   {
-    "id": "68937e8a-12f3-4adf-81d6-16bc79408560",
+    "id": "70d4ccfe-dcdb-4612-ba60-532292f8c590",
     "data": [
       {
         "text": "@sys.any:variable \u003d @sys.any:value",
@@ -21,10 +21,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524278286
+    "updated": 0
   },
   {
-    "id": "3fe87b78-eff1-4f22-a011-00070eaf252c",
+    "id": "3e8d78d1-d370-4376-b1dd-ab0b1be54d56",
     "data": [
       {
         "text": "let @sys.any:variable equal to @sys.any:value",
@@ -33,10 +33,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524278286
+    "updated": 0
   },
   {
-    "id": "8f769ab8-9e26-4866-8918-d53583955014",
+    "id": "81b7d493-003d-4750-bec4-206cf2eecf3d",
     "data": [
       {
         "text": "create a variable @sys.any:variable equals to @sys.any:value",
@@ -45,10 +45,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 0
   },
   {
-    "id": "fc661456-c049-482c-aac0-f02842f9771f",
+    "id": "9968c41b-bf91-4164-bb26-2509db056dbc",
     "data": [
       {
         "text": "assign @sys.any:variable the value @sys.any:value",
@@ -57,10 +57,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 0
   },
   {
-    "id": "5995edc8-3fc3-4d52-ab2e-ea8960001c5d",
+    "id": "ffa3a352-4d44-43ec-a58f-6debb1d699fa",
     "data": [
       {
         "text": "set @sys.any:variable equal to @sys.any:value",
@@ -69,10 +69,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 0
   },
   {
-    "id": "dafd8da0-71b3-47fc-8390-ee0fbd2841a9",
+    "id": "a540b16f-2858-4cf6-be46-d590fd5d5358",
     "data": [
       {
         "text": "let @sys.any:variable equal @sys.any:value",
@@ -81,10 +81,10 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 0
   },
   {
-    "id": "6ce5a4ab-dbd7-4244-ba14-48ead92b295c",
+    "id": "bbefa6ab-67ad-4951-b82d-25fd689f58be",
     "data": [
       {
         "text": "@sys.any:variable equals @sys.any:value",
@@ -93,6 +93,6 @@
     ],
     "isTemplate": true,
     "count": 0,
-    "updated": 1524277186
+    "updated": 0
   }
 ]

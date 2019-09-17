@@ -13,18 +13,21 @@
           "type": "simple_response",
           "platform": "google",
           "lang": "en",
-          "customizeAudio": true,
+          "condition": "",
           "items": [
             {
               "textToSpeech": "What would you like to create? An array? Or a variable?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             },
             {
               "textToSpeech": "What would you like to create? An array? Or a string?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             },
             {
               "textToSpeech": "What would you like to create? An array? Or a loop?",
+              "ssml": "",
               "displayText": "What would you like to create?"
             }
           ]
@@ -33,13 +36,18 @@
           "type": "basic_card",
           "platform": "google",
           "lang": "en",
-          "formattedText": "░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░\n░░░█░██████░░░░\n░░░░░░░░░░░░░░░",
-          "buttons": []
+          "condition": "",
+          "formattedText": "📋",
+          "image": {
+            "url": "",
+            "accessibilityText": ""
+          }
         },
         {
           "type": "suggestion_chips",
           "platform": "google",
           "lang": "en",
+          "condition": "",
           "suggestions": [
             {
               "title": "give me an example"
@@ -64,6 +72,7 @@
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": "An array is like a numbered list of variables. Think of a shopping list. By the way, in code, we start counting at 0, so the first item in an array is at position 0, not 1."
         }
       ],
@@ -76,7 +85,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1524530693,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }

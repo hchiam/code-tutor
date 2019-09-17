@@ -19,21 +19,34 @@
       "parameters": [
         {
           "id": "b8370554-0102-47eb-9163-d4564dc091aa",
+          "required": false,
           "dataType": "@sys.any",
           "name": "code",
-          "value": "#sandbox.code"
+          "value": "#sandbox.code",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "02ec0e35-aee6-4c66-bff8-4a4fa429391c",
+          "required": false,
           "dataType": "@sys.any",
           "name": "codeVariables",
-          "value": "#sandbox.codeVariables"
+          "value": "#sandbox.codeVariables",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
           "type": 0,
           "lang": "en",
+          "condition": "",
           "speech": []
         }
       ],
@@ -44,7 +57,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1525053894,
   "fallbackIntent": false,
-  "events": []
+  "events": [],
+  "conditionalResponses": []
 }
