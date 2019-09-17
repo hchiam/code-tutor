@@ -1,6 +1,6 @@
 'use strict';
 
-const { dialogflow, Card, Suggestion } = require('actions-on-google');
+const { dialogflow, BasicCard, Button, Suggestions } = require('actions-on-google');
 const functions = require('firebase-functions');
 
 const app = dialogflow({ debug: true });
@@ -35,12 +35,13 @@ app.intent('0.1 Default Fallback Intent - yes - suggestion', function suggestion
       conv.ask(`Sorry! Right now, I can't open a link for you hands-free. If you use a device with a screen, you'll see a button to go to a feedback form.`);
     //}
 
-    conv.ask(new Card({
+    conv.ask(new BasicCard({
       title: `Send feedback`,
-      imageUrl: ``,
       text: `Your feedback: \n${suggestion}`,
-      buttonText: `feedback form`,
-      buttonUrl: `https://docs.google.com/forms/d/e/1FAIpQLSdi2h9SfAS2EU2AC6PjlqnKPwo5v5i3fQreFN1Vx-fs1MckEA/viewform?usp=pp_url&entry.326955045=${suggestion}`
+      buttons: new Button({
+        title: 'feedback form',
+        url: `https://docs.google.com/forms/d/e/1FAIpQLSdi2h9SfAS2EU2AC6PjlqnKPwo5v5i3fQreFN1Vx-fs1MckEA/viewform?usp=pp_url&entry.326955045=${suggestion}`
+      })
     }));
 });
 
@@ -88,7 +89,7 @@ app.intent('3.2.2 array - fill', function arrayFill(conv) {
     let i = conv.contexts.get('array-fill').parameters.i;
     let array = conv.contexts.get('array-fill').parameters.array;
     let value = conv.contexts.get('array-fill').parameters.value;
-    let moreArrayIndicesToFill = i < size;
+    let moreArrayIndicesToFill = i < size-1;
 
     array[i] = isNaN(value) ? `'${value}'` : value;
     code += `\nx[${i}] = ${array[i]};`;
@@ -109,8 +110,7 @@ app.intent('3.2.2 array - fill', function arrayFill(conv) {
     } else {
       conv.ask(`We counted starting at 0, so we stop at ${size-1}, and not at ${size}.`);
       conv.ask(`Here's your code: \n${code}\nsay(x);\n I added a function say(x). That's it for the code. Now, say "run code" and I'll follow the instructions.`);
-      conv.ask(new Suggestion('run code'));
-      conv.ask(new Suggestion('do something else'));
+      conv.ask(new Suggestions(['run code', 'do something else']));
       // repeat to fill remainder of array
       conv.contexts.set(
         'array-run', 
@@ -142,6 +142,7 @@ app.intent('3.4.2 loop - times', function loopTimes(conv) {
       times = 5;
       conv.ask(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that's too O.P.!</speak>`);
       conv.ask(`Please give me a number between 2 and 5.`);
+      conv.ask(new Suggestions(['2', '3', '4', '5']));
       conv.contexts.set(
         'loop-what', 
         1, 
@@ -160,8 +161,7 @@ app.intent('3.4.2 loop - times', function loopTimes(conv) {
     let code = `for (let i=0; i<${times}; i++) {\n    say("${what}"); \n}`;
 
     conv.ask(`Here's your code: \n${code}\n That's it for the code. By the way, in code, we count from 0. And because we want to repeat ${times} times, we need to stop 1 step before ${times}. Say "run code" and I'll follow the instructions.`);
-    conv.ask(new Suggestion('run code'));
-    conv.ask(new Suggestion('do something else'));
+    conv.ask(new Suggestions(['run code', 'do something else']));
     conv.contexts.set(
       'loop-run-code', 
       1, 
@@ -191,6 +191,7 @@ app.intent('3.4.3 loop - run code', function loopRun(conv) {
       times = 5;
       conv.ask(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that's too O.P.!</speak>`);
       conv.ask(`Please give me a number between 2 and 5.`);
+      conv.ask(new Suggestions(['2', '3', '4', '5']));
       conv.contexts.set(
         'loop-run-code', 
         1, 
@@ -210,9 +211,7 @@ app.intent('3.4.3 loop - run code', function loopRun(conv) {
     conv.ask(say);
     conv.ask(`<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? Or a variable? Or play with sound effects?</speak>`);
 
-    conv.ask(new Suggestion('another loop'));
-    conv.ask(new Suggestion('a variable'));
-    conv.ask(new Suggestion('play with sound effects'));
+    conv.ask(new Suggestions(['another loop', 'a variable', 'play with sound effects']));
 });
 
 app.intent('3.5.2 sound effects - more info', function soundEffectsMoreInfo(conv) {
@@ -221,7 +220,7 @@ app.intent('3.5.2 sound effects - more info', function soundEffectsMoreInfo(conv
     let codeShow = `let x = "nothing";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
 
     conv.ask(say + codeShow);
-    conv.ask(`What would you like to put in the variable x?`);
+    conv.ask(`Let's replace the value in the variable x. What would you like to put in the variable x?`);
 });
 
 app.intent('3.5.3 sound effects - value response', function soundEffectsValueResponse(conv) {
@@ -230,8 +229,7 @@ app.intent('3.5.3 sound effects - value response', function soundEffectsValueRes
       let codeSay = `Here's your code: Let variable x equal "beep". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`;
       let codeShow = `Here's your code: \nlet x = "beep";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
       conv.ask(codeShow +  `\n That's it for the code. Now, say "run code".`);
-      conv.ask(new Suggestion('run code'));
-      conv.ask(new Suggestion('do something else'));
+      conv.ask(new Suggestions(['run code', 'do something else']));
       conv.contexts.set(
         'sound-effects-beep',
         1,
@@ -241,8 +239,7 @@ app.intent('3.5.3 sound effects - value response', function soundEffectsValueRes
       let codeSay = `Here's your code: Let variable x equal "wood planks". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks.`;
       let codeShow = `Here's your code: \nlet x = "wood planks";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
       conv.ask(codeShow +  `\n That's it for the code. Now, say "run code".`);
-      conv.ask(new Suggestion('run code'));
-      conv.ask(new Suggestion('do something else'));
+      conv.ask(new Suggestions(['run code', 'do something else']));
       conv.contexts.set(
         'sound-effects-wood-planks',
         1,
@@ -253,13 +250,7 @@ app.intent('3.5.3 sound effects - value response', function soundEffectsValueRes
       let codeShow = `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
       conv.ask(codeShow +  `\n That's it for the code. Now, say "run code".`);
       conv.ask(`Nothing will play if you run this code. What would you like to try next? A variable? An array? A string? A loop?`); // Please say another value.`);
-      conv.ask(new Suggestion('run code'));
-      conv.ask(new Suggestion('do something else'));
-      conv.ask(new Suggestion('sandbox'));
-      conv.ask(new Suggestion('a variable'));
-      conv.ask(new Suggestion('an array'));
-      conv.ask(new Suggestion('a string'));
-      conv.ask(new Suggestion('a loop'));
+      conv.ask(new Suggestions(['run code', 'do something else', 'sandbox', 'a variable', 'an array', 'a string', 'a loop']));
       conv.contexts.set(
         'sound-effects-wood-planks',
         1,
@@ -276,19 +267,13 @@ app.intent('3.5.3 sound effects - value response', function soundEffectsValueRes
 });
 
 app.intent('3.5.3.1 sound effects - beep', function soundEffectsBeep(conv) {
-    let say =  `<speak>
-<audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-<audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-<audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-</speak>`;
+    let say =  `<speak><audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio></speak>`;
     let displayText = '(beep)';
     conv.ask(say);
+    conv.ask(say);
+    conv.ask(say);
     conv.ask('What would you like to try next? A variable? An array? A string? A loop?');
-    conv.ask(new Suggestion('a variable'));
-    conv.ask(new Suggestion('sandbox'));
-    conv.ask(new Suggestion('an array'));
-    conv.ask(new Suggestion('a string'));
-    conv.ask(new Suggestion('a loop'));
+    conv.ask(new Suggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop']));
 });
 
 app.intent('3.5.3.2 sound effects - wood planks', function soundEffectsWoodPlanks(conv) {
@@ -296,11 +281,7 @@ app.intent('3.5.3.2 sound effects - wood planks', function soundEffectsWoodPlank
     let displayText = '(wood planks)';
     conv.ask(say);
     conv.ask('What would you like to try next? A variable? An array? A string? A loop?');
-    conv.ask(new Suggestion('a variable'));
-    conv.ask(new Suggestion('sandbox'));
-    conv.ask(new Suggestion('an array'));
-    conv.ask(new Suggestion('a string'));
-    conv.ask(new Suggestion('a loop'));
+    conv.ask(new Suggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop']));
 });
 
 app.intent('3.6.1 example - name', function exampleName(conv) {
@@ -322,9 +303,7 @@ for (let i=0; i<3; i++)
 
     conv.ask(`Here's your code: ${code}`);
     conv.ask(`Say "run code" and I'll follow the instructions.`);
-    conv.ask(new Suggestion('run code'));
-    conv.ask(new Suggestion(`what's a variable?`));
-    conv.ask(new Suggestion(`what's a loop?`));
+    conv.ask(new Suggestions(['run code', `what's a variable?`, `what's a loop?`]));
     conv.contexts.set(
       'example-run-code',
       1,
@@ -345,13 +324,7 @@ app.intent('3.6.2 example - run code', function exampleRunCode(conv) {
 
     conv.ask(say);
     conv.ask(`What would you like to try next? A variable? An array? A string? A loop?`);
-    conv.ask(new Suggestion('a variable'));
-    conv.ask(new Suggestion(`what's a variable?`));
-    conv.ask(new Suggestion('an array'));
-    conv.ask(new Suggestion('a string'));
-    conv.ask(new Suggestion('a loop'));
-    conv.ask(new Suggestion('try the example again'));
-    conv.ask(new Suggestion('sandbox'));
+    conv.ask(new Suggestions(['a variable', `what's a variable?`, 'an array', 'a string', 'a loop', 'try the example again', 'sandbox']));
 });
 
 app.intent(`3.7.0 sandbox - what's on the list`, function sandboxList(conv) {
@@ -370,11 +343,7 @@ app.intent(`3.7.0 sandbox - what's on the list`, function sandboxList(conv) {
 
 If you need this list again, just say "what\'s on the list?"`;
     conv.ask(`Here's what you can say: \n${optionsText}`);
-    conv.ask(new Suggestion('apple equals 1'));
-    conv.ask(new Suggestion('repeat 3 times'));
-    conv.ask(new Suggestion('say hi'));
-    conv.ask(new Suggestion('if banana equals fruit'));
-    conv.ask(new Suggestion('run code'));
+    conv.ask(new Suggestions(['apple equals 1', 'repeat 3 times', 'say hi', 'if banana equals fruit', 'run code']));
     conv.contexts.set(
       'sandbox',
       1,
@@ -400,7 +369,7 @@ app.intent('3.7.1 sandbox - variable', function sandboxVariable(conv) {
     }
     conv.ask(`Here's your code:\n${code}`);
     conv.ask(`What's next?`);
-    conv.ask(new Suggestion('run code'));
+    conv.ask(new Suggestions('run code'));
     conv.contexts.set(
       'sandbox',
       1,
@@ -419,7 +388,7 @@ app.intent('3.7.2 sandbox - repeat', function sandboxRepeat(conv) {
 
     conv.ask(`Here's your code:\n${code}`);
     conv.ask(`What's next?`);
-    conv.ask(new Suggestion('run code'));
+    conv.ask(new Suggestions('run code'));
     conv.contexts.set(
       'sandbox',
       1,
@@ -438,7 +407,7 @@ app.intent('3.7.3 sandbox - say', function sandboxSay(conv) {
 
     conv.ask(`Here's your code:\n${code}`);
     conv.ask(`What's next?`);
-    conv.ask(new Suggestion('run code'));
+    conv.ask(new Suggestions('run code'));
     conv.contexts.set(
       'sandbox',
       1,
@@ -458,7 +427,7 @@ app.intent('3.7.4 sandbox - if', function sandboxIf(conv) {
 
     conv.ask(`Here's your code:\n${code}`);
     conv.ask(`What's next?`);
-    conv.ask(new Suggestion('run code'));
+    conv.ask(new Suggestions('run code'));
     conv.contexts.set(
       'sandbox',
       1,
