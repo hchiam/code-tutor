@@ -11,29 +11,20 @@ const v = 4; // also edit the intents "-1.0 No/Bye" and "1.0 Default Welcome Int
 // make this the only global variable for the complex parsing
 var codeVariables = [];
 
-function hasScreenOutput(request) {
-  if (request !== undefined) {
-    let requestPayload = request.body.originalDetectIntentRequest.payload;
-    if (requestPayload.surface && requestPayload.surface.capabilities && requestPayload.surface.capabilities[0]) {
-      for (let i=0; i<requestPayload.surface.capabilities.length; i++) {
-        if (requestPayload.surface.capabilities[i].name == 'actions.capability.SCREEN_OUTPUT') {
-          return true;
-        }
-      }
-    }
-  }
-  return false;
+function hasScreenOutput(conv) {
+  const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT');
+  return hasScreen;
 }
 
 app.intent('0.1 Default Fallback Intent - yes - suggestion', function suggestionPrefill(conv) {
     let suggestion = conv.contexts.get('suggest').parameters.suggestion;
-    //let hasScreen = hasScreenOutput(request);
+    let hasScreen = hasScreenOutput(conv);
 
-    //if (hasScreen) {
-      //conv.ask(`Thanks! Right now, I can't open a link for you hands-free. But here's a link to a feedback form pre-filled for you:`);
-    //} else {
+    if (hasScreen) {
+      conv.ask(`Thanks! Right now, I can't open a link for you hands-free. But here's a link to a feedback form pre-filled for you:`);
+    } else {
       conv.ask(`Sorry! Right now, I can't open a link for you hands-free. If you use a device with a screen, you'll see a button to go to a feedback form.`);
-    //}
+    }
 
     conv.ask(new BasicCard({
       title: `Send feedback`,
