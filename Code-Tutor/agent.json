@@ -1,30 +1,39 @@
 {
   "description": "Build simple code, hands-free.",
   "language": "en",
+  "shortDescription": "",
+  "examples": "",
+  "linkToDocs": "",
   "disableInteractionLogs": false,
   "disableStackdriverLogs": true,
   "googleAssistant": {
     "googleAssistantCompatible": true,
-    "project": "code-tutor-59988",
+    "project": "code-tutor-v2-nuyhew",
     "welcomeIntentSignInRequired": false,
     "startIntents": [],
     "systemIntents": [],
-    "endIntentIds": [
-      "8eda261a-92ea-4f78-9826-e504705e6659"
-    ],
+    "endIntentIds": [],
     "oAuthLinking": {
       "required": false,
+      "providerId": "",
+      "authorizationUrl": "",
+      "tokenUrl": "",
+      "scopes": "",
+      "privacyPolicyUrl": "",
       "grantType": "AUTH_CODE_GRANT"
     },
     "voiceType": "MALE_1",
     "capabilities": [],
+    "env": "",
     "protocolVersion": "V2",
     "autoPreviewEnabled": true,
     "isDeviceAgent": false
   },
   "defaultTimezone": "America/New_York",
   "webhook": {
-    "url": "https://us-central1-code-tutor-59988.cloudfunctions.net/dialogflowFirebaseFulfillment",
+    "url": "https://us-central1-code-tutor-v2-nuyhew.cloudfunctions.net/dialogflowFirebaseFulfillment",
+    "username": "",
+    "headers": {},
     "available": true,
     "useForDomains": false,
     "cloudFunctionsEnabled": true,
@@ -38,5 +47,6 @@
   "analyzeQueryTextSentiment": false,
   "enabledKnowledgeBaseNames": [],
   "knowledgeServiceConfidenceAdjustment": -0.4,
-  "dialogBuilderMode": false
+  "dialogBuilderMode": false,
+  "baseActionPackagesUrl": ""
 }

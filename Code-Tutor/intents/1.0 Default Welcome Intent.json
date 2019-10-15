@@ -79,5 +79,7 @@
       "name": "WELCOME"
     }
   ],
-  "conditionalResponses": []
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
 }

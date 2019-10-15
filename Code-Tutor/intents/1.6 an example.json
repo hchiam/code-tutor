@@ -43,5 +43,7 @@
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": [],
-  "conditionalResponses": []
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
 }
