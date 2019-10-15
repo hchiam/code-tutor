@@ -220,6 +220,7 @@ app.intent('3.5.2 sound effects - more info', function soundEffectsMoreInfo(conv
 
     conv.ask(say + codeShow);
     conv.ask(`Let's replace the value in the variable x. What would you like to put in the variable x?`);
+    conv.ask(new Suggestions(['beep', 'wood planks']));
 });
 
 app.intent('3.5.3 sound effects - value response', function soundEffectsValueResponse(conv) {
@@ -247,26 +248,20 @@ app.intent('3.5.3 sound effects - value response', function soundEffectsValueRes
     } else { // if value = some other value
       let codeSay = `Here's your code: Let variable x equal "${value}". If x = "beep", then play a beep, otherwise if x = "wood planks", then play wood planks. That's it for the code.`;
       let codeShow = `let x = "${value}";\nif (x == "beep") {\n\tplayBeep();\n} else if (x == "wood planks") {\n\tplayWoodPlanks();\n}`;
-      conv.ask(codeShow +  `\n That's it for the code. Now, say "run code".`);
+      conv.ask(codeShow +  `\n That's it for the code.`);
       conv.ask(`Nothing will play if you run this code. What would you like to try next? A variable? An array? A string? A loop?`); // Please say another value.`);
       conv.ask(new Suggestions(['run code', 'do something else', 'sandbox', 'a variable', 'an array', 'a string', 'a loop']));
     }
 });
 
 app.intent('3.5.3.1 sound effects - beep', function soundEffectsBeep(conv) {
-    let say = `<speak><audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio></speak>`;
-    let displayText = '(beep)';
-    conv.ask(say);
-    conv.ask(say);
-    conv.ask(say);
+    conv.add(`<speak>(beep)<audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio><audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio><audio src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio></speak>`);
     conv.ask('What would you like to try next? A variable? An array? A string? A loop?');
     conv.ask(new Suggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop']));
 });
 
 app.intent('3.5.3.2 sound effects - wood planks', function soundEffectsWoodPlanks(conv) {
-    let say = `<speak><audio src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio></speak>`;
-    let displayText = '(wood planks)';
-    conv.ask(say);
+    conv.add(`<speak>(wood planks)<audio src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio></speak>`);
     conv.ask('What would you like to try next? A variable? An array? A string? A loop?');
     conv.ask(new Suggestions(['a variable', 'sandbox', 'an array', 'a string', 'a loop']));
 });
