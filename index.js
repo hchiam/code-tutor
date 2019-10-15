@@ -56,6 +56,7 @@ app.intent('3.2.1 array - size', function arraySize(conv) {
       size = 5;
       conv.ask(`<speak><audio src="https://actions.google.com/sounds/v1/impacts/crash.ogg"></audio>Sorry, that's too O.P.! </speak>`);
       conv.ask(`Please give me a number between 2 and 5.`);
+      conv.ask(new Suggestions(['2', '3', '4', '5']));
       conv.contexts.set(
         'array-size', 
         1, 
