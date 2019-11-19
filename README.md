@@ -48,7 +48,7 @@ https://github.com/hchiam/code-tutor-sandbox-test and https://code-tutor-sandbox
 
 * https://glitch.com/edit/#!/code-tutor (I started coding directly in Dialogflow's inline editor instead)
 * [Mental Temperature Converter app](https://github.com/hchiam/mental-temperature-converter) for the Google Assistant
-* [LUI](https://github.com/hchiam/language-user-interface)'s programming [add-on](https://github.com/hchiam/language-user-interface/blob/master/add-on.js)
+* The programming [add-on](https://github.com/hchiam/language-user-interface/blob/master/add-on.js) for [LUI](https://github.com/hchiam/language-user-interface), a voice assistant kinda like a mini JARVIS that lives in the browser
 * [Please](https://github.com/hchiam/please), an experimental programming language
 * My [programmingByVoice](https://github.com/hchiam/programmingByVoice) web interface
 * [How](https://github.com/hchiam/how), an interactive programming test
