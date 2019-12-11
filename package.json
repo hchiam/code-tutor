@@ -1,7 +1,7 @@
 {
   "name": "dialogflowFirebaseFulfillment",
   "description": "This is Code Tutor's fulfillment using Cloud Functions for Firebase",
-  "version": "4.0.2",
+  "version": "4.0.4",
   "private": true,
   "license": "Apache Version 2.0",
   "author": "Howard Chiam (unless someone forked this project)",

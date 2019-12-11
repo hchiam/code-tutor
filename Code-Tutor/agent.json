@@ -33,7 +33,7 @@
   },
   "defaultTimezone": "America/New_York",
   "webhook": {
-    "url": "https://us-central1-code-tutor-v2-nuyhew.cloudfunctions.net/dialogflowFirebaseFulfillment",
+    "url": "https://us-central1-code-tutor-59988.cloudfunctions.net/dialogflowFirebaseFulfillment",
     "username": "",
     "headers": {},
     "available": true,

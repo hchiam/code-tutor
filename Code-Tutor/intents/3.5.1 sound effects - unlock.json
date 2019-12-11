@@ -24,8 +24,8 @@
           "lang": "en",
           "condition": "",
           "textToSpeech": "",
-          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003ePassword accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to continue?\u003c/speak\u003e",
-          "displayText": "Password accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to continue?"
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg\"\u003e\u003c/audio\u003eSecret word accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to continue?\u003c/speak\u003e",
+          "displayText": "Secret word accepted. An \"if statement\" is like a lock. If you have the right key, then you can access other code. Would you like to continue?"
         },
         {
           "type": "basic_card",

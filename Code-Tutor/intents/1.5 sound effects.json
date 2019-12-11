@@ -31,8 +31,8 @@
           "lang": "en",
           "condition": "",
           "textToSpeech": "",
-          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/foley/hand_claps_medium.ogg\"\u003e\u003c/audio\u003eWhat\u0027s the password?\u003c/speak\u003e",
-          "displayText": "What\u0027s the password?"
+          "ssml": "\u003cspeak\u003e\u003caudio src\u003d\"https://actions.google.com/sounds/v1/foley/hand_claps_medium.ogg\"\u003e\u003c/audio\u003eWhat\u0027s the secret word?\u003c/speak\u003e",
+          "displayText": "What\u0027s the secret word?"
         },
         {
           "type": 0,

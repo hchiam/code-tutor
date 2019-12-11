@@ -201,7 +201,7 @@ app.intent('3.4.3 loop - run code', function loopRun(conv) {
 
     let say = (what + ' ').repeat(times);
     conv.ask(say);
-    conv.ask(`<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also unlocked a hidden password: "chicken nuggets". What would you like to try next? Another loop? Or a variable? Or play with sound effects?</speak>`);
+    conv.ask(`<speak><audio src="https://actions.google.com/sounds/v1/sports/bowling_strike.ogg"></audio>Congrats! You created a loop. You also discovered a hidden secret word: "chicken nuggets". What would you like to try next? Another loop? Or a variable? Or play with sound effects?</speak>`);
     conv.ask(new Suggestions(['another loop', 'a variable', 'play with sound effects']));
 });
 
