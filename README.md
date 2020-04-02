@@ -1,6 +1,6 @@
 # Ok Google, Talk to Code Tutor
 
-[![HitCount](http://hits.dwyl.com/hchiam/code-tutor.svg)](http://hits.dwyl.com/hchiam/code-tutor)
+![version](https://img.shields.io/github/release/hchiam/code-tutor) [![HitCount](http://hits.dwyl.com/hchiam/code-tutor.svg)](http://hits.dwyl.com/hchiam/code-tutor)
 
 **Try it now:** <a href="https://assistant.google.com/services/invoke/uid/000000668d1fb538">🅖 Ask Code Tutor to teach me</a>
 
