@@ -16,6 +16,8 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 
 Privacy policy: https://goo.gl/PMwsDW
 
+**2023 news:** [Conversational Actions are scheduled to sunset in 2023](https://developers.google.com/assistant/ca-sunset).
+
 ## Use the Google Assistant on Your Phone:
 
 <img alt="Code Tutor on mobile" src="code-tutor-mobile-screenshot.png" height="250">
