@@ -4,6 +4,8 @@
 
 **Code Tutor** is listed in the [Google Assistant web directory](https://assistant.google.com/services/a/uid/000000668d1fb538).
 
+<img alt="Code Tutor listed on the Google Assistant web directory" src="code-tutor-directory-screenshot.png" height="250">
+
 **Long-term goal**: Let's help people who can't use their hands to learn to code by talking to the Google Assistant.
 
 **For now**: Conversationally teach simple coding concepts. Code hands-free.
@@ -15,6 +17,8 @@ Built using lessons learned from my [mental-temp-converter backend](https://glit
 Privacy policy: https://goo.gl/PMwsDW
 
 ## Use the Google Assistant on Your Phone:
+
+<img alt="Code Tutor on mobile" src="code-tutor-mobile-screenshot.png" height="250">
 
 This app works great on a device with a screen. You can get the Google Assistant on your device:
 
