@@ -1,5 +1,9 @@
 # Ok Google, Talk to Code Tutor ![version](https://img.shields.io/github/release/hchiam/code-tutor)
 
+**2023 news:** [Conversational Actions are scheduled to sunset in 2023](https://developers.google.com/assistant/ca-sunset).
+
+<hr/>
+
 **Try it now:** <a href="https://assistant.google.com/services/invoke/uid/000000668d1fb538">🅖 Ask Code Tutor to teach me</a>
 
 **Code Tutor** is listed in the [Google Assistant web directory](https://assistant.google.com/services/a/uid/000000668d1fb538).
@@ -15,8 +19,6 @@ Made possible thanks to support from family and friends.
 Built using lessons learned from my [mental-temp-converter backend](https://glitch.com/edit/#!/mental-temp-converter) and a [Zeitspace workshop](https://github.com/zeitspace/AssistantAppWorkshop) I attended. (EDIT: Now updated to use API V2.)
 
 Privacy policy: https://goo.gl/PMwsDW
-
-**2023 news:** [Conversational Actions are scheduled to sunset in 2023](https://developers.google.com/assistant/ca-sunset).
 
 ## Use the Google Assistant on Your Phone:
 
