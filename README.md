@@ -59,9 +59,10 @@ https://github.com/hchiam/code-tutor-sandbox-test and https://code-tutor-sandbox
 - My [programmingByVoice](https://github.com/hchiam/programmingByVoice) web interface
 - [How](https://github.com/hchiam/how), an interactive programming test
 
-## Newer Experiment:
+## Newer Experiments:
 
-https://github.com/hchiam/ccc
+- https://github.com/hchiam/ccc
+- https://github.com/hchiam/learning-gpt4all
 
 ## You Might Also Like:
 
